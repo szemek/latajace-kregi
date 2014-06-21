@@ -13,7 +13,7 @@
         <a href="#">Latające Kręgi Miejskie</a>
         <ul class="dropdown">
           <% @circles.each do |circle| %>
-            <li><a href="#"><%= circle.name %></a></li>
+            <li><%= link_to circle.name, circle %></li>
           <% end %>
         </ul>
       </li>
