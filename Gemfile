@@ -39,3 +39,5 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
 end
+
+gem 'activeadmin', github: 'gregbell/active_admin'
