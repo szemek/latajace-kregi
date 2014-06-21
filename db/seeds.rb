@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Circle.find_or_create_by(name: 'Kraków')
+Circle.find_or_create_by(name: 'Warszawa')
+Circle.find_or_create_by(name: 'Trójmiasto')
+Circle.find_or_create_by(name: 'Śląsk')
+Circle.find_or_create_by(name: 'Tarnów')
+Circle.find_or_create_by(name: 'Poznań')
+Circle.find_or_create_by(name: 'Łomianki')
+Circle.find_or_create_by(name: 'Bochnia')
+Circle.find_or_create_by(name: 'Berlin')
