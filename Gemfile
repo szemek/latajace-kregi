@@ -34,3 +34,10 @@ gem 'spring',        group: :development
 
 gem 'thin'
 gem 'devise', '~> 3.2.4'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+end
