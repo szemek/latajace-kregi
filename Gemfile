@@ -41,3 +41,4 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'foundation-rails'
