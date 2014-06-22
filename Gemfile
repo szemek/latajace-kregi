@@ -43,3 +43,4 @@ end
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'foundation-rails'
 gem 'friendly_id', '~> 5.0.4'
+gem 'carrierwave', '~> 0.10.0'
