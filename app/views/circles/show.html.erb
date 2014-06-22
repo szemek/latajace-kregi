@@ -1,0 +1,8 @@
+<h1><%= @circle.name %></h1>
+
+<h2>Wydarzenia</h2>
+
+<% @events.each do |event| %>
+  <h3><%= link_to event.name, event %></h3>
+  <p><%= event.description %></p>
+<% end %>
