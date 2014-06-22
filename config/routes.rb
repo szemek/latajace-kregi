@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resource :profile
 
   get '/people' => 'people#index'
+  get '/person/:id' => 'person#show', as: :person
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

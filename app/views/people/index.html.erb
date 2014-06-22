@@ -3,9 +3,11 @@
     <h1>Ludzie</h1>
 
     <% @people.each do |profile| %>
-      <div class="th">
-        <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
-      </div>
+      <%= link_to(person_path(profile)) do %>
+        <div class="th">
+          <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
