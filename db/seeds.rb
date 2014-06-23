@@ -15,3 +15,15 @@ Circle.find_or_create_by(name: 'Poznań')
 Circle.find_or_create_by(name: 'Łomianki')
 Circle.find_or_create_by(name: 'Bochnia')
 Circle.find_or_create_by(name: 'Berlin')
+
+(1..10).with_progress do |n|
+  user = User.find_or_initialize_by(email: "user#{n}@example.com")
+  user.password = user.password_confirmation = 'password'
+  user.save
+
+  profile = Profile.find_or_create_by(user: user)
+  profile.remote_photo_url = 'http://lorempixel.com/400/400/'
+  profile.fullname = Faker::Name.name
+  profile.bio = Faker::Lorem.paragraph
+  profile.save
+end
