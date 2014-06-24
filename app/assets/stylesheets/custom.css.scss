@@ -3,8 +3,24 @@
   height: 200px;
 }
 
+article {
+    &.th {
+    box-shadow: none;
+
+    a {
+      color: black;
+    }
+  }
+}
+
 .slide {
   padding: 50px;
   height: 500px;
   background: rgb(200, 200, 200);
+}
+
+.people article {
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
