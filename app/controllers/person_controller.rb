@@ -1,5 +1,5 @@
 class PersonController < ApplicationController
   def show
-    @profile = Profile.find(params[:id])
+    @person = Profile.find(params[:id])
   end
 end

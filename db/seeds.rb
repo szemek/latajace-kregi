@@ -25,6 +25,7 @@ Circle.find_or_create_by(name: 'Berlin')
   profile.remote_photo_url = 'http://lorempixel.com/400/400/'
   profile.fullname = Faker::Name.name
   profile.bio = Faker::Lorem.paragraph
+  profile.activity = Faker::Company.name
   profile.save
 end
 
@@ -33,5 +34,6 @@ end
   heroine.remote_photo_url = 'http://lorempixel.com/400/400/'
   heroine.fullname = Faker::Name.name
   heroine.bio = Faker::Lorem.paragraph
+  heroine.activity = Faker::Company.name
   heroine.save
 end

@@ -1,8 +1,1 @@
-<h1><%= @profile.fullname %></h1>
-
-<p><%= @profile.bio %></p>
-
-<div class="th">
-  <%= image_tag(@profile.photo_url) if @profile.photo? %>
-</div>
-
+<%= render partial: 'shared/profile', locals: {profile: @person} %>

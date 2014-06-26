@@ -1,0 +1,9 @@
+<% profiles.each do |profile| %>
+  <article class="th">
+    <%= link_to(heroine_path(profile)) do %>
+      <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
+      <h5><%= profile.fullname %></h5>
+      <h6><%= profile.activity %>&nbsp;</h6>
+    <% end %>
+  </article>
+<% end %>

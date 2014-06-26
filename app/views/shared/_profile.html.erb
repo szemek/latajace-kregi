@@ -1,0 +1,10 @@
+<h1><%= profile.fullname %></h1>
+
+<p class="activity"><strong><%= profile.activity %></strong></p>
+
+<p class="bio"><%= profile.bio %></p>
+
+<div class="th">
+  <%= image_tag(profile.photo_url) if profile.photo? %>
+</div>
+

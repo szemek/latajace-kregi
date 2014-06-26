@@ -2,13 +2,6 @@
   <div class="small-12 columns">
     <h1>Kręgowiczki</h1>
 
-    <% @people.each do |profile| %>
-      <article class="th">
-        <%= link_to(person_path(profile)) do %>
-          <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
-          <h5><%= profile.fullname %></h5>
-        <% end %>
-      </article>
-    <% end %>
+    <%= render partial: 'shared/profiles', locals: { profiles: @people } %>
   </div>
 </div>
