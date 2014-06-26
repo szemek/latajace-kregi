@@ -1,0 +1,8 @@
+<h1><%= @heroine.fullname %></h1>
+
+<p><%= @heroine.bio %></p>
+
+<div class="th">
+  <%= image_tag(@heroine.photo_url) if @heroine.photo? %>
+</div>
+

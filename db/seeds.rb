@@ -27,3 +27,11 @@ Circle.find_or_create_by(name: 'Berlin')
   profile.bio = Faker::Lorem.paragraph
   profile.save
 end
+
+(1..5).with_progress do |n|
+  heroine = Heroine.find_or_create_by(id: n)
+  heroine.remote_photo_url = 'http://lorempixel.com/400/400/'
+  heroine.fullname = Faker::Name.name
+  heroine.bio = Faker::Lorem.paragraph
+  heroine.save
+end
