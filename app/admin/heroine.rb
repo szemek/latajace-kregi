@@ -1,5 +1,5 @@
 ActiveAdmin.register Heroine do
-  permit_params :photo, :fullname, :bio
+  permit_params :photo, :fullname, :bio, :activity
 
   index do
     selectable_column
@@ -7,6 +7,7 @@ ActiveAdmin.register Heroine do
     column :photo
     column :fullname
     column :bio
+    column :activity
     column :created_at
     actions
   end
@@ -18,6 +19,7 @@ ActiveAdmin.register Heroine do
       end
       row :fullname
       row :bio
+      row :activity
     end
   end
 
@@ -28,6 +30,7 @@ ActiveAdmin.register Heroine do
       f.input :photo
       f.input :fullname
       f.input :bio
+      f.input :activity
     end
     f.actions
   end
