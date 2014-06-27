@@ -3,7 +3,7 @@
     <%= link_to(send(profile_path, profile)) do %>
       <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
       <h5><%= profile.fullname %></h5>
-      <h6><%= profile.activity.truncate(25) %>&nbsp;</h6>
+      <h6><%= profile.activity.try(:truncate, 25) %>&nbsp;</h6>
     <% end %>
 
     <% if profile.code %>
