@@ -38,6 +38,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
+  gem 'quiet_assets', '~> 1.0.3'
 end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -49,4 +50,3 @@ gem 'dotenv-rails', '~> 0.11.1'
 gem 'faker', '~> 1.3.0'
 gem 'colored', '~> 1.2'
 gem 'progress', '~> 3.0.0'
-gem 'quiet_assets', '~> 1.0.3'
