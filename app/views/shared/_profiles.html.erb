@@ -7,8 +7,14 @@
     <% end %>
 
     <% if profile.code %>
-      <div class="circle label">
+      <div class="circle label" title="Krąg">
         <%= profile.code %>
+      </div>
+    <% end %>
+
+    <% if profile.is_a?(Profile) && profile.events.count > 0 %>
+      <div class="events label round secondary" title="Liczba udziałów w kręgach">
+        <%= profile.events.count %>
       </div>
     <% end %>
   </article>
