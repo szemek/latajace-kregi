@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :menu_circles
+  before_filter :all_circles
 
-  def menu_circles
-    @menu_circles = Circle.all
+  def all_circles
+    @all_circles = Circle.all
   end
 end

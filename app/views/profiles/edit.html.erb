@@ -36,6 +36,13 @@
   </div>
   <div class="row">
     <div class="small-4 columns">
+      <label>Krąg
+        <%= f.select :circle_id, options_from_collection_for_select(@all_circles, :id, :name, selected: @profile.circle_id) %>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
       <%= f.submit 'Aktualizuj', class: 'button small' %>
     </div>
   </div>
