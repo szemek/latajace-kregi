@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   resources :circles
-  resources :events
+  resources :events do
+    resources :rsvps, only: [:create, :destroy]
+  end
   resource :profile
 
   get '/people' => 'people#index'

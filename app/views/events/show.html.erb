@@ -1,2 +1,15 @@
-<h1><%= @event.name %></h1>
-<h2><%= @event.description %></h2>
+<div class="row">
+  <div class="small-12 large-9 columns">
+    <h1><%= @event.name %></h1>
+    <h2><%= @event.description %></h2>
+  </div>
+  <div class="small-12 large-3 columns">
+    <% if @rsvp %>
+      <%= button_to('Zrezygnuj', event_rsvp_path(@event, @rsvp), method: :delete) %>
+    <% else %>
+      <%= form_for([@event, Rsvp.new]) do |f| %>
+        <%= f.submit 'Idę' %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
