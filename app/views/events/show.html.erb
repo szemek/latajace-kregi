@@ -11,5 +11,11 @@
         <%= f.submit 'Idę' %>
       <% end %>
     <% end %>
+
+    <ul>
+      <% @participants.each do |participant| %>
+        <li><%= participant.fullname %></li>
+      <% end %>
+    </ul>
   </div>
 </div>
