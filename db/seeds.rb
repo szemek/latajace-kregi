@@ -18,6 +18,8 @@ Circle.find_or_create_by(name: 'Berlin', code: 'BER')
 Circle.find_or_create_by(name: 'Wrocław', code: 'WRO')
 Circle.find_or_create_by(name: 'Łódź', code: 'ŁDŹ')
 
+circles = Circle.count
+
 (1..10).with_progress do |n|
   user = User.find_or_initialize_by(email: "user#{n}@example.com")
   user.password = user.password_confirmation = 'password'
@@ -28,6 +30,7 @@ Circle.find_or_create_by(name: 'Łódź', code: 'ŁDŹ')
   profile.fullname = Faker::Name.name
   profile.bio = Faker::Lorem.paragraph
   profile.activity = Faker::Company.name
+  profile.circle_id = rand(1..circles)
   profile.save
 end
 
@@ -37,5 +40,6 @@ end
   heroine.fullname = Faker::Name.name
   heroine.bio = Faker::Lorem.paragraph
   heroine.activity = Faker::Company.name
+  heroine.circle_id = rand(1..circles)
   heroine.save
 end

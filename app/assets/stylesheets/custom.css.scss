@@ -1,15 +1,23 @@
-.th img {
-  width: 200px;
-  height: 200px;
+.th {
+  box-shadow: none;
+
+  a, img {
+    width: 200px;
+    height: 200px;
+  }
+
+  a {
+    color: black;
+  }
 }
 
-article {
-    &.th {
-    box-shadow: none;
+.profile {
+  position: relative;
 
-    a {
-      color: black;
-    }
+  .circle {
+    position: absolute;
+    right: 10px;
+    top: 170px;
   }
 }
 

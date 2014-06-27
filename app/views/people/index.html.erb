@@ -2,6 +2,6 @@
   <div class="small-12 columns">
     <h1>Kręgowiczki</h1>
 
-    <%= render partial: 'shared/profiles', locals: { profiles: @people } %>
+    <%= render partial: 'shared/profiles', locals: { profiles: @people, profile_path: :person_path } %>
   </div>
 </div>
