@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   before_filter :all_circles
 
   def all_circles
-    @all_circles = Circle.all
+    @all_circles = Circle.all.order(:name)
   end
 end
