@@ -1,6 +1,7 @@
 <div class="row">
   <div class="small-12 large-9 columns">
     <h2><%= @event.name %></h2>
+    <p><%= I18n.l(@event.starting_at, locale: :pl, format: '%d %b %Y') %></p>
     <p><%= simple_format(auto_link(@event.description)) %></p>
   </div>
   <div class="small-12 large-3 columns">

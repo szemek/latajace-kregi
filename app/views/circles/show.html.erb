@@ -3,6 +3,7 @@
 <h2>Wydarzenia</h2>
 
 <% @events.each do |event| %>
+  <p><%= I18n.l(event.starting_at, locale: :pl, format: '%d %b %Y') %></p>
   <h3><%= link_to event.name, event %></h3>
   <p><%= simple_format(auto_link(event.description)) %></p>
 <% end %>
