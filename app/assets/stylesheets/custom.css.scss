@@ -1,6 +1,11 @@
 .top-bar {
   padding-bottom: 50px;
   border-bottom: 1px solid black;
+
+  .name h1 a:hover {
+    background-color: #272727;
+    color: white;
+  }
 }
 
 #rsvp-container {
