@@ -4,5 +4,5 @@
 
 <% @events.each do |event| %>
   <h3><%= link_to event.name, event %></h3>
-  <p><%= event.description %></p>
+  <p><%= simple_format(auto_link(event.description)) %></p>
 <% end %>
