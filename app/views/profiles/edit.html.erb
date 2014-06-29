@@ -1,49 +1,39 @@
 <div class="row">
-  <div class="small-4 columns">
+  <div class="small-12 columns">
     <h2>Edycja profilu</h2>
   </div>
 </div>
 
-<%= form_for @profile do |f| %>
-  <div class="row">
-    <div class="small-4 columns">
-      <label>Imię i nazwisko
-        <%= f.text_field :fullname %>
-      </label>
-    </div>
+<div class="row">
+  <div class="small-12 columns">
+    <%= form_for @profile do |f| %>
+      <div class="row">
+        <div class="small-6 columns">
+          <label>Imię i nazwisko
+            <%= f.text_field :fullname %>
+          </label>
+          <label>Projekt/firma
+            <%= f.text_field :activity %>
+          </label>
+          <label>O sobie
+            <%= f.text_area :bio %>
+          </label>
+          <label>Krąg
+            <%= f.select :circle_id, options_from_collection_for_select(@all_circles, :id, :name, selected: @profile.circle_id) %>
+          </label>
+        </div>
+        <div class="small-6 columns">
+          <label>Zdjęcie
+            <%= f.file_field :photo %>
+            <%= image_tag(@profile.photo.thumbnail.url) if @profile.photo? %>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-6 columns">
+          <%= f.submit 'Aktualizuj', class: 'button small' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <label>Projekt/firma
-        <%= f.text_field :activity %>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <label>O sobie
-        <%= f.text_area :bio %>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <label>Zdjęcie
-        <%= image_tag(@profile.photo.thumbnail.url) if @profile.photo? %>
-        <%= f.file_field :photo %>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <label>Krąg
-        <%= f.select :circle_id, options_from_collection_for_select(@all_circles, :id, :name, selected: @profile.circle_id) %>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <%= f.submit 'Aktualizuj', class: 'button small' %>
-    </div>
-  </div>
-<% end %>
+</div>
