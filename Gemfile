@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.2'
+gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -43,6 +43,7 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'jquery-ui-rails', '~> 4.2.1'
 gem 'foundation-rails'
 gem 'friendly_id', '~> 5.0.4'
 gem 'carrierwave', '~> 0.10.0'
