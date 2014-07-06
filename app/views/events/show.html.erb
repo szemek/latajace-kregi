@@ -25,8 +25,12 @@
         </div>
       </div>
     <% else %>
-      <%= form_for([@event, Rsvp.new]) do |f| %>
-        <%= f.submit 'Dołącz', class: 'button success' %>
+      <% if current_user %>
+        <%= form_for([@event, Rsvp.new]) do |f| %>
+          <%= f.submit 'Dołącz', class: 'button success' %>
+        <% end %>
+      <% else %>
+        <%= link_to 'Zaloguj, aby dołączyć', new_user_session_path, class: 'button info' %>
       <% end %>
     <% end %>
 
