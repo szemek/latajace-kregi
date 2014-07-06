@@ -69,11 +69,35 @@
     top: 170px;
   }
 }
+.example-orbit-content {
+  .slide {
+    padding: 50px;
+    height: 500px;
+    background: rgb(200, 200, 200);
+    position: relative;
 
-.slide {
-  padding: 50px;
-  height: 500px;
-  background: rgb(200, 200, 200);
+    &.slide01 {
+      background: url(/assets/header01.jpeg);
+    }
+    &.slide02 {
+      background: url(/assets/header02.jpeg);
+    }
+    &.slide03 {
+      background: url(/assets/header03.jpeg);
+    }
+  }
+
+  .heading {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 50px;
+
+    h2, h3 {
+      color: white;
+      text-shadow: 1px 1px 1px #888;
+    }
+  }
 }
 
 .people article {
