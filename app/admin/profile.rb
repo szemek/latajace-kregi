@@ -28,6 +28,7 @@ ActiveAdmin.register Profile do
   end
 
   filter :fullname
+  filter :circle
 
   form do |f|
     f.inputs "Profile Details" do
