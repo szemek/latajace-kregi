@@ -57,16 +57,24 @@
 .profile {
   position: relative;
 
-  .circle {
+  .circle, .events {
     position: absolute;
+    top: 160px;
+    font-size: 21px;
+  }
+
+  .circle {
     right: 10px;
-    top: 170px;
+    background-color: #e67e22;
   }
 
   .events {
-    position: absolute;
-    right: 60px;
-    top: 170px;
+    right: 85px;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    padding: 0;
+    background-color: #bdc3c7;
   }
 }
 .example-orbit-content {
