@@ -16,7 +16,7 @@
       <li class="has-dropdown">
         <a href="#">Latające Kręgi Miejskie</a>
         <ul class="dropdown">
-          <% @all_circles.each do |circle| %>
+          <% circles.each do |circle| %>
             <li><%= link_to circle.name, circle %></li>
           <% end %>
         </ul>
