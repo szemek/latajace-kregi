@@ -1,15 +1,15 @@
 class RsvpsController < ApplicationController
   def create
     event = Event.find(params[:event_id])
-    Rsvp.create(event: event, user: current_user, going: true)
+    AttendeeList.new(event: event, user: current_user).join
 
     redirect_to event
   end
 
   def destroy
     event = Event.find(params[:event_id])
-    rsvp = Rsvp.find(params[:id])
-    rsvp.destroy
+    rsvp = current_user.rsvps.find(params[:id])
+    AttendeeList.new(rsvp: rsvp).leave
 
     redirect_to event
   end
