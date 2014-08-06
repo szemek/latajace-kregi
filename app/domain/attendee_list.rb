@@ -8,7 +8,9 @@ class AttendeeList
   end
 
   def join
-    Rsvp.create(event: event, user: user, going: allow?)
+    rsvp = Rsvp.find_or_initialize_by(event: event, user: user)
+    rsvp.assign_attributes(going: allow?)
+    rsvp.save
   end
 
   def leave

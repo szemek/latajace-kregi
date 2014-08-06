@@ -1,5 +1,10 @@
 ActiveAdmin.register Event do
-  permit_params :name, :description, :circle_id, :starting_at, :location
+  permit_params :name,
+    :description,
+    :circle_id,
+    :starting_at,
+    :quantity,
+    :location
 
   index do
     selectable_column
@@ -8,6 +13,7 @@ ActiveAdmin.register Event do
     column :description
     column :circle
     column :starting_at
+    column :quantity
     column :location
     column :created_at
     actions
@@ -24,6 +30,7 @@ ActiveAdmin.register Event do
       f.input :description
       f.input :circle
       f.input :starting_at
+      f.input :quantity
       f.input :location
     end
     f.actions

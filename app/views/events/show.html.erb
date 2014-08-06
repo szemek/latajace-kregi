@@ -6,24 +6,11 @@
   </div>
   <div class="small-12 large-3 columns">
     <% if @rsvp %>
-      <div id="rsvp-container">
-        <div id="rsvp-mine">
-          <h3>
-            Weźmiesz udział
-          </h3>
-          <a href="#" class="rsvp-change label" data-reveal-id="rsvp-change" aria-label="Zmień zdanie">
-            Zmień zdanie
-          </a>
-
-          <div id="rsvp-change" class="reveal-modal" data-reveal>
-            <h3>Czy nadal chcesz wziąć udział w wydarzeniu?</h3>
-            <div class="action"><a class="button success yes close-modal">Tak</a></div>
-            <div class="action"><%= button_to('Zrezygnuj', event_rsvp_path(@event, @rsvp), method: :delete, class: 'button alert') %></div>
-
-            <a class="close-reveal-modal">&#215;</a>
-          </div>
-        </div>
-      </div>
+      <% if @rsvp.going? %>
+        <%= render 'rsvp' %>
+      <% else %>
+        <%= render 'waiting' %>
+      <% end %>
     <% else %>
       <% if current_user %>
         <%= form_for([@event, Rsvp.new]) do |f| %>
@@ -34,8 +21,16 @@
       <% end %>
     <% end %>
 
+    <h3>Lista uczestników</h3>
     <ul>
       <% @participants.each do |participant| %>
+        <li><%= participant.fullname %></li>
+      <% end %>
+    </ul>
+
+    <h3>Lista rezerwowa</h3>
+    <ul>
+      <% @waiting.each do |participant| %>
         <li><%= participant.fullname %></li>
       <% end %>
     </ul>

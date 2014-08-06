@@ -1,0 +1,18 @@
+<div id="rsvp-container">
+  <div id="rsvp-mine">
+    <h3>
+      Weźmiesz udział
+    </h3>
+    <a href="#" class="rsvp-change label" data-reveal-id="rsvp-change" aria-label="Zmień zdanie">
+      Zmień zdanie
+    </a>
+
+    <div id="rsvp-change" class="reveal-modal" data-reveal>
+      <h3>Czy nadal chcesz wziąć udział w wydarzeniu?</h3>
+      <div class="action"><a class="button success yes close-modal">Tak</a></div>
+      <div class="action"><%= button_to('Zrezygnuj', event_rsvp_path(@event, @rsvp), method: :delete, class: 'button alert') %></div>
+
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+  </div>
+</div>
