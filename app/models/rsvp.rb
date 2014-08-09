@@ -4,6 +4,8 @@ class Rsvp < ActiveRecord::Base
 
   enum status: [:not_going, :going, :waiting]
 
-  scope :going, -> { where(going: true) }
-  scope :waiting, -> { where(going: false) }
+  # dynamic definitions of scopes
+  statuses.each do |status, value|
+    scope status, -> { where(status: value)}
+  end
 end

@@ -20,6 +20,6 @@ module Onthefly
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.autoload_paths << Rails.root.join('app/domain')
+    config.autoload_paths << Rails.root.join('app/services')
   end
 end

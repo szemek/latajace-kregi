@@ -5,12 +5,10 @@
     <p><%= simple_format(auto_link(@event.description)) %></p>
   </div>
   <div class="small-12 large-3 columns">
-    <% if @rsvp %>
-      <% if @rsvp.going? %>
-        <%= render 'rsvp' %>
-      <% else %>
+    <% if @rsvp.going? %>
+      <%= render 'going' %>
+    <% elsif @rsvp.waiting? %>
         <%= render 'waiting' %>
-      <% end %>
     <% else %>
       <% if current_user %>
         <%= form_for([@event, Rsvp.new]) do |f| %>
@@ -23,15 +21,15 @@
 
     <h3>Lista uczestników</h3>
     <ul>
-      <% @participants.each do |participant| %>
-        <li><%= participant.fullname %></li>
+      <% @going_users.each do |user| %>
+        <li><%= user.fullname %></li>
       <% end %>
     </ul>
 
     <h3>Lista rezerwowa</h3>
     <ul>
-      <% @waiting.each do |participant| %>
-        <li><%= participant.fullname %></li>
+      <% @waiting_users.each do |user| %>
+        <li><%= user.fullname %></li>
       <% end %>
     </ul>
   </div>

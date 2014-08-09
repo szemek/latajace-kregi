@@ -9,17 +9,20 @@ class AttendeeList
 
   def join
     rsvp = Rsvp.find_or_initialize_by(event: event, user: user)
-    rsvp.assign_attributes(going: allow?)
-    rsvp.save
+    if can_join?
+      rsvp.going!
+    else
+      rsvp.waiting!
+    end
   end
 
   def leave
-    rsvp.try(:destroy)
+    rsvp.not_going!
   end
 
   private
 
-  def allow?
+  def can_join?
     event.quantity > event.rsvps.going.count
   end
 end
