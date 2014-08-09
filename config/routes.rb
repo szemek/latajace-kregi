@@ -16,4 +16,5 @@ Rails.application.routes.draw do
 
   resources :people, only: [:index, :show], path: 'kregowiczki'
   resources :heroines, only: [:index, :show], path: 'bohaterki'
+  resources :organizers, only: [:index, :show], path: 'organizatorki'
 end

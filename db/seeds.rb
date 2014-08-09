@@ -30,21 +30,37 @@ circles_ids = Circle.pluck(:id)
   user.password = user.password_confirmation = 'password'
   user.save
 
-  profile = Profile.find_or_create_by(user: user)
-  profile.remote_photo_url = 'http://lorempixel.com/400/400/'
-  profile.fullname = Faker::Name.name
-  profile.bio = Faker::Lorem.paragraph
-  profile.activity = Faker::Company.name
-  profile.circle_id = circles_ids.sample
-  profile.save
+  profile = Profile.find_or_initialize_by(user: user)
+  if profile.new_record?
+    profile.remote_photo_url = 'http://lorempixel.com/400/400/'
+    profile.fullname = Faker::Name.name
+    profile.bio = Faker::Lorem.paragraph
+    profile.activity = Faker::Company.name
+    profile.circle_id = circles_ids.sample
+    profile.save
+  end
 end
 
 (1..5).with_progress do |n|
-  heroine = Heroine.find_or_create_by(id: n)
-  heroine.remote_photo_url = 'http://lorempixel.com/400/400/'
-  heroine.fullname = Faker::Name.name
-  heroine.bio = Faker::Lorem.paragraph
-  heroine.activity = Faker::Company.name
-  heroine.circle_id = circles_ids.sample
-  heroine.save
+  heroine = Heroine.find_or_initialize_by(id: n)
+  if heroine.new_record?
+    heroine.remote_photo_url = 'http://lorempixel.com/400/400/'
+    heroine.fullname = Faker::Name.name
+    heroine.bio = Faker::Lorem.paragraph
+    heroine.activity = Faker::Company.name
+    heroine.circle_id = circles_ids.sample
+    heroine.save
+  end
+end
+
+(1..5).with_progress do |n|
+  organizer = Organizer.find_or_initialize_by(id: n)
+  if organizer.new_record?
+    organizer.remote_photo_url = 'http://lorempixel.com/400/400/'
+    organizer.fullname = Faker::Name.name
+    organizer.bio = Faker::Lorem.paragraph
+    organizer.activity = Faker::Company.name
+    organizer.circle_id = circles_ids.sample
+    organizer.save
+  end
 end
