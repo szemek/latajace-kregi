@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.1.3'
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'factory_girl_rails', '~> 4.4.1'
   gem 'pry-rails'
   gem 'quiet_assets', '~> 1.0.3'
   gem 'rspec-rails', '~> 3.0.0'
