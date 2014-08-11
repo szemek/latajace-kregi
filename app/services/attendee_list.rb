@@ -2,9 +2,9 @@ class AttendeeList
   attr_accessor :event, :user, :rsvp
 
   def initialize(params)
-    @event = params[:event]
-    @user = params[:user]
     @rsvp = params[:rsvp]
+    @event = params[:event] || @rsvp.event
+    @user = params[:user] || @rsvp.user
   end
 
   def join
@@ -18,11 +18,17 @@ class AttendeeList
 
   def leave
     rsvp.not_going!
+
+    next_from_waiting_list.try(:going!)
   end
 
   private
 
   def can_join?
     event.quantity > event.rsvps.going.count
+  end
+
+  def next_from_waiting_list
+    event.rsvps.waiting.order(:updated_at).first
   end
 end
