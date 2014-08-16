@@ -31,6 +31,7 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'acts-as-taggable-on', '~> 3.3.0'
 gem 'carrierwave', '~> 0.10.0'
 gem 'cloudinary', '~> 1.0.75'
 gem 'colored', '~> 1.2'
