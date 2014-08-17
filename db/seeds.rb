@@ -64,3 +64,8 @@ end
     organizer.save
   end
 end
+
+tags = YAML.load_file(Rails.root.join('lib/seeds/tags.yml'))
+tags.with_progress.each do |tag_name|
+  Tag.find_or_create_by(name: tag_name)
+end

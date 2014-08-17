@@ -16,5 +16,6 @@
 //= require foundation
 //= require modals
 //= require tag-it
+//= require tags
 
 $(function(){ $(document).foundation(); });
