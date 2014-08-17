@@ -14,4 +14,7 @@
  *= require foundation_and_overrides
  *= require custom
  *= require circles
+ *= require jquery.ui.core
+ *= require jquery.ui.theme
+ *= require tag-it
  */
