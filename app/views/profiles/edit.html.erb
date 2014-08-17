@@ -18,11 +18,17 @@
           <label>O sobie
             <%= f.text_area :bio %>
           </label>
-          <label>Krąg
-            <%= f.select :circle_id, options_from_collection_for_select(circles, :id, :name, selected: @profile.circle_id) %>
+          <label>To umiem/to mogę zaoferować innym
+            <%= f.text_field :skill_list %>
+          </label>
+          <label>Tego potrzebuję/tego się chcę nauczyć
+            <%= f.text_field :interest_list %>
           </label>
         </div>
         <div class="small-6 columns">
+          <label>Krąg
+            <%= f.select :circle_id, options_from_collection_for_select(circles, :id, :name, selected: @profile.circle_id) %>
+          </label>
           <label>Zdjęcie
             <%= f.file_field :photo %>
             <%= image_tag(@profile.photo.thumbnail.url) if @profile.photo? %>
