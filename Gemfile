@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.2'
 
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 
 group :development do
   gem 'sqlite3'
@@ -37,11 +37,11 @@ gem 'cloudinary', '~> 1.0.75'
 gem 'colored', '~> 1.2'
 gem 'devise', '~> 3.2.4'
 gem 'dotenv-rails', '~> 0.11.1'
-gem 'faker', '~> 1.4.2'
+gem 'faker', '~> 1.4.3'
 gem 'foundation-rails', '~> 5.3.3.0'
 gem 'friendly_id', '~> 5.0.4'
 gem 'jquery-ui-rails', '~> 4.2.1'
-gem 'progress', '~> 3.0.0'
+gem 'progress', '~> 3.0.1'
 gem 'rails-i18n', '~> 4.0.2'
 gem 'rails_autolink', '~> 1.1.6'
 gem 'thin', '~> 1.6.2'
