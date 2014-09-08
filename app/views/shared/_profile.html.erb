@@ -1,10 +1,15 @@
-<h1><%= profile.fullname %></h1>
+<div class='row'>
+  <div class='small-12 large-3 columns'>
+    <div class="th photo">
+      <%= image_tag(profile.photo_url) if profile.photo? %>
+    </div>
+  </div>
+  <div class='small-12 large-9 columns'>
+    <h1><%= profile.fullname %></h1>
 
-<p class="activity"><strong><%= profile.activity %></strong></p>
+    <p class="activity"><strong><%= profile.activity %></strong></p>
 
-<p class="bio"><%= profile.bio %></p>
-
-<div class="th">
-  <%= image_tag(profile.photo_url) if profile.photo? %>
+    <p class="bio"><%= profile.bio %></p>
+    <%= render partial: 'shared/extended_info', locals: {profile: profile} %>
+  </div>
 </div>
-

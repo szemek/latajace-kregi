@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  <div class='extended-info'>
+    <p>To umiem/to mogę zaoferować innym</p>
+    <% profile.skill_list.each do |skill| %>
+      <span class='success label'><%= skill %></span>
+    <% end %>
+
+    <p>Tego potrzebuję/tego się chcę nauczyć</p>
+    <% profile.interest_list.each do |interest| %>
+      <span class='label'><%= interest %></span>
+    <% end %>
+  </div>
+<% else %>
+  <%= link_to 'Zaloguj się, aby zobaczyć więcej informacji', new_user_session_path, class: 'button success' %>
+<% end %>
