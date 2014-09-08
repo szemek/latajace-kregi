@@ -1,13 +1,17 @@
 <% if user_signed_in? %>
   <div class='extended-info'>
-    <p>To umiem/to mogę zaoferować innym</p>
-    <% profile.skill_list.each do |skill| %>
-      <span class='success label'><%= skill %></span>
+    <% if profile.skill_list.present? %>
+      <p>To umiem/to mogę zaoferować innym</p>
+      <% profile.skill_list.each do |skill| %>
+        <span class='success label'><%= skill %></span>
+      <% end %>
     <% end %>
 
-    <p>Tego potrzebuję/tego się chcę nauczyć</p>
-    <% profile.interest_list.each do |interest| %>
-      <span class='label'><%= interest %></span>
+    <% if profile.interest_list.present? %>
+      <p>Tego potrzebuję/tego się chcę nauczyć</p>
+      <% profile.interest_list.each do |interest| %>
+        <span class='label'><%= interest %></span>
+      <% end %>
     <% end %>
   </div>
 <% else %>
