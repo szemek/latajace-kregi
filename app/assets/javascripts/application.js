@@ -15,7 +15,7 @@
 //= require jquery.ui.all
 //= require foundation
 //= require modals
-//= require tag-it
+//= require select2.min
 //= require tags
 
 $(function(){ $(document).foundation(); });

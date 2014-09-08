@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   def edit
     @profile = Profile.find_or_create_by(user: current_user)
+    @tags = Tag.order(:name)
   end
 
   def update
@@ -18,6 +19,6 @@ class ProfilesController < ApplicationController
   end
 
   def profile_fields
-    [:fullname, :bio, :photo, :activity, :circle_id, :skill_list, :interest_list]
+    [:fullname, :bio, :photo, :activity, :circle_id, skill_list: [], interest_list: []]
   end
 end

@@ -9,21 +9,30 @@
     <%= form_for @profile do |f| %>
       <div class="row">
         <div class="small-6 columns">
-          <label>Imię i nazwisko
+          <div class='field'>
+            <%= f.label :fullname, 'Imię i nazwisko' %>
             <%= f.text_field :fullname %>
-          </label>
-          <label>Projekt/firma
+          </div>
+
+          <div class='field'>
+            <%= f.label :activity, 'Projekt/firma' %>
             <%= f.text_field :activity %>
-          </label>
-          <label>O sobie
+          </div>
+
+          <div class='field'>
+            <%= f.label :bio, 'O sobie' %>
             <%= f.text_area :bio %>
-          </label>
-          <label>To umiem/to mogę zaoferować innym
-            <%= f.text_field :skill_list %>
-          </label>
-          <label>Tego potrzebuję/tego się chcę nauczyć
-            <%= f.text_field :interest_list %>
-          </label>
+          </div>
+
+          <div class='field'>
+            <%= f.label :skill_list, 'To umiem/to mogę zaoferować innym' %>
+            <%= f.select :skill_list, options_from_collection_for_select(@tags, :name, :name, @profile.skill_list), {}, multiple: true %>
+          </div>
+
+          <div class='field'>
+            <%= f.label :interest_list, 'Tego potrzebuję/tego się chcę nauczyć' %>
+            <%= f.select :interest_list, options_from_collection_for_select(@tags, :name, :name, @profile.interest_list), {}, multiple: true %>
+          </div>
         </div>
         <div class="small-6 columns">
           <label>Krąg
