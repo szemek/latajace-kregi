@@ -8,3 +8,16 @@ pl:
     profile: profil
     rsvps: rsvp
     edit: edycja
+
+  circles: Latające Kręgi Miejskie
+  events: Wydarzenia
+  people: Kręgowiczki
+  heroines: Bohaterki
+  organizers: Organizatorki
+  settings: Ustawienia
+
+  users:
+    sign_out: Wyloguj
+    sign_in: Zaloguj
+  profile: Profil
+  account: Konto

@@ -1,6 +1,6 @@
 <h1><%= @circle.name %></h1>
 
-<h2>Wydarzenia</h2>
+<h2><%= I18n.t('events') %></h2>
 
 <% @events.each do |event| %>
   <p><%= I18n.l(event.starting_at, locale: :pl, format: '%d %b %Y') %></p>

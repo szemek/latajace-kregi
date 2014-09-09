@@ -14,33 +14,33 @@
   <section class="top-bar-section">
     <ul class="left">
       <li class="has-dropdown">
-        <a href="#">Latające Kręgi Miejskie</a>
+        <a href="#"><%= I18n.t('circles') %></a>
         <ul class="dropdown">
           <% circles.each do |circle| %>
             <li><%= link_to circle.name, circle %></li>
           <% end %>
         </ul>
       </li>
-      <li><%= link_to 'Kręgowiczki', people_path %></li>
-      <li><%= link_to 'Bohaterki', heroines_path %></li>
-      <li><%= link_to 'Organizatorki', organizers_path %></li>
+      <li><%= link_to I18n.t('people'), people_path %></li>
+      <li><%= link_to I18n.t('heroines'), heroines_path %></li>
+      <li><%= link_to I18n.t('organizers'), organizers_path %></li>
     </ul>
 
     <ul class="right">
       <% if current_user %>
         <li class="has-dropdown">
-          <a href="#">Ustawienia</a>
+          <a href="#"><%= I18n.t('settings') %></a>
           <ul class="dropdown">
-            <li><%= link_to 'Profil', edit_profile_path %></li>
-            <li><%= link_to 'Email, hasło', edit_user_registration_path %>
+            <li><%= link_to I18n.t('profile'), edit_profile_path %></li>
+            <li><%= link_to I18n.t('account'), edit_user_registration_path %>
           </ul>
         </li>
         <li class="divider"></li>
       <% end %>
       <% if current_user %>
-        <li><%= link_to 'Wyloguj', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to I18n.t('users.sign_out'), destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to 'Zaloguj', new_user_session_path %></li>
+        <li><%= link_to I18n.t('users.sign_in'), new_user_session_path %></li>
       <% end %>
     </ul>
   </section>

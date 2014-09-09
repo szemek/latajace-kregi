@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  circles: Circles
+  events: Events
+  people: People
+  heroines: Heroines
+  organizers: Organizers
+  settings: Settings
+
+  users:
+    sign_out: Sign out
+    sign_in: Sign in
+  profile: Profile
+  account: Account
