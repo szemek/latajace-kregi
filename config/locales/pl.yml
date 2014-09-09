@@ -1,0 +1,10 @@
+pl:
+  routes:
+    circles: kregi
+    events: wydarzenia
+    organizers: organizatorki
+    heroines: bohaterki
+    people: kregowiczki
+    profile: profil
+    rsvps: rsvp
+    edit: edycja
