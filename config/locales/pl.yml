@@ -32,10 +32,15 @@ pl:
       sign_in_to_join: 'Zaloguj, aby dołączyć'
       attendee_list: 'Lista uczestników'
       waiting_list: 'Lista rezerwowa'
-      you_will_participate: 'Weźmiesz udział'
-      change: 'Zmień zdanie'
-      still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
-      stay: Tak
-      leave: Zrezygnuj
     waiting:
+      change: 'Zmień zdanie'
+      leave: Zrezygnuj
+      stay: Tak
+      still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
       you_are_on_waiting_list: 'Jesteś na liście rezerwowej'
+    going:
+      change: 'Zmień zdanie'
+      leave: Zrezygnuj
+      stay: Tak
+      still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
+      you_will_participate: 'Weźmiesz udział'

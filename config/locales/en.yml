@@ -43,10 +43,15 @@ en:
       sign_in_to_join: 'Sign in to join'
       attendee_list: 'Attendee list'
       waiting_list: 'Waiting list'
-      you_will_participate: 'You will participate'
-      change: 'Change'
-      still_interested?: 'Still interested?'
-      stay: Yes
-      leave: Leave
     waiting:
+      change: 'Change'
+      stay: Stay
+      leave: Leave
+      still_interested?: 'Still interested?'
       you_are_on_waiting_list: 'You are on waiting list'
+    going:
+      change: 'Change'
+      stay: Stay
+      leave: Leave
+      still_interested?: 'Still interested?'
+      you_will_participate: 'You will participate'
