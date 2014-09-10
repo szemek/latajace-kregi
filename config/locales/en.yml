@@ -20,15 +20,33 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  circles: Circles
-  events: Events
-  people: People
-  heroines: Heroines
-  organizers: Organizers
-  settings: Settings
+  nav:
+    events: Events
+    people: People
+    heroines: Heroines
+    organizers: Organizers
+    settings: Settings
 
   users:
-    sign_out: Sign out
-    sign_in: Sign in
+    sign_out: 'Sign out'
+    sign_in: 'Sign in'
   profile: Profile
   account: Account
+
+  circles:
+    show:
+      events: Events
+
+  events:
+    show:
+      join: Join
+      sign_in_to_join: 'Sign in to join'
+      attendee_list: 'Attendee list'
+      waiting_list: 'Waiting list'
+      you_will_participate: 'You will participate'
+      change: 'Change'
+      still_interested?: 'Still interested?'
+      stay: Yes
+      leave: Leave
+    waiting:
+      you_are_on_waiting_list: 'You are on waiting list'

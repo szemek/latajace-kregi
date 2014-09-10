@@ -9,15 +9,33 @@ pl:
     rsvps: rsvp
     edit: edycja
 
-  circles: Latające Kręgi Miejskie
-  events: Wydarzenia
-  people: Kręgowiczki
-  heroines: Bohaterki
-  organizers: Organizatorki
-  settings: Ustawienia
+  nav:
+    circles: 'Latające Kręgi Miejskie'
+    events: Wydarzenia
+    heroines: Bohaterki
+    organizers: Organizatorki
+    people: Kręgowiczki
+    settings: Ustawienia
+    users:
+      sign_out: Wyloguj
+      sign_in: Zaloguj
+    profile: Profil
+    account: Konto
 
-  users:
-    sign_out: Wyloguj
-    sign_in: Zaloguj
-  profile: Profil
-  account: Konto
+  circles:
+    show:
+      events: Events
+
+  events:
+    show:
+      join: Dołącz
+      sign_in_to_join: 'Zaloguj, aby dołączyć'
+      attendee_list: 'Lista uczestników'
+      waiting_list: 'Lista rezerwowa'
+      you_will_participate: 'Weźmiesz udział'
+      change: 'Zmień zdanie'
+      still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
+      stay: Tak
+      leave: Zrezygnuj
+    waiting:
+      you_are_on_waiting_list: 'Jesteś na liście rezerwowej'

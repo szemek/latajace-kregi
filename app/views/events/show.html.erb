@@ -1,32 +1,32 @@
 <div class="row">
   <div class="small-12 large-9 columns">
     <h2><%= @event.name %></h2>
-    <p><%= I18n.l(@event.starting_at, locale: :pl, format: '%d %b %Y') %></p>
+    <p><%= I18n.l(@event.starting_at, locale: I18n.locale, format: '%d %b %Y') %></p>
     <p><%= simple_format(auto_link(@event.description)) %></p>
   </div>
   <div class="small-12 large-3 columns">
     <% if @rsvp.going? %>
-      <%= render 'going' %>
+      <%= render partial: 'going' %>
     <% elsif @rsvp.waiting? %>
-        <%= render 'waiting' %>
+        <%= render partial: 'waiting' %>
     <% else %>
       <% if current_user %>
         <%= form_for([@event, Rsvp.new]) do |f| %>
-          <%= f.submit 'Dołącz', class: 'button success' %>
+          <%= f.submit t('.join'), class: 'button success' %>
         <% end %>
       <% else %>
-        <%= link_to 'Zaloguj, aby dołączyć', new_user_session_path, class: 'button info' %>
+        <%= link_to t('.sign_in_to_join'), new_user_session_path, class: 'button info' %>
       <% end %>
     <% end %>
 
-    <h3>Lista uczestników</h3>
+    <h3><%= t('.attendee_list') %></h3>
     <ul>
       <% @going_users.each do |user| %>
         <li><%= user.fullname %></li>
       <% end %>
     </ul>
 
-    <h3>Lista rezerwowa</h3>
+    <h3><%= t('.waiting_list') %></h3>
     <ul>
       <% @waiting_users.each do |user| %>
         <li><%= user.fullname %></li>
