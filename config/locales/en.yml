@@ -32,6 +32,7 @@ en:
     sign_in: 'Sign in'
   profile: Profile
   account: Account
+  language: Language
 
   circles:
     show:

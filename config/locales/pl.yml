@@ -10,7 +10,7 @@ pl:
     edit: edycja
 
   nav:
-    circles: 'Latające Kręgi Miejskie'
+    circles: Kręgi
     events: Wydarzenia
     heroines: Bohaterki
     organizers: Organizatorki
@@ -21,6 +21,7 @@ pl:
       sign_in: Zaloguj
     profile: Profil
     account: Konto
+    language: Język
 
   circles:
     show:

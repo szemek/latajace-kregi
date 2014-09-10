@@ -27,6 +27,14 @@
     </ul>
 
     <ul class="right">
+      <li class="has-dropdown">
+        <a href="#"><%= t('nav.language') %></a>
+        <ul class="dropdown">
+          <li><%= link_to('English', url_for(params.merge(locale: 'en'))) %></li>
+          <li><%= link_to('Polski', url_for(params.merge(locale: 'pl'))) %></li>
+        </ul>
+      </li>
+
       <% if current_user %>
         <li class="has-dropdown">
           <a href="#"><%= t('nav.settings') %></a>
@@ -37,6 +45,7 @@
         </li>
         <li class="divider"></li>
       <% end %>
+
       <% if current_user %>
         <li><%= link_to t('nav.users.sign_out'), destroy_user_session_path, method: :delete %></li>
       <% else %>
