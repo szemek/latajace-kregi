@@ -66,3 +66,12 @@ pl:
     registrations:
       edit:
         title: 'Ustawienia konta'
+
+  activerecord:
+    attributes:
+      user:
+        email: 'E-mail'
+        password: 'Hasło'
+        password_confirmation: 'Potwierdzenie hasła'
+        current_password: 'Aktualne hasło'
+        remember_me: 'Zapamiętaj mnie'
