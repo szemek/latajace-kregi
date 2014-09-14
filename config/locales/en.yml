@@ -20,19 +20,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  nav:
-    events: Events
-    people: People
-    heroines: Heroines
-    organizers: Organizers
-    settings: Settings
+  routes:
+    circles: circles
+    events: events
+    organizers: organizers
+    heroines: heroines
+    people: people
+    profile: profile
+    rsvps: rsvps
+    edit: edit
 
-  users:
-    sign_out: 'Sign out'
-    sign_in: 'Sign in'
-  profile: Profile
-  account: Account
-  language: Language
+  nav:
+    account: Account
+    circles: Circles
+    events: Events
+    heroines: Heroines
+    language: Language
+    organizers: Organizers
+    people: People
+    profile: Profile
+    settings: Settings
+    users:
+      sign_out: 'Sign out'
+      sign_in: 'Sign in'
 
   circles:
     show:
