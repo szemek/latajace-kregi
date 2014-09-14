@@ -57,3 +57,12 @@ pl:
   organizers:
     index:
       organizers: Organizatorki
+
+  profiles:
+    edit:
+      title: 'Ustawienia profilu'
+
+  devise:
+    registrations:
+      edit:
+        title: 'Ustawienia konta'

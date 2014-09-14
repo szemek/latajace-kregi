@@ -57,3 +57,12 @@ en:
   organizers:
     index:
       organizers: Organizers
+
+  profiles:
+    edit:
+      title: 'Profile settings'
+
+  devise:
+    registrations:
+      edit:
+        title: 'Ustawienia konta'
