@@ -1,6 +1,6 @@
 <div class="row people">
   <div class="small-12 columns">
-    <h1>Bohaterki</h1>
+    <h1><%= t('.heroines') %></h1>
 
     <%= render partial: 'shared/profiles', locals: {profiles: @heroines, profile_path: :heroine_path } %>
   </div>

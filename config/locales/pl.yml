@@ -10,18 +10,18 @@ pl:
     edit: edycja
 
   nav:
+    account: Konto
     circles: Kręgi
     events: Wydarzenia
     heroines: Bohaterki
+    language: Język
     organizers: Organizatorki
     people: Kręgowiczki
+    profile: Profil
     settings: Ustawienia
     users:
       sign_out: Wyloguj
       sign_in: Zaloguj
-    profile: Profil
-    account: Konto
-    language: Język
 
   circles:
     show:
@@ -45,3 +45,15 @@ pl:
       stay: Tak
       still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
       you_will_participate: 'Weźmiesz udział'
+
+  heroines:
+    index:
+      heroines: Bohaterki
+
+  people:
+    index:
+      people: Kręgowiczki
+
+  organizers:
+    index:
+      organizers: Organizatorki
