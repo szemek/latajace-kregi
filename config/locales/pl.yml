@@ -29,9 +29,9 @@ pl:
 
   events:
     show:
+      attendee_list: 'Lista uczestników'
       join: Dołącz
       sign_in_to_join: 'Zaloguj, aby dołączyć'
-      attendee_list: 'Lista uczestników'
       waiting_list: 'Lista rezerwowa'
     waiting:
       change: 'Zmień zdanie'
