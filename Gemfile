@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.4'
 
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.7'
 
 group :development do
   gem 'sqlite3'
@@ -31,9 +31,9 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'acts-as-taggable-on', '~> 3.4.1'
+gem 'acts-as-taggable-on', '~> 3.4.2'
 gem 'carrierwave', '~> 0.10.0'
-gem 'cloudinary', '~> 1.0.76'
+gem 'cloudinary', '~> 1.0.78'
 gem 'colored', '~> 1.2'
 gem 'devise', '~> 3.2.4'
 gem 'devise-i18n', '~> 0.11.0'
