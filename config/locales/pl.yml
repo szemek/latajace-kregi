@@ -1,4 +1,5 @@
 pl:
+  title: 'Latające Kręgi'
   routes:
     circles: kregi
     events: wydarzenia

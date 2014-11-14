@@ -1,4 +1,5 @@
 en:
+  title: 'Flying Circles'
   routes:
     circles: circles
     events: events
