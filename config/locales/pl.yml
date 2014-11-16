@@ -62,6 +62,16 @@ pl:
   profiles:
     edit:
       title: 'Ustawienia profilu'
+      fullname: 'Imię i nazwisko'
+      activity: 'Projekt/firma'
+      bio: 'O sobie'
+      skill_list: 'To umiem/to mogę zaoferować innym'
+      interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
+      circle: Krąg
+      photo: Zdjęcie
+      update: Aktualizuj
+      webpage: 'Strona www'
+      contact: Kontakt
 
   devise:
     registrations:

@@ -10,35 +10,45 @@
       <div class="row">
         <div class="small-6 columns">
           <div class='field'>
-            <%= f.label :fullname, 'Imię i nazwisko' %>
+            <%= f.label :fullname, t('.fullname') %>
             <%= f.text_field :fullname %>
           </div>
 
           <div class='field'>
-            <%= f.label :activity, 'Projekt/firma' %>
+            <%= f.label :activity, t('.activity') %>
             <%= f.text_field :activity %>
           </div>
 
           <div class='field'>
-            <%= f.label :bio, 'O sobie' %>
+            <%= f.label :bio, t('.bio') %>
             <%= f.text_area :bio %>
           </div>
 
           <div class='field'>
-            <%= f.label :skill_list, 'To umiem/to mogę zaoferować innym' %>
+            <%= f.label :webpage, t('.webpage') %>
+            <%= f.text_field :webpage %>
+          </div>
+
+          <div class='field'>
+            <%= f.label :contact, t('.contact') %>
+            <%= f.text_field :contact %>
+          </div>
+
+          <div class='field'>
+            <%= f.label :skill_list, t('.skill_list') %>
             <%= f.select :skill_list, options_from_collection_for_select(@tags, :name, :name, @profile.skill_list), {}, multiple: true %>
           </div>
 
           <div class='field'>
-            <%= f.label :interest_list, 'Tego potrzebuję/tego się chcę nauczyć' %>
+            <%= f.label :interest_list, t('.interest_list') %>
             <%= f.select :interest_list, options_from_collection_for_select(@tags, :name, :name, @profile.interest_list), {}, multiple: true %>
           </div>
         </div>
         <div class="small-6 columns">
-          <label>Krąg
+          <label><%= t('.circle') %>
             <%= f.select :circle_id, options_from_collection_for_select(circles, :id, :name, selected: @profile.circle_id) %>
           </label>
-          <label>Zdjęcie
+          <label><%= t('.photo') %>
             <%= f.file_field :photo %>
             <%= image_tag(@profile.photo.thumbnail.url) if @profile.photo? %>
           </label>
@@ -46,7 +56,7 @@
       </div>
       <div class="row">
         <div class="small-6 columns">
-          <%= f.submit 'Aktualizuj', class: 'button small' %>
+          <%= f.submit t('.update'), class: 'button small' %>
         </div>
       </div>
     <% end %>

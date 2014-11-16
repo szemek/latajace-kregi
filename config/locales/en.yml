@@ -62,6 +62,16 @@ en:
   profiles:
     edit:
       title: 'Profile settings'
+      fullname: 'Full name'
+      activity: 'Project/company'
+      bio: 'Bio'
+      skill_list: 'Skills I have/can offer'
+      interest_list: 'Skills I need/want to learn'
+      circle: Circle
+      photo: Photo
+      update: Update
+      webpage: 'Web page'
+      contact: Contact
 
   devise:
     registrations:
