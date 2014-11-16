@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140816191357) do
+ActiveRecord::Schema.define(version: 20141116122854) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 20140816191357) do
     t.string   "activity"
     t.integer  "circle_id"
     t.text     "bio"
+    t.string   "webpage"
+    t.string   "contact"
   end
 
   create_table "organizers", force: true do |t|
@@ -96,6 +98,8 @@ ActiveRecord::Schema.define(version: 20140816191357) do
     t.integer  "circle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "webpage"
+    t.string   "contact"
   end
 
   create_table "profiles", force: true do |t|
@@ -107,6 +111,8 @@ ActiveRecord::Schema.define(version: 20140816191357) do
     t.string   "activity"
     t.integer  "circle_id"
     t.text     "bio"
+    t.string   "webpage"
+    t.string   "contact"
   end
 
   create_table "rsvps", force: true do |t|
