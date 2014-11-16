@@ -1,0 +1,14 @@
+<li class="has-dropdown">
+  <a href="#">
+    <%= image_tag "icons/#{current_locale}.png" %>
+  </a>
+  <ul class="dropdown">
+    <% ['pl', 'en'].each do |language| %>
+      <li>
+        <%= link_to(url_for(params.merge(locale: language))) do %>
+          <%= image_tag "icons/#{language}.png" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</li>

@@ -8,6 +8,12 @@ class ApplicationController < ActionController::Base
     I18n.locale = :en if admin_area?
   end
 
+  def current_locale
+    I18n.locale || :en
+  end
+
+  helper_method :current_locale
+
   def admin_area?
     request.path.include?('/admin')
   end
