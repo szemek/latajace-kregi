@@ -7,6 +7,6 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   version :thumbnail do
-    process resize_to_limit: [200, 200]
+    process resize_to_fill: [200, 200, 'north_west']
   end
 end
