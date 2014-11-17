@@ -1,19 +1,27 @@
 <% if user_signed_in? %>
   <div class='extended-info'>
     <% if profile.skill_list.present? %>
-      <p>To umiem/to mogę zaoferować innym</p>
+      <p><%= t('.skill_list') %></p>
       <% profile.skill_list.each do |skill| %>
         <span class='success label'><%= skill %></span>
       <% end %>
     <% end %>
 
     <% if profile.interest_list.present? %>
-      <p>Tego potrzebuję/tego się chcę nauczyć</p>
+      <p><%= t('.interest_list') %></p>
       <% profile.interest_list.each do |interest| %>
         <span class='label'><%= interest %></span>
       <% end %>
     <% end %>
+
+    <% if profile.webpage? %>
+      <p><%= auto_link(profile.webpage) %><p>
+    <% end %>
+
+    <% if profile.contact? %>
+      <p><%= auto_link(profile.contact) %><p>
+    <% end %>
   </div>
 <% else %>
-  <%= link_to 'Zaloguj się, aby zobaczyć więcej informacji', new_user_session_path, class: 'button success' %>
+  <%= link_to t('.login_to_see_more'), new_user_session_path, class: 'button success' %>
 <% end %>

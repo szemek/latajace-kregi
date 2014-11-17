@@ -61,17 +61,23 @@ pl:
 
   profiles:
     edit:
-      title: 'Ustawienia profilu'
-      fullname: 'Imię i nazwisko'
       activity: 'Projekt/firma'
       bio: 'O sobie'
-      skill_list: 'To umiem/to mogę zaoferować innym'
-      interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
       circle: Krąg
+      contact: Kontakt
+      fullname: 'Imię i nazwisko'
+      interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
       photo: Zdjęcie
+      skill_list: 'To umiem/to mogę zaoferować innym'
+      title: 'Ustawienia profilu'
       update: Aktualizuj
       webpage: 'Strona www'
-      contact: Kontakt
+
+  shared:
+    extended_info:
+      interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
+      login_to_see_more: 'Zaloguj się, aby zobaczyć więcej informacji'
+      skill_list: 'To umiem/to mogę zaoferować innym'
 
   devise:
     registrations:

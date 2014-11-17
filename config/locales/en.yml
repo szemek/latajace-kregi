@@ -61,17 +61,23 @@ en:
 
   profiles:
     edit:
-      title: 'Profile settings'
-      fullname: 'Full name'
       activity: 'Project/company'
       bio: 'Bio'
-      skill_list: 'Skills I have/can offer'
-      interest_list: 'Skills I need/want to learn'
       circle: Circle
+      contact: Contact
+      fullname: 'Full name'
+      interest_list: 'Skills I need/want to learn'
       photo: Photo
+      skill_list: 'Skills I have/can offer'
+      title: 'Profile settings'
       update: Update
       webpage: 'Web page'
-      contact: Contact
+
+  shared:
+    extended_info:
+      interest_list: 'Skills I need/want to learn'
+      login_to_see_more: 'Log in to see more'
+      skill_list: 'Skills I have/can offer'
 
   devise:
     registrations:
