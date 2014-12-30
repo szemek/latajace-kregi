@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Latające kręgi
+    = stylesheet_link_tag 'landing'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&subset=latin,latin-ext'
+  %body.landing
+    %h1= t('.intro')
+    = link_to t('.go'), dashboard_path

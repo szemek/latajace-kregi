@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   localized do
-    root 'dashboard#index'
+    root 'landing#index'
+    get 'dashboard' => 'dashboard#index'
 
     resource :profile, only: [:edit, :update]
 

@@ -10,6 +10,11 @@ en:
     rsvps: rsvps
     edit: edit
 
+  landing:
+    index:
+      intro: 'We help creative feminine businesses spread their wings'
+      go: 'Go'
+
   nav:
     account: Account
     circles: Circles

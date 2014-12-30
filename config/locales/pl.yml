@@ -10,6 +10,11 @@ pl:
     rsvps: rsvp
     edit: edycja
 
+  landing:
+    index:
+      intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
+      go: 'Wejdź'
+
   nav:
     account: Konto
     circles: Kręgi
