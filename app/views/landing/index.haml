@@ -1,2 +1,4 @@
-%h1= t('.intro')
-= link_to t('.go'), dashboard_path
+.content{'ng-controller' => 'FormsController'}
+  .intro
+    %h1= t('.intro')
+    = link_to t('.go'), dashboard_path

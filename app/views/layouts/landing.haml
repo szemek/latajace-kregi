@@ -1,5 +1,5 @@
 !!!
-%html{lang: params[:locale]}
+%html{lang: params[:locale], 'ng-app' => 'landing'}
   %head
     %title= t('title')
 
@@ -7,11 +7,10 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
 
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&subset=latin,latin-ext'
-    = stylesheet_link_tag 'application'
-    = javascript_include_tag 'vendor/modernizr'
+    = stylesheet_link_tag 'landing'
     = csrf_meta_tags
 
   %body.landing
     = yield
 
-    = javascript_include_tag "application"
+    = javascript_include_tag 'angular/landing'

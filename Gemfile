@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.2.0'
 
@@ -50,3 +51,5 @@ gem 'rails_autolink', '~> 1.1.6'
 gem 'route_translator', '~> 4.0.0'
 gem 'searchlight', '~> 3.1.1'
 gem 'thin', '~> 1.6.3'
+
+gem 'rails-assets-angular', '~> 1.3.8'
