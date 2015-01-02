@@ -11,7 +11,10 @@
     = javascript_include_tag 'vendor/modernizr'
     = csrf_meta_tags
 
-  %body.landing
-    = yield
+  %body
+    = render 'shared/navigation'
 
-    = javascript_include_tag "application"
+    .container.row
+      = yield
+
+    = javascript_include_tag 'application'
