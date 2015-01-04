@@ -159,6 +159,7 @@ GEM
     multi_json (1.10.1)
     named (1.1.0)
     netrc (0.10.2)
+    newrelic_rpm (3.9.9.275)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.1.0)
@@ -298,6 +299,7 @@ DEPENDENCIES
   jquery-rails (~> 3.1.2)
   jquery-ui-rails (~> 5.0.3)
   meta_request (~> 0.3.4)
+  newrelic_rpm (~> 3.9.9.275)
   pg
   progress (~> 3.1.0)
   pry-rails
