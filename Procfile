@@ -1,1 +1,1 @@
-web: bin/rails server thin -p $PORT -e $RAILS_ENV
+web: bundle exec unicorn -p $PORT -E production -c ./config/unicorn.rb

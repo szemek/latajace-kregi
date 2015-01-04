@@ -50,6 +50,6 @@ gem 'rails-i18n', '~> 4.0.3'
 gem 'rails_autolink', '~> 1.1.6'
 gem 'route_translator', '~> 4.0.0'
 gem 'searchlight', '~> 3.1.1'
-gem 'thin', '~> 1.6.3'
+gem 'unicorn', '~> 4.8.3'
 
 gem 'rails-assets-angular', '~> 1.3.8'
