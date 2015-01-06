@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require_self
- *= require landing
  *= require foundation_and_overrides
  *= require custom
  *= require circles

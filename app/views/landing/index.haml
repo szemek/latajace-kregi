@@ -1,4 +1,13 @@
 .content{'ng-controller' => 'FormsController'}
   .intro
     %h1= t('.intro')
-    = link_to t('.go'), dashboard_path
+    = link_to t('.go'), dashboard_path #, 'ng-click' => 'showModal()', 'stop-event' => true
+
+  .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
+    .md-content
+      %h3 Modal Dialog
+      %div
+        %p This is a modal window.
+        %button.md-close{'ng-click' => 'closeModal()'} Close me!
+
+  .md-overlay{'ng-click' => 'closeModal()'}
