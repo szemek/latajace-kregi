@@ -31,32 +31,60 @@ html, body {
         font-size: 2em;
         line-height: 1.5;
       }
-
-      a {
-        height: 55px;
-        width: 125px;
-        margin: 50px auto;
-        display: block;
-
-        cursor: pointer;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.6em;
-        line-height: 1;
-        border: 1px solid #ffffff;
-        padding: 13px 25px;
-        overflow: hidden;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        -webkit-transition: all .35s;
-        transition: all .35s;
-
-        &:hover {
-          background: #fff;
-          color: #353946;
-        }
-      }
     }
   }
 }
 
+.login-email-input {
+  display: inline-block;
+  width: 300px;
+  max-width: 75%;
+  position: relative;
+  height: 40px;
+
+  input {
+    height: 100%;
+    width: 75%;
+    border: none;
+    padding: 2px 5px;
+    font-size: 14px;
+    color: #4b8971;
+    box-sizing: border-box;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  a {
+    background: #4b8971;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: 1px solid white;
+    border-left: none;
+    box-shadow: none;
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+
+    cursor: pointer;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+
+    &:hover {
+      background: #cb8c6f;
+    }
+  }
+}

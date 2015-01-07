@@ -1,7 +1,11 @@
 .content{'ng-controller' => 'FormsController'}
   .intro
     %h1= t('.intro')
-    = link_to t('.go'), dashboard_path #, 'ng-click' => 'showModal()', 'stop-event' => true
+    .form
+      = form_for(:user, url: check_path) do |f|
+        %span.login-email-input
+          = f.email_field :email, placeholder: 'Email'
+          = link_to t('.go'), dashboard_path#, 'ng-click' => 'showModal()', 'stop-event' => true
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
     .md-content

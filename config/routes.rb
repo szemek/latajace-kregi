@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
+  post 'users/signin_or_signup', as: :check
+
   localized do
     root 'landing#index'
     get 'dashboard' => 'dashboard#index'
