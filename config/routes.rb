@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
 
-  post 'users/signin_or_signup', as: :check
+  post 'users/check'
 
   localized do
     root 'landing#index'
@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     resources :heroines, only: [:index, :show]
     resources :organizers, only: [:index, :show]
     resources :people, only: [:index, :show]
+  end
+
+  namespace :api do
+    post 'users/check'
   end
 
   resources :tags

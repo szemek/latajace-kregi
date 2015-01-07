@@ -58,7 +58,7 @@ html, body {
     }
   }
 
-  a {
+  input[type=submit] {
     background: #4b8971;
     color: white;
     font-weight: bold;
@@ -76,7 +76,6 @@ html, body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     text-align: center;
-    line-height: 40px;
     text-decoration: none;
 
     cursor: pointer;

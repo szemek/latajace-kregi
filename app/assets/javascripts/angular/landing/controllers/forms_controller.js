@@ -1,9 +1,13 @@
 app.controller('FormsController', ['$scope', function($scope){
   $scope.showModal = function() {
-    $scope.modal = true;
+    $.post('/api/users/check', $('#check form').serialize(), function(data){
+      $scope[data.action] = true;
+      $scope.$apply();
+    });
   };
 
   $scope.closeModal = function() {
-    $scope.modal = false;
+    $scope.signin = false;
+    $scope.signup = false;
   }
 }]);

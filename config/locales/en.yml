@@ -12,8 +12,10 @@ en:
 
   landing:
     index:
-      intro: 'We help creative feminine businesses spread their wings'
       go: 'Go'
+      intro: 'We help creative feminine businesses spread their wings'
+      signin: 'Sign in'
+      signup: 'Sign up'
 
   nav:
     account: Account

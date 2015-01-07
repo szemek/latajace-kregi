@@ -12,8 +12,10 @@ pl:
 
   landing:
     index:
-      intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
       go: 'Wejdź'
+      intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
+      signin: Zaloguj
+      signup: Zarejestruj
 
   nav:
     account: Konto
