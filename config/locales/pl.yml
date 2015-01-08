@@ -12,8 +12,11 @@ pl:
 
   landing:
     index:
+      email: 'E-mail'
       go: 'Wejdź'
       intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
+      password: 'Hasło'
+      password_confirmation: 'Potwierdzenie hasła'
       signin: Zaloguj
       signup: Zarejestruj
 

@@ -12,8 +12,11 @@ en:
 
   landing:
     index:
+      email: Email
       go: 'Go'
       intro: 'We help creative feminine businesses spread their wings'
+      password: Password
+      password_confirmation: 'Password confirmation'
       signin: 'Sign in'
       signup: 'Sign up'
 
