@@ -36,6 +36,11 @@ html, body {
       #check {
         width: 300px;
         margin: 0 auto;
+
+        input {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       }
     }
 
