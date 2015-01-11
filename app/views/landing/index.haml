@@ -15,7 +15,7 @@
           = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
           = f.password_field :password, placeholder: t('.password')
           = f.submit t('.signin')
-      %button.md-close{'ng-click' => 'signin = false'} Close me!
+      %button.md-close{'ng-click' => 'closeModal()'} Close me!
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": signup}'}
     .md-content
@@ -26,6 +26,6 @@
           = f.password_field :password, placeholder: t('.password')
           = f.password_field :password_confirmation, placeholder: t('.password_confirmation')
           = f.submit t('.signup')
-      %button.md-close{'ng-click' => 'signup = false'} Close me!
+      %button.md-close{'ng-click' => 'closeModal()'} Close me!
 
   .md-overlay{'ng-click' => 'closeModal()'}
