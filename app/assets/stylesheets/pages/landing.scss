@@ -30,6 +30,12 @@ html, body {
         font-weight: bold;
         font-size: 2em;
         line-height: 1.5;
+        text-align: center;
+      }
+
+      #check {
+        width: 300px;
+        margin: 0 auto;
       }
     }
 
@@ -42,13 +48,24 @@ html, body {
       height: 40px;
       font-size: 14px;
     }
+
+    #signup {
+      input {
+        width: 100%;
+      }
+    }
+
+    #signin {
+      input {
+        width: 100%;
+      }
+    }
   }
 }
 
 .login-email-input {
   display: inline-block;
-  width: 300px;
-  max-width: 75%;
+  width: 100%;
   position: relative;
   height: 40px;
 

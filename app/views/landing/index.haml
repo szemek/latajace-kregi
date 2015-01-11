@@ -4,7 +4,7 @@
     #check
       = form_for(:user, url: users_check_path) do |f|
         %span.login-email-input
-          = f.email_field :email, placeholder: t('.email')
+          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
           = f.submit t('.go'), 'ng-click' => 'showModal()', 'stop-event' => true
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": signin}'}
@@ -12,7 +12,7 @@
       %h3= t('.signin')
       #signin
         = form_for(:user, url: user_session_path) do |f|
-          = f.email_field :email, placeholder: t('.email')
+          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
           = f.password_field :password, placeholder: t('.password')
           = f.submit t('.signin')
       %button.md-close{'ng-click' => 'signin = false'} Close me!
@@ -22,7 +22,7 @@
       %h3= t('.signup')
       #signup
         = form_for(:user, url: user_registration_path) do |f|
-          = f.email_field :email, placeholder: t('.email')
+          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
           = f.password_field :password, placeholder: t('.password')
           = f.password_field :password_confirmation, placeholder: t('.password_confirmation')
           = f.submit t('.signup')
