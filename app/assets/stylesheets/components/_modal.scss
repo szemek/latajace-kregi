@@ -51,6 +51,32 @@
     line-height: 50px;
     text-transform: uppercase;
   }
+
+  .plane-wrapper {
+    display: inline-block;
+    width: 310px;
+    height: 310px;
+    padding: 40px;
+    margin: 0;
+
+    .plane {
+      background: image-url('landing/plane.png');
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      margin: 40px;
+      height: 230px;
+      width: 230px;
+      margin: 0;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .plane {
+        background: image-url('landing/plane@2x.png');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
 
 .md-content > div {
