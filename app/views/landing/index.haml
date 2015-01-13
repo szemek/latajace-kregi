@@ -1,11 +1,8 @@
 .content{'ng-controller' => 'FormsController'}
   .intro
     %h1= t('.intro')
-    #check
-      = form_for(:user, url: users_check_path) do |f|
-        %span.login-email-input
-          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
-          = f.submit t('.go'), 'ng-click' => 'showModal()', 'stop-event' => true
+
+    .go= link_to t('.go'), dashboard_path
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": signin}'}
     .md-content

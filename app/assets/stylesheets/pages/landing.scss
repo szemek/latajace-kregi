@@ -35,6 +35,33 @@ html, body {
         font-family: 'Inder', sans-serif;
       }
 
+      .go {
+        margin-top: 60px;
+
+        a {
+          background: transparent;
+          border: 3px solid white;
+          color: white;
+          display: block;
+          font-family: 'Inder', sans-serif;
+          font-size: 24px;
+          margin: 0 auto;
+          padding: 10px 40px;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          width: 240px;
+          -webkit-transition: all .35s;
+          transition: all .35s;
+
+          &:hover {
+            background: #fff;
+            color: #353946;
+          }
+        }
+
+      }
+
       #check {
         width: 300px;
         margin: 0 auto;
