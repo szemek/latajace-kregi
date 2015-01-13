@@ -1,28 +1,10 @@
 .content{'ng-controller' => 'FormsController'}
   .intro
     %h1= t('.intro')
+    .go= link_to t('.go'), dashboard_path, 'stop-event' => true, 'ng-click' => 'showModal()'
 
-    .go= link_to t('.go'), dashboard_path
-
-  .md-modal.md-effect-3{'ng-class' => '{"md-show": signin}'}
+  .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
     .md-content
-      %h3= t('.signin')
-      #signin
-        = form_for(:user, url: user_session_path) do |f|
-          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
-          = f.password_field :password, placeholder: t('.password')
-          = f.submit t('.signin')
-      %button.md-close{'ng-click' => 'closeModal()'} Close me!
-
-  .md-modal.md-effect-3{'ng-class' => '{"md-show": signup}'}
-    .md-content
-      %h3= t('.signup')
-      #signup
-        = form_for(:user, url: user_registration_path) do |f|
-          = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
-          = f.password_field :password, placeholder: t('.password')
-          = f.password_field :password_confirmation, placeholder: t('.password_confirmation')
-          = f.submit t('.signup')
-      %button.md-close{'ng-click' => 'closeModal()'} Close me!
+      %h3= t('.decide')
 
   .md-overlay{'ng-click' => 'closeModal()'}

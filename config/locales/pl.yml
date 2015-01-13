@@ -12,6 +12,7 @@ pl:
 
   landing:
     index:
+      decide: 'Zaloguj / zarejestruj się'
       email: 'E-mail'
       go: 'Wejdź'
       intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
