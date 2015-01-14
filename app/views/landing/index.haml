@@ -9,4 +9,12 @@
       .plane-wrapper
         .plane
 
+      #check
+        = form_for(:user, url: users_check_path) do |f|
+          %span#login-email-wrapper
+            = f.label :email do
+              = fa_icon 'envelope'
+            = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
+          = f.submit t('.signin')
+
   .md-overlay{'ng-click' => 'closeModal()'}

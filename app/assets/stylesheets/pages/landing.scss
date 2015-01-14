@@ -1,5 +1,6 @@
-@import 'config/fonts';
-@import 'components/modal';
+@import "config/fonts";
+@import "components/modal";
+@import "font-awesome";
 
 * {
   box-sizing: border-box;
@@ -61,26 +62,62 @@ html, body {
         }
 
       }
+    }
 
-      #check {
-        width: 300px;
-        margin: 0 auto;
+    #check {
+      width: 300px;
+      padding-left: 10px;
+      padding-top: 60px;
+
+      #login-email-wrapper {
+        display: inline-block;
+        position: relative;
+        width: 95%;
+        height: 40px;
+        padding: 6px;
+        padding-left: 12px;
+        background: white;
+
+        label {
+          i {
+            height: 25px;
+            width: 25px;
+            font-size: 15px;
+            line-height: 25px;
+            color: #12aca3;
+          }
+        }
 
         input {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
+          width: 80%;
+          height: 28px;
+          font-size: 14px;
+          line-height: 16px;
+          border: none;
+          padding: 0;
+
+          &:focus {
+            outline: 0;
+          }
         }
+      }
+
+      input[type=submit] {
+        width: 95%;
+        background: #12aca3;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Source Sans Pro', sans-serif;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding: 12px;
+        cursor: pointer;
       }
     }
 
-    input {
+    input[type=submit] {
       border: none;
-      display: block;
-      border-radius: 2px;
-      margin-bottom: 10px;
-      padding: 2px 5px;
-      height: 40px;
-      font-size: 14px;
     }
 
     #signup {
@@ -93,59 +130,6 @@ html, body {
       input {
         width: 100%;
       }
-    }
-  }
-}
-
-.login-email-input {
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  height: 40px;
-
-  input {
-    height: 100%;
-    width: 75%;
-    border: none;
-    padding: 2px 5px;
-    font-size: 14px;
-    color: #4b8971;
-    box-sizing: border-box;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-    margin-bottom: 10px;
-
-    &:focus {
-      outline: 0;
-    }
-  }
-
-  input[type=submit] {
-    background: #4b8971;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 0;
-    border: 1px solid white;
-    border-left: none;
-    box-shadow: none;
-    height: 100%;
-    width: 25%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 14px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    text-align: center;
-    text-decoration: none;
-
-    cursor: pointer;
-    -webkit-transition: all .35s;
-    transition: all .35s;
-
-    &:hover {
-      background: #cb8c6f;
     }
   }
 }

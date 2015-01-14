@@ -58,6 +58,7 @@
     height: 310px;
     padding: 40px;
     margin: 0;
+    float: left;
 
     .plane {
       background: image-url('landing/plane.png');
@@ -69,7 +70,7 @@
       margin: 0;
     }
 
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .plane {
         background: image-url('landing/plane@2x.png');
         background-size: auto 100%;
@@ -80,10 +81,9 @@
 }
 
 .md-content > div {
-  padding: 15px 40px 30px;
+  padding: 0;
   margin: 0;
-  font-weight: 300;
-  font-size: 1.15em;
+  float: left;
 }
 
 .md-content > div p {
