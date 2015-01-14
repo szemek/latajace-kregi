@@ -25,7 +25,7 @@
             = f.text_field :name, placeholder: t('.name')
 
           = f.submit t('.next'), 'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true
-          = f.submit t('.signin'), 'ng-show' => 'showSignin', 'stop-event' => true
-          = f.submit t('.signup'), 'ng-show' => 'showSignup', 'stop-event' => true
+          = f.submit t('.signin'), 'ng-show' => 'showSignin', 'ng-click' => 'signin()', 'stop-event' => true
+          = f.submit t('.signup'), 'ng-show' => 'showSignup', 'ng-click' => 'signup()', 'stop-event' => true
 
   .md-overlay{'ng-click' => 'closeModal()'}

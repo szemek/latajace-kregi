@@ -1,4 +1,4 @@
-app.controller('FormsController', ['$scope', function($scope){
+app.controller('FormsController', ['$scope', function($scope) {
   $scope.showEmail = true;
   $scope.showNext = true;
 
@@ -23,11 +23,23 @@ app.controller('FormsController', ['$scope', function($scope){
   };
 
   $scope.check = function() {
-    $.post('/api/users/check', $('form').serialize(), function(data){
+    $.post('/api/users/check', $('form').serialize(), function(data) {
       $scope.go[data.action]();
       $scope.$apply();
     });
   };
+
+  $scope.signin = function() {
+    $.post('/api/users/sign_in', $('form').serialize(), function(data) {
+      window.location.replace('/dashboard');
+    }, 'json');
+  }
+
+  $scope.signup = function() {
+    $.post('/api/users', $('form').serialize(), function(data) {
+      window.location.replace('/dashboard');
+    }, 'json');
+  }
 
   $scope.closeModal = function() {
     $('.intro').show();

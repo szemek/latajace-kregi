@@ -24,6 +24,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     post 'users/check'
+
+    devise_scope :user do
+      post 'users/sign_in' => 'sessions#create'
+      post 'users' => 'registrations#create'
+    end
   end
 
   resources :tags
