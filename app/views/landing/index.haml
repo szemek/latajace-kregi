@@ -9,12 +9,23 @@
       .plane-wrapper
         .plane
 
-      #check
+      .form
         = form_for(:user, url: users_check_path) do |f|
-          %span#login-email-wrapper
+          %span.field-wrapper{'ng-show' => 'showEmail'}
             = f.label :email do
               = fa_icon 'envelope'
             = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
-          = f.submit t('.signin')
+          %span.field-wrapper{'ng-show' => 'showPassword'}
+            = f.label :password do
+              = fa_icon 'lock'
+            = f.password_field :password, placeholder: t('.password')
+          %span.field-wrapper{'ng-show' => 'showName'}
+            = f.label :name do
+              = fa_icon 'user'
+            = f.text_field :name, placeholder: t('.name')
+
+          = f.submit t('.next'), 'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true
+          = f.submit t('.signin'), 'ng-show' => 'showSignin', 'stop-event' => true
+          = f.submit t('.signup'), 'ng-show' => 'showSignup', 'stop-event' => true
 
   .md-overlay{'ng-click' => 'closeModal()'}

@@ -16,6 +16,8 @@ pl:
       email: 'E-mail'
       go: 'Wejdź'
       intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
+      name: 'Imię i nazwisko'
+      next: 'Dalej'
       password: 'Hasło'
       password_confirmation: 'Potwierdzenie hasła'
       signin: Zaloguj

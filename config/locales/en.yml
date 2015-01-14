@@ -16,6 +16,8 @@ en:
       email: Email
       go: 'Go'
       intro: 'We help creative feminine businesses spread their wings'
+      name: 'Full name'
+      next: 'Next'
       password: Password
       password_confirmation: 'Password confirmation'
       signin: 'Sign in'
