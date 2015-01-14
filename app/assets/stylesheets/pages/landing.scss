@@ -111,7 +111,9 @@ html, body {
         }
       }
 
-      input[type=submit] {
+      button {
+        border: none;
+        margin: 0;
         margin-top: 20px;
         width: 95%;
         background: #12aca3;

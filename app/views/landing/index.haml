@@ -10,22 +10,23 @@
         .plane
 
       .form
-        = form_for(:user, url: users_check_path) do |f|
+        %form{'ng-enter' => 'submit()'}
+          = token_tag
           %span.field-wrapper{'ng-show' => 'showEmail'}
-            = f.label :email do
+            = label_tag 'user[email]' do
               = fa_icon 'envelope'
-            = f.email_field :email, placeholder: t('.email'), 'ng-model' => 'email'
+            = email_field_tag 'user[email]', nil, placeholder: t('.email'), 'ng-model' => 'email'
           %span.field-wrapper{'ng-show' => 'showPassword'}
-            = f.label :password do
+            = label_tag 'user[password]' do
               = fa_icon 'lock'
-            = f.password_field :password, placeholder: t('.password')
+            = password_field_tag 'user[password]', nil, placeholder: t('.password')
           %span.field-wrapper{'ng-show' => 'showName'}
-            = f.label :name do
+            = label_tag 'user[name]' do
               = fa_icon 'user'
-            = f.text_field :name, placeholder: t('.name')
+            = text_field_tag 'user[name]', nil, placeholder: t('.name')
 
-          = f.submit t('.next'), 'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true
-          = f.submit t('.signin'), 'ng-show' => 'showSignin', 'ng-click' => 'signin()', 'stop-event' => true
-          = f.submit t('.signup'), 'ng-show' => 'showSignup', 'ng-click' => 'signup()', 'stop-event' => true
+          %button{'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true}= t('.next')
+          %button{'ng-show' => 'showSignin', 'ng-click' => 'signin()', 'stop-event' => true}= t('.signin')
+          %button{'ng-show' => 'showSignup', 'ng-click' => 'signup()', 'stop-event' => true}= t('.signup')
 
   .md-overlay{'ng-click' => 'closeModal()'}

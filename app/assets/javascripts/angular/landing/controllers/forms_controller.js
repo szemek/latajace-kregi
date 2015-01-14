@@ -22,6 +22,16 @@ app.controller('FormsController', ['$scope', function($scope) {
     }
   };
 
+  $scope.submit = function() {
+    if ($scope.showName) {
+      $scope.signup();
+    } else if ($scope.showPassword) {
+      $scope.signin();
+    } else {
+      $scope.check();
+    }
+  };
+
   $scope.check = function() {
     $.post('/api/users/check', $('form').serialize(), function(data) {
       $scope.go[data.action]();
