@@ -7,6 +7,9 @@
   .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
     .md-content
       %h3= t('.decide')
+
+      = image_tag 'landing/spinner.svg', class: 'spinner', 'ng-show' => 'spinner'
+
       .plane-wrapper
         .plane
 
