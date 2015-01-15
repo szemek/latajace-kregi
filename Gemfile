@@ -55,3 +55,4 @@ gem 'searchlight', '~> 3.1.1'
 gem 'unicorn', '~> 4.8.3'
 
 gem 'rails-assets-angular', '~> 1.3.8'
+gem 'rails-assets-angular-translate', '~> 2.5.2'
