@@ -18,12 +18,12 @@ app.controller('FormsController', ['$scope', function($scope) {
       $scope.showNext = false;
       $scope.showSignup = true;
       $scope.showPassword = true;
-      $scope.showName = true;
+      $scope.showPasswordConfirmation = true;
     }
   };
 
   $scope.submit = function() {
-    if ($scope.showName) {
+    if ($scope.showPasswordConfirmation) {
       $scope.signup();
     } else if ($scope.showPassword) {
       $scope.signin();
