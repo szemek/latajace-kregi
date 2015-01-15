@@ -34,3 +34,7 @@
           %button{'ng-show' => 'showSignup', 'ng-click' => 'signup()', 'stop-event' => true}= t('.signup')
 
   .md-overlay{'ng-click' => 'closeModal()'}
+
+  .notification
+    %p{'ng-repeat' => 'message in messages'}
+      {{message.field | translate}} {{message.description}}

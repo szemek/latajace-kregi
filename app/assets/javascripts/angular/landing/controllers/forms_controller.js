@@ -1,4 +1,4 @@
-app.controller('FormsController', ['$scope', function($scope) {
+app.controller('FormsController', ['$scope', '$translate', function($scope, $translate) {
   $scope.showEmail = true;
   $scope.showNext = true;
 
@@ -47,7 +47,15 @@ app.controller('FormsController', ['$scope', function($scope) {
       $scope.spinner = false;
       $scope.$apply();
       window.location.replace('/dashboard');
-    }, 'json');
+    }, 'json').fail(function(data) {
+      var error = data.responseJSON.error;
+
+      $scope.spinner = false;
+      $scope.messages = [{description: error}];
+      $scope.$apply();
+
+      $('.notification').fadeIn(500).delay(2000).fadeOut(500);
+    });
   }
 
   $scope.signup = function() {
@@ -56,7 +64,18 @@ app.controller('FormsController', ['$scope', function($scope) {
       $scope.spinner = false;
       $scope.$apply();
       window.location.replace('/dashboard');
-    }, 'json');
+    }, 'json').fail(function(data) {
+      var errors = data.responseJSON.errors;
+      var messages = _.map(errors, function(value, key) {
+        return {field: key, description: value.join(', ')};
+      });
+
+      $scope.spinner = false;
+      $scope.messages = messages;
+      $scope.$apply();
+
+      $('.notification').fadeIn(500).delay(2000).fadeOut(500);
+    });
   }
 
   $scope.closeModal = function() {
