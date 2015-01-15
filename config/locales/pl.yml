@@ -105,3 +105,9 @@ pl:
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
         remember_me: 'Zapamiętaj mnie'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: 'został już zajęty'
