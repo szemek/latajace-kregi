@@ -13,12 +13,24 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
       $scope.showNext = false;
       $scope.showSignin = true;
       $scope.showPassword = true;
+      $scope.showBack = true;
     },
     signup: function() {
       $scope.showNext = false;
       $scope.showSignup = true;
       $scope.showPassword = true;
       $scope.showPasswordConfirmation = true;
+      $scope.showBack = true;
+    },
+    back: function() {
+      $scope.showNext = true;
+      $scope.showSignin = false;
+      $scope.showSignup = false;
+      $scope.password = null;
+      $scope.showPassword = false;
+      $scope.passwordConfirmation = null;
+      $scope.showPasswordConfirmation = false;
+      $scope.showBack = false;
     }
   };
 
@@ -30,6 +42,10 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     } else {
       $scope.check();
     }
+  };
+
+  $scope.back = function() {
+    $scope.go.back();
   };
 
   $scope.check = function() {
