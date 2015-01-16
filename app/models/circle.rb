@@ -3,6 +3,8 @@ class Circle < ActiveRecord::Base
   has_many :profiles
   has_many :heroines
 
+  validates :position, presence: true
+
   extend FriendlyId
   friendly_id :slug_candidates, use: [:slugged, :finders]
 
