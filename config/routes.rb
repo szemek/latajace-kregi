@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
     resource :profile, only: [:edit, :update]
 
-    resources :circles, only: [:show]
+    resources :circles, only: [:index, :show]
 
     resources :events, only: [:show] do
       resources :rsvps, only: [:create, :destroy]

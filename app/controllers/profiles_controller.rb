@@ -1,7 +1,10 @@
 class ProfilesController < ApplicationController
   def edit
-    @profile = Profile.find_or_create_by(user: current_user)
-    @tags = Tag.order(:name)
+    circles = Circle.all
+    profile = Profile.find_or_create_by(user: current_user)
+    tags = Tag.order(:name)
+
+    render :edit, locals: {circles: circles, profile: profile, tags: tags}
   end
 
   def update

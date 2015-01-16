@@ -17,10 +17,4 @@ class ApplicationController < ActionController::Base
   def admin_area?
     request.path.include?('/admin')
   end
-
-  def circles
-    @_circles ||= Circle.order(:name)
-  end
-
-  helper_method :circles
 end
