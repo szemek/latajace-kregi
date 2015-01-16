@@ -22,22 +22,8 @@
     <ul class="right">
       <%= render 'shared/languages' %>
 
-      <% if current_user %>
-        <li class="has-dropdown">
-          <a href="#"><%= t('nav.settings') %></a>
-          <ul class="dropdown">
-            <li><%= link_to t('nav.profile'), edit_profile_path %></li>
-            <li><%= link_to t('nav.account'), edit_user_registration_path %>
-          </ul>
-        </li>
-        <li class="divider"></li>
-      <% end %>
-
-      <% if current_user %>
-        <li><%= link_to t('nav.users.sign_out'), destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to t('nav.users.sign_in'), new_user_session_path %></li>
-      <% end %>
+      <li><%= link_to t('nav.profile'), edit_profile_path %></li>
+      <li><%= link_to t('nav.users.sign_out'), destroy_user_session_path, method: :delete %></li>
     </ul>
   </section>
 </nav>
