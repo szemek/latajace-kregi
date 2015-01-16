@@ -1,3 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Inder);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext);
+
+@font-face {
+  font-family: 'Komoda';
+  src: font-url('komoda.eot');
+  src: font-url('komoda.eot?#iefix') format('embedded-opentype'),
+       font-url('komoda.woff2') format('woff2'),
+       font-url('komoda.woff') format('woff'),
+       font-url('komoda.ttf') format('truetype'),
+       font-url('komoda.svg#komodaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
