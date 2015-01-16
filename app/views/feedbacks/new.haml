@@ -1,0 +1,5 @@
+%h1 Feedback
+
+= form_for(feedback, url: feedback_path(feedback)) do |f|
+  = f.text_area :content, placeholder: t('.teaser')
+  = f.submit t('.submit'), class: 'button'

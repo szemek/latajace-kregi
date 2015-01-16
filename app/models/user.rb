@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_one :profile, dependent: :destroy
   has_many :rsvps
   has_many :events, through: :rsvps
+  has_many :feedbacks
 
   delegate :fullname, to: :profile, allow_nil: true
 end

@@ -32,4 +32,7 @@ Rails.application.routes.draw do
   end
 
   resources :tags
+  resource :feedback do
+    get :thanks
+  end
 end

@@ -23,6 +23,14 @@ pl:
       signin: Zaloguj
       signup: Zarejestruj
 
+  feedbacks:
+    new:
+      submit: Wyślij
+      teaser: 'Napisz nam co myślisz o stronie...'
+    thanks:
+      header: 'Dzięki!'
+      sentence: 'Dziekujemy za Twoją opinię'
+
   nav:
     account: Konto
     circles: Kręgi

@@ -23,6 +23,14 @@ en:
       signin: 'Sign in'
       signup: 'Sign up'
 
+  feedbacks:
+    new:
+      submit: Submit
+      teaser: 'Write what you think about page...'
+    thanks:
+      header: 'Thanks!'
+      sentence: 'Thank you for your opinion'
+
   nav:
     account: Account
     circles: Circles
