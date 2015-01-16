@@ -57,13 +57,13 @@
 .profile {
   position: relative;
 
-  .circle, .events {
+  .profile-circle, .events {
     position: absolute;
     top: 160px;
     font-size: 21px;
   }
 
-  .circle {
+  .profile-circle {
     right: 10px;
     background-color: #e67e22;
   }
