@@ -1,7 +1,11 @@
 <div class='row'>
   <div class='small-12 large-3 columns'>
     <div class="th photo">
-      <%= image_tag(profile.photo_url) if profile.photo? %>
+      <% if profile.photo? %>
+        <%= image_tag(profile.photo_url)  %>
+      <% else %>
+        <%= image_tag('woman.png') %>
+      <% end %>
     </div>
   </div>
   <div class='small-12 large-9 columns'>

@@ -1,7 +1,11 @@
 <% profiles.each do |profile| %>
   <article class="profile th">
     <%= link_to(send(profile_path, profile)) do %>
-      <%= image_tag(profile.photo.thumbnail.url) if profile.photo? %>
+      <% if profile.photo? %>
+        <%= image_tag(profile.photo.thumbnail.url) %>
+      <% else %>
+        <%= image_tag('woman.png') %>
+      <% end %>
       <h5><%= profile.fullname %></h5>
       <h6><%= profile.activity.try(:truncate, 24) %>&nbsp;</h6>
     <% end %>
