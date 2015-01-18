@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   def index
-    @people = Profile.all.joins(:user)
+    @people = Profile.filled.joins(:user)
   end
 
   def show
