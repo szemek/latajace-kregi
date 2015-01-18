@@ -2,7 +2,9 @@
   <div class='small-12 large-3 columns'>
     <div class="th photo">
       <% if profile.photo? %>
-        <%= image_tag(profile.photo_url)  %>
+        <%= link_to(profile.photo_url, target: '_blank') do %>
+          <%= image_tag(profile.photo.thumbnail.url)  %>
+        <% end %>
       <% else %>
         <%= image_tag('woman.png') %>
       <% end %>
