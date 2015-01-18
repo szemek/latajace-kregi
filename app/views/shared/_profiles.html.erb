@@ -15,11 +15,5 @@
         <%= profile.code %>
       </div>
     <% end %>
-
-    <% if profile.is_a?(Profile) && profile.events.count > 0 %>
-      <div data-tooltip class="events label round secondary" title="Liczba udziałów w kręgach: <%= profile.events.count %>">
-        <%= profile.events.count %>
-      </div>
-    <% end %>
   </article>
 <% end %>
