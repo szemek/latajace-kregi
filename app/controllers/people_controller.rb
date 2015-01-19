@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   def index
-    @people = Profile.filled.joins(:user)
+    @people = ProfileDecorator.decorate_collection(Profile.filled.joins(:user))
   end
 
   def show

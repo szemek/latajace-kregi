@@ -11,7 +11,7 @@
     <% end %>
 
     <% if profile.code %>
-      <div data-tooltip class="profile-circle label <%= profile.circle.slug %>" title="<%= profile.circle.name %>">
+      <div data-tooltip class="profile-circle label <%= profile.circle.slug %>" title="<%= profile.circle.name %>" style="<%= profile.color_background %>">
         <%= profile.code %>
       </div>
     <% end %>
