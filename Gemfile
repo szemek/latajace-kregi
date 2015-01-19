@@ -6,16 +6,15 @@ ruby '2.2.0'
 gem 'rails', '4.1.8'
 
 group :development do
-  gem 'sqlite3'
   gem 'spring'
   gem 'meta_request', '~> 0.3.4'
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor', '~> 0.0.3'
 end
 
+gem 'pg'
 gem 'sass-rails', '~> 4.0.4'
 gem 'uglifier', '~> 2.6.1'
 gem 'coffee-rails', '~> 4.1.0'
