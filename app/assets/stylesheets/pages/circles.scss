@@ -32,7 +32,7 @@
     }
   }
 
-  .circle-fill {
+  .circle-color {
     position: absolute;
     top: 4px;
     left: 4px;
@@ -44,12 +44,12 @@
     transition: all 0.5s;
   }
 
-  &:hover .circle-fill {
-    opacity: 0.5;
+  &:hover .circle-color {
+    opacity: 0.4;
     transition: all 0.5s;
   }
 
-  .circle-photo {
+  .circle-cover {
     position: absolute;
     top: 4px;
     left: 4px;

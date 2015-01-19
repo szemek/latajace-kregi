@@ -30,4 +30,12 @@ namespace :circles do
       end
     end
   end
+
+  namespace :covers do
+    task update: :environment do
+      Circle.all.each do |circle|
+        circle.update_attribute(:cover, "/assets/circles/#{circle.slug}.png")
+      end
+    end
+  end
 end
