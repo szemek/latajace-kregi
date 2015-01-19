@@ -1,5 +1,5 @@
 ActiveAdmin.register Circle do
-  permit_params :name, :code, :position
+  permit_params :name, :code, :position, :cover
 
   index do
     selectable_column
@@ -7,6 +7,7 @@ ActiveAdmin.register Circle do
     column :name
     column :code
     column :position
+    column :cover
     column :created_at
     actions
   end
@@ -20,6 +21,7 @@ ActiveAdmin.register Circle do
       f.input :name
       f.input :code
       f.input :position
+      f.input :cover
     end
     f.actions
   end
