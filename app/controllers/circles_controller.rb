@@ -1,6 +1,6 @@
 class CirclesController < ApplicationController
   def index
-    circles = CircleDecorator.decorate_collection(Circle.order(:position))
+    circles = CircleFetcher.all
 
     render :index, locals: {circles: circles}
   end

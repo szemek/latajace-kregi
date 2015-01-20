@@ -1,6 +1,8 @@
-- circles.each do |circle|
-  = link_to(circle, class: 'circle') do
-    .circle-ellipse
-      .circle-text= circle.name
-    .circle-color{style: circle.color_background}
-    .circle-cover{style: circle.cover_background}
+- circles.each do |row|
+  .row
+    - row.each do |circle|
+      = link_to(circle, class: 'circle') do
+        .circle-ellipse
+          .circle-text= circle.name
+        .circle-color{style: circle.color_background}
+        .circle-cover{style: circle.cover_background}
