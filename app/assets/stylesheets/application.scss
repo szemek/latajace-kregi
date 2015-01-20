@@ -11,13 +11,19 @@
  * file per style scope.
  *
  *= require_self
- *= require foundation_and_overrides
  *= require custom
- *= require pages/circles
  *= require jquery-ui
  *= require select2
  */
 
-@import 'components/feedback';
+@import 'config/variables';
 @import 'config/fonts';
+
+@import 'foundation/functions';
+@import 'foundation';
+
+@import 'pages/circles';
 @import 'pages/people';
+
+@import 'components/feedback';
+@import 'components/navigation';
