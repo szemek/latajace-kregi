@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 3.1.2'
 
 group :development, :test do
+  gem 'awesome_print', '~> 1.6.1'
   gem 'better_errors', '~> 2.0.0'
   gem 'binding_of_caller'
   gem 'factory_girl_rails', '~> 4.5.0'
