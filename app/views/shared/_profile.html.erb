@@ -15,7 +15,8 @@
 
     <p class="activity"><strong><%= profile.activity %></strong></p>
 
-    <p class="bio"><%= profile.bio %></p>
+    <%= simple_format(profile.bio, class: 'bio') %>
+
     <%= render partial: 'shared/extended_info', locals: {profile: profile} %>
   </div>
 </div>
