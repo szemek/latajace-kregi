@@ -4,9 +4,7 @@ ActiveAdmin.register Profile do
   index do
     selectable_column
     id_column
-    column :photo
     column :fullname
-    column :bio
     column :activity
     column :user
     column :circle
