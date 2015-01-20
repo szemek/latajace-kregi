@@ -37,6 +37,10 @@ nav {
   width: 95px;
   height: 95px;
 
+  .menu-item-circles { background: #f46b6b; }
+  .menu-item-people { background: #006b6b; }
+  .menu-item-profile { background: #7d919f; }
+
   .menu-item-ellipse {
     position: relative;
     top: 0;
@@ -48,21 +52,21 @@ nav {
     width: 90px;
     height: 90px;
     z-index: 10;
+  }
 
-    .menu-item-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      font-size: $base-size;
-      font-family: 'Dosis', sans-serif;
-      color: rgb(255, 255, 255);
-      line-height: 1.2;
-      text-align: center;
-      width: 100%;
-      height: $base-size;
-      z-index: 11;
-    }
+  .menu-item-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: $base-size;
+    font-family: 'Dosis', sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    height: $base-size;
+    z-index: 11;
   }
 
   .menu-item-color {
@@ -78,7 +82,7 @@ nav {
   }
 
   &:hover .menu-item-color {
-    opacity: 0.4;
+    opacity: 0.7;
     transition: all 0.5s;
   }
 }

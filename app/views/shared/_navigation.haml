@@ -1,19 +1,20 @@
 %nav.row
-  .logo
+  = link_to(circles_path) do
+    .logo
 
   %ul
     %li
       = link_to(circles_path, class: 'menu-item') do
         .menu-item-ellipse
-          .menu-item-text= t('nav.circles')
-        .menu-item-color{style: 'background: #f46b6b'}
+        .menu-item-text= t('nav.circles')
+        .menu-item-color.menu-item-circles
     %li
       = link_to(people_path, class: 'menu-item') do
         .menu-item-ellipse
-          .menu-item-text= t('nav.people')
-        .menu-item-color{style: 'background: #006b6b'}
+        .menu-item-text= t('nav.people')
+        .menu-item-color.menu-item-people
     %li
       = link_to(edit_profile_path, class: 'menu-item') do
         .menu-item-ellipse
-          .menu-item-text= t('nav.profile')
-        .menu-item-color{style: 'background: #7d919f'}
+        .menu-item-text= t('nav.profile')
+        .menu-item-color.menu-item-profile
