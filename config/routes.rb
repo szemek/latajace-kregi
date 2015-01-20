@@ -29,6 +29,8 @@ Rails.application.routes.draw do
       post 'users/sign_in' => 'sessions#create'
       post 'users' => 'registrations#create'
     end
+
+    resources :tags, only: [:index]
   end
 
   resources :tags
