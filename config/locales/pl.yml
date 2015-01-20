@@ -18,7 +18,7 @@ pl:
       intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
       name: 'Imię i nazwisko'
       next: 'Dalej'
-      password: 'Hasło'
+      password: 'Hasło (min. 8 znaków)'
       password_confirmation: 'Potwierdzenie hasła'
       signin: Zaloguj
       signup: Zarejestruj

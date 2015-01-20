@@ -18,7 +18,7 @@ en:
       intro: 'We help creative feminine businesses spread their wings'
       name: 'Full name'
       next: 'Next'
-      password: Password
+      password: 'Password (min. 8 characters)'
       password_confirmation: 'Password confirmation'
       signin: 'Sign in'
       signup: 'Sign up'
