@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    redirect_to(circles_path)
+    redirect_to(start_path)
   end
 end

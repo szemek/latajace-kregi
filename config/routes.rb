@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   localized do
     root 'landing#index'
     get 'dashboard' => 'dashboard#index'
+    get 'people' => 'people#index', as: :start
 
     resource :profile, only: [:edit, :update]
 

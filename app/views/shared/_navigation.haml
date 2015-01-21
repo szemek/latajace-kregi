@@ -1,18 +1,18 @@
 %nav.row
-  = link_to(circles_path) do
+  = link_to(start_path) do
     .logo
 
   %ul
-    %li
-      = link_to(circles_path, class: 'menu-item') do
-        .menu-item-ellipse
-        .menu-item-text= t('nav.circles')
-        .menu-item-color.menu-item-circles
     %li
       = link_to(people_path, class: 'menu-item') do
         .menu-item-ellipse
         .menu-item-text= t('nav.people')
         .menu-item-color.menu-item-people
+    %li
+      = link_to(circles_path, class: 'menu-item') do
+        .menu-item-ellipse
+        .menu-item-text= t('nav.circles')
+        .menu-item-color.menu-item-circles
     %li
       = link_to(edit_profile_path, class: 'menu-item') do
         .menu-item-ellipse
