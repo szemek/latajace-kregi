@@ -1,0 +1,16 @@
+.extended-info
+  - if profile.skill_list.present?
+    %p= t('.skill_list')
+    - profile.skill_list.each do |skill|
+      %span.success.label= skill
+
+  - if profile.interest_list.present?
+    %p= t('.interest_list')
+    - profile.interest_list.each do |interest|
+      %span.label= interest
+
+  - if profile.webpage?
+    %p= auto_link(profile.webpage, html: { target: '_blank' })
+
+  - if profile.contact?
+    %p= auto_link(profile.contact, html: { target: '_blank' })
