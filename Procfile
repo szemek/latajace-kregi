@@ -1,1 +1,1 @@
-web: bundle exec unicorn -p $PORT -E production -c ./config/unicorn.rb
+web: bundle exec passenger start -p $PORT --max-pool-size 3
