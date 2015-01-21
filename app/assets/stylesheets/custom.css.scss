@@ -1,29 +1,3 @@
-#rsvp-container {
-  padding: 10px;
-  background: #62ac75;
-
-  #rsvp-mine {
-    h3 {
-      color: white;
-    }
-
-    .label {
-      background-color: #83c49e;
-      width: 100%;
-      text-align: center;
-
-      &:hover {
-        color: white;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-#rsvp-change .action {
-  display: inline-block;
-}
-
 .th {
   box-shadow: none;
 
