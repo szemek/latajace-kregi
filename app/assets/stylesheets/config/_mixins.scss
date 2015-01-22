@@ -1,0 +1,11 @@
+@mixin hover-lighten($selector, $background) {
+  #{$selector} {
+    background: $background;
+    transition: all 0.5s;
+  }
+
+  &:hover #{$selector} {
+    background: lighten($background, 15%);
+    transition: all 0.5s;
+  }
+}
