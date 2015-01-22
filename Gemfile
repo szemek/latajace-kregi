@@ -12,6 +12,7 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
+  gem 'newrelic_rpm', '~> 3.9.9.275'
 end
 
 gem 'pg'
@@ -47,7 +48,6 @@ gem 'foundation-rails', '~> 5.4.5.0'
 gem 'friendly_id', '~> 5.0.4'
 gem 'haml-rails', '~> 0.6.0'
 gem 'jquery-ui-rails', '~> 5.0.3'
-gem 'newrelic_rpm', '~> 3.9.9.275'
 gem 'passenger', '~> 4.0.57'
 gem 'progress', '~> 3.1.0'
 gem 'rails-i18n', '~> 4.0.3'
