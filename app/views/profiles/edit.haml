@@ -1,0 +1,42 @@
+.row
+  .small-12.columns
+    %h2= t('.title')
+.row
+  .small-12.columns
+    = form_for(profile) do |f|
+      .row
+        .small-6.columns
+          .field
+            = f.label :fullname, t('.fullname')
+            = f.text_field :fullname
+          .field
+            = f.label :activity, t('.activity')
+            = f.text_field :activity
+          .field
+            = f.label :bio, t('.bio')
+            = f.text_area :bio
+          .field
+            = f.label :webpage, t('.webpage')
+            = f.text_field :webpage
+          .field
+            = f.label :contact, t('.contact')
+            = f.text_field :contact
+          .field
+            = f.label :skill_list, t('.skill_list')
+            = f.hidden_field :skill_list
+          .field
+            = f.label :interest_list, t('.interest_list')
+            = f.hidden_field :interest_list
+        .small-6.columns
+          %label
+            = t('.circle')
+            = f.select :circle_id, options_from_collection_for_select(circles, :id, :name, selected: profile.circle_id)
+          %label
+            = t('.photo')
+            = f.file_field :photo
+            = image_tag(profile.photo.thumbnail.url) if profile.photo?
+      .row
+        .small-6.columns
+          = f.submit t('.update'), class: 'button small'
+
+= include_gon
