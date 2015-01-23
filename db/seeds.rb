@@ -6,17 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 circles = [
-  { name: 'Kraków', code: 'KRK' },
-  { name: 'Warszawa', code: 'WAW' },
-  { name: 'Trójmiasto', code: '3M' },
-  { name: 'Śląsk', code: 'ŚLĄ' },
-  { name: 'Tarnów', code: 'TAR' },
-  { name: 'Poznań', code: 'PZN' },
-  { name: 'Łomianki', code: 'ŁOM' },
-  { name: 'Bochnia', code: 'BOC' },
-  { name: 'Berlin', code: 'BER' },
-  { name: 'Wrocław', code: 'WRO' },
-  { name: 'Łódź', code: 'ŁDŹ' }
+  { name: 'Kraków', code: 'KRK', position: 1 },
+  { name: 'Warszawa', code: 'WAW', position: 2 },
+  { name: 'Trójmiasto', code: '3M', position: 3 },
+  { name: 'Śląsk', code: 'ŚLĄ', position: 4 },
+  { name: 'Tarnów', code: 'TAR', position: 5 },
+  { name: 'Poznań', code: 'PZN', position: 6 },
+  { name: 'Łomianki', code: 'ŁOM', position: 7 },
+  { name: 'Bochnia', code: 'BOC', position: 8 },
+  { name: 'Berlin', code: 'BER', position: 9 },
+  { name: 'Wrocław', code: 'WRO', position: 10 },
+  { name: 'Łódź', code: 'ŁDŹ', position: 11 }
 ]
 
 circles.each do |circle|
