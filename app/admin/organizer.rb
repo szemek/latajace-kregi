@@ -1,13 +1,12 @@
 ActiveAdmin.register Organizer do
-  permit_params :photo, :fullname, :bio, :activity, :circle_id
+  permit_params :photo, :fullname, :bio, :user, :activity, :circle_id
 
   index do
     selectable_column
     id_column
-    column :photo
     column :fullname
-    column :bio
     column :activity
+    column :user
     column :circle
     column :created_at
     actions
@@ -20,12 +19,14 @@ ActiveAdmin.register Organizer do
       end
       row :fullname
       row :bio
+      row :user
       row :activity
       row :circle
     end
   end
 
   filter :fullname
+  filter :circle
 
   form do |f|
     f.inputs "Organizer Details" do
