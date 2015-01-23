@@ -2,9 +2,10 @@ class ProfilesController < ApplicationController
   def edit
     circles = Circle.all
     profile = Profile.find_or_create_by(user: current_user)
-    tags = Tag.order(:name)
 
-    render :edit, locals: {circles: circles, profile: profile, tags: tags}
+    gon.tags = Tag.order(:name).pluck(:name)
+
+    render :edit, locals: {circles: circles, profile: profile}
   end
 
   def update
@@ -22,6 +23,6 @@ class ProfilesController < ApplicationController
   end
 
   def profile_fields
-    [:fullname, :bio, :photo, :activity, :circle_id, :webpage, :contact, skill_list: [], interest_list: []]
+    [:fullname, :bio, :photo, :activity, :circle_id, :webpage, :contact, :skill_list, :interest_list]
   end
 end

@@ -36,13 +36,13 @@
 
           <div class='field'>
             <%= f.label :skill_list, t('.skill_list') %>
-            <%= f.select :skill_list, options_from_collection_for_select(tags, :name, :name, profile.skill_list), {}, multiple: true %>
+            <%= f.hidden_field :skill_list %>
           </div>
 
           <div class='field'>
             <%= f.label :interest_list, t('.interest_list') %>
-            <%= f.select :interest_list, options_from_collection_for_select(tags, :name, :name, profile.interest_list), {}, multiple: true %>
-          </div>
+            <%= f.hidden_field :interest_list %>
+           </div>
         </div>
         <div class="small-6 columns">
           <label><%= t('.circle') %>
@@ -62,3 +62,5 @@
     <% end %>
   </div>
 </div>
+
+<%= include_gon %>

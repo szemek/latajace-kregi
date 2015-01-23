@@ -122,6 +122,11 @@ GEM
       sass (>= 3.2.0)
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
+    gon (5.2.3)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     haml (4.1.0.beta.1)
       tilt
     haml-rails (0.6.0)
@@ -307,6 +312,7 @@ DEPENDENCIES
   font-awesome-rails (~> 4.2.0.0)
   foundation-rails (~> 5.4.5.0)
   friendly_id (~> 5.0.4)
+  gon (~> 5.2.3)
   haml-rails (~> 0.6.0)
   jquery-rails (~> 3.1.2)
   jquery-ui-rails (~> 5.0.3)
