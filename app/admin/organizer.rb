@@ -1,6 +1,8 @@
 ActiveAdmin.register Organizer do
   permit_params :photo, :fullname, :bio, :user, :activity, :circle_id
 
+  actions :all, except: [:new, :destroy]
+
   index do
     selectable_column
     id_column
