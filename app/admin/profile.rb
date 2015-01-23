@@ -1,5 +1,5 @@
 ActiveAdmin.register Profile do
-  permit_params :photo, :fullname, :bio, :user, :activity, :circle_id
+  permit_params :photo, :fullname, :bio, :user, :activity, :circle_id, :organizer
 
   index do
     selectable_column
@@ -8,6 +8,7 @@ ActiveAdmin.register Profile do
     column :activity
     column :user
     column :circle
+    column :organizer
     column :created_at
     actions
   end
@@ -22,11 +23,13 @@ ActiveAdmin.register Profile do
       row :user
       row :activity
       row :circle
+      row :organizer
     end
   end
 
   filter :fullname
   filter :circle
+  filter :organizer
 
   form do |f|
     f.inputs "Profile Details" do
@@ -35,6 +38,7 @@ ActiveAdmin.register Profile do
       f.input :bio
       f.input :activity
       f.input :circle
+      f.input :organizer
     end
     f.actions
   end
