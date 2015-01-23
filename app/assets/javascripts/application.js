@@ -15,9 +15,6 @@
 //= require jquery-ui
 //= require exists
 //= require underscore
-//= require foundation
 //= require modals
 //= require select2.min
 //= require tags
-
-$(function(){ $(document).foundation(); });
