@@ -15,6 +15,6 @@ class CircleDecorator < Draper::Decorator
   end
 
   def cover_background
-    "background: url(#{circle.cover})" if cover?
+    "background: url(#{cover})" if cover?
   end
 end
