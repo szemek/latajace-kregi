@@ -15,3 +15,11 @@ production:
   <<: *default
   database: flying_circles_production
   password: <%= ENV['FLYING_CIRCLES_DATABASE_PASSWORD'] %>
+
+heroku:
+  adapter: postgresql
+  database: <%= ENV['HEROKU_DATABASE'] %>
+  host: <%= ENV['HEROKU_HOST'] %>
+  port: <%= ENV['HEROKU_PORT'] %>
+  username: <%= ENV['HEROKU_USERNAME'] %>
+  password: <%= ENV['HEROKU_PASSWORD'] %>
