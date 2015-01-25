@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 
     resources :heroines, only: [:index, :show]
     resources :organizers, only: [:index, :show]
-    resources :people, only: [:index, :show]
+    resources :people, only: [:index, :show] do
+      post :index, on: :collection
+    end
   end
 
   namespace :api do

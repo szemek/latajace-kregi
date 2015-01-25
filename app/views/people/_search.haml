@@ -1,0 +1,13 @@
+= form_for(search, url: people_path) do |f|
+  %table
+    %tr
+      %th= t('.circle')
+      %th= t('.skills')
+      %th= t('.interests')
+    %tr
+      %td= f.select :circle_id, options_from_collection_for_select(circles, :id, :name), include_blank: true
+      %td= f.select :skills, options_from_collection_for_select(tags, :name, :name), include_blank: true
+      %td= f.select :interests, options_from_collection_for_select(tags, :name, :name), include_blank: true
+
+  %button{type: :reset}= t('.clear')
+  = f.submit t('.search'), class: 'button'

@@ -75,6 +75,12 @@ pl:
   people:
     index:
       people: Kręgowiczki
+    search:
+      clear: Wyczyść
+      search: Szukaj
+      circle: Krąg
+      skills: Oferowane
+      interests: Szukane
 
   organizers:
     index:

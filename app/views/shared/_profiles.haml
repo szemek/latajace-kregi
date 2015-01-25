@@ -1,0 +1,15 @@
+.profiles
+  - profiles.each do |profile|
+    %article.profile.th
+      = link_to(send(profile_path, profile)) do
+        - if profile.photo?
+          = image_tag(profile.photo.thumbnail.url)
+        - else
+          = image_tag('woman.png')
+        %h5= profile.fullname
+        %h6
+          = profile.activity.try(:truncate, 24)
+          %br
+      - if profile.code
+        .profile-circle.label{class: profile.circle.slug, 'data-tooltip' => true, style: profile.color_background, title: profile.circle.name}
+          = profile.code
