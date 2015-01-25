@@ -1,6 +1,12 @@
 ActiveAdmin.register Profile do
   permit_params :photo, :fullname, :bio, :user, :activity, :circle_id, :organizer
 
+  controller do
+    def scoped_collection
+      super.includes(:user, :circle)
+    end
+  end
+
   index do
     selectable_column
     id_column
