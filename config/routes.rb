@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post 'users/check'
 
   localized do
-    get 'dashboard' => 'dashboard#index'
     get 'people' => 'people#index', as: :start
 
     resource :profile, only: [:edit, :update]

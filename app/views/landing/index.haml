@@ -2,7 +2,7 @@
   .intro
     = image_tag 'landing/logo.png', class: 'logo'
     %h1= t('.intro')
-    .go= link_to t('.go'), dashboard_path, 'stop-event' => true, 'ng-click' => 'showModal()'
+    .go= link_to t('.go'), '#', 'stop-event' => true, 'ng-click' => 'showModal()'
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
     .md-content

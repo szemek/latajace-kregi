@@ -67,7 +67,7 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     $.post('/api/users/sign_in', $('form').serialize(), function(data) {
       $scope.spinner = false;
       $scope.$apply();
-      window.location.replace('/dashboard');
+      window.location.replace('/');
     }, 'json').fail(function(data) {
       var error = data.responseJSON.error;
 
@@ -84,7 +84,7 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     $.post('/api/users', $('form').serialize(), function(data) {
       $scope.spinner = false;
       $scope.$apply();
-      window.location.replace('/dashboard');
+      window.location.replace('/');
     }, 'json').fail(function(data) {
       var errors = data.responseJSON.errors;
       var messages = _.map(errors, function(value, key) {
