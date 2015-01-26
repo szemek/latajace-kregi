@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admins, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  root 'landing#index'
+
   devise_for :users
+  ActiveAdmin.routes(self)
 
   post 'users/check'
 
   localized do
-    root 'landing#index'
     get 'dashboard' => 'dashboard#index'
     get 'people' => 'people#index', as: :start
 
