@@ -1,5 +1,5 @@
 class ProfileSearch < Searchlight::Search
-  search_on Profile.filled.joins(:user)
+  search_on proc { Profile.filled.joins(:user) }
 
   searches :circle_id, :skills, :interests
 
