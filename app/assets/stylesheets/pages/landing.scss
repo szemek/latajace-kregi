@@ -112,6 +112,14 @@ html, body {
           }
         }
 
+        .show-password, .hide-password {
+          position: absolute;
+          top: 12px;
+          right: 6px;
+          color: #666;
+          cursor: pointer;
+        }
+
         input {
           width: 80%;
           height: 28px;

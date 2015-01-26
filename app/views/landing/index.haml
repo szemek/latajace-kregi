@@ -24,11 +24,9 @@
           %span.field-wrapper{'ng-show' => 'showPassword'}
             = label_tag 'user[password]' do
               = fa_icon 'lock'
+            %span{'ng-show' => 'hiddenPassword', 'ng-click' => 'showPasswordText()'}= fa_icon 'eye', class: 'show-password'
+            %span{'ng-hide' => 'hiddenPassword', 'ng-click' => 'hidePasswordText()'}= fa_icon 'eye-slash', class: 'hide-password'
             = password_field_tag 'user[password]', nil, placeholder: t('.password'), 'ng-model' => 'password'
-          %span.field-wrapper{'ng-show' => 'showPasswordConfirmation'}
-            = label_tag 'user[password_confirmation]' do
-              = fa_icon 'lock'
-            = password_field_tag 'user[password_confirmation]', nil, placeholder: t('.password_confirmation'), 'ng-model' => 'passwordConfirmation'
 
           %button{'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true}= t('.next')
           %button{'ng-show' => 'showSignin', 'ng-click' => 'signin()', 'stop-event' => true}= t('.signin')

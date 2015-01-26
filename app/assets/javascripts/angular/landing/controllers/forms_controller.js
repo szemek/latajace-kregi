@@ -1,11 +1,23 @@
 app.controller('FormsController', ['$scope', '$translate', function($scope, $translate) {
   $scope.showEmail = true;
   $scope.showNext = true;
+  $scope.hiddenPassword = true;
+  $scope.step = 'check';
 
   $scope.showModal = function() {
     $('.intro').hide();
 
     $scope.modal = true;
+  };
+
+  $scope.showPasswordText = function() {
+    $('#user_password').attr('type', 'text');
+    $scope.hiddenPassword = false;
+  };
+
+  $scope.hidePasswordText = function() {
+    $('#user_password').attr('type', 'password');
+    $scope.hiddenPassword = true;
   };
 
   $scope.go = {
@@ -19,7 +31,6 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
       $scope.showNext = false;
       $scope.showSignup = true;
       $scope.showPassword = true;
-      $scope.showPasswordConfirmation = true;
       $scope.showBack = true;
     },
     back: function() {
@@ -28,20 +39,13 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
       $scope.showSignup = false;
       $scope.password = null;
       $scope.showPassword = false;
-      $scope.passwordConfirmation = null;
-      $scope.showPasswordConfirmation = false;
       $scope.showBack = false;
+      $scope.step = 'check';
     }
   };
 
   $scope.submit = function() {
-    if ($scope.showPasswordConfirmation) {
-      $scope.signup();
-    } else if ($scope.showPassword) {
-      $scope.signin();
-    } else {
-      $scope.check();
-    }
+    $scope[$scope.step]();
   };
 
   $scope.back = function() {
@@ -51,7 +55,8 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
   $scope.check = function() {
     $scope.spinner = true;
     $.post('/api/users/check', $('form').serialize(), function(data) {
-      $scope.go[data.action]();
+      $scope.step = data.action;
+      $scope.go[$scope.step]();
       $scope.spinner = false;
       $scope.$apply();
     });
