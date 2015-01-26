@@ -23,3 +23,8 @@
         .menu-item-ellipse
         .menu-item-text= t('nav.users.sign_out')
         .menu-item-color.menu-item-sign-out
+    - if current_user.admin?
+      %li
+        = link_to(admin_root_path, class: 'menu-item') do
+          .menu-item-ellipse
+          .menu-item-text Admin
