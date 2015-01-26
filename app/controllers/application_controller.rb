@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :set_locale
-  before_filter :authorize_admin, if: :admin_area?
+  before_filter :authorize_admin, if: :admin_panel?
 
   def set_locale
-    I18n.locale = :en if admin_area?
+    I18n.locale = :en if admin_panel?
   end
 
   def current_locale
@@ -15,11 +15,17 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_locale
 
-  def admin_area?
+  def admin_panel?
     request.path.start_with?('/admin')
   end
 
+  def admin?
+    current_user.try(:admin?)
+  end
+
+  helper_method :admin?
+
   def authorize_admin
-    redirect_to(root_path) if current_user.blank? || !current_user.admin?
+    redirect_to(root_path) unless admin?
   end
 end
