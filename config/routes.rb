@@ -33,6 +33,10 @@ Rails.application.routes.draw do
     end
 
     resources :tags, only: [:index]
+
+    resources :hooks, only: [] do
+      post :email, on: :collection
+    end
   end
 
   resources :tags
