@@ -1,6 +1,8 @@
 ActiveAdmin.register Heroine do
   permit_params :photo, :fullname, :bio, :activity, :circle_id
 
+  actions :all, except: [:destroy]
+
   index do
     selectable_column
     id_column

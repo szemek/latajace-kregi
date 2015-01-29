@@ -1,6 +1,8 @@
 ActiveAdmin.register Profile do
   permit_params :photo, :fullname, :bio, :user, :activity, :circle_id, :organizer
 
+  actions :all, except: [:destroy]
+
   controller do
     def scoped_collection
       super.includes(:user, :circle)

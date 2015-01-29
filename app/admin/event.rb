@@ -6,6 +6,8 @@ ActiveAdmin.register Event do
     :quantity,
     :location
 
+  actions :all, except: [:destroy]
+
   index do
     selectable_column
     id_column

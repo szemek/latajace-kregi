@@ -1,6 +1,8 @@
 ActiveAdmin.register Circle do
   permit_params :name, :code, :position, :cover
 
+  actions :all, except: [:destroy]
+
   index do
     selectable_column
     id_column
