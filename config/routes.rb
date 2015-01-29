@@ -43,4 +43,6 @@ Rails.application.routes.draw do
   resource :feedback do
     get :thanks
   end
+
+  match '*path', to: redirect('/'), via: [:get, :post]
 end
