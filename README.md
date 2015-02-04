@@ -1,8 +1,8 @@
-## Flying Circles
+## Lające Kręgi
 
 ### Installation
 
- * `git clone git@github.com:szemek/flying-circles.git`
+ * `git clone git@github.com:szemek/latajace-kregi.git`
  * `bundle install`
  * `rake db:migrate`
 
