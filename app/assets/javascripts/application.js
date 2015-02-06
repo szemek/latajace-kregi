@@ -18,3 +18,4 @@
 //= require modals
 //= require select2.min
 //= require tags
+//= require buttons
