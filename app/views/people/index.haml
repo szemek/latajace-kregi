@@ -2,5 +2,5 @@
   .small-12.columns
     %h1= t('.people')
     - if feature.active?(:search, current_user)
-      = render partial: 'people/search', locals: { search: search, circles: circles, tags: tags }
+      = render partial: 'people/search', locals: { search: search, circles: circles, skills: skills, interests: interests }
     = render partial: 'shared/profiles', locals: { profiles: profiles, profile_path: :person_path }

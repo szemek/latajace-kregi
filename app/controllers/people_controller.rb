@@ -2,10 +2,14 @@ class PeopleController < ApplicationController
   def index
     search = ProfileSearch.new(search_params)
     profiles = ProfileDecorator.decorate_collection(search.results)
-    tags  = Tag.order(:name)
+    skills = SkillFetcher.all
+    interests = InterestFetcher.all
     circles = Circle.order(:position)
 
-    render :index, locals: {profiles: profiles, search: search, circles: circles, tags: tags, feature: feature}
+    render :index, locals: {
+      profiles: profiles, search: search, circles: circles, feature: feature,
+      skills: skills, interests: interests
+    }
   end
 
   def show
