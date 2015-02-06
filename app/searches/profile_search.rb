@@ -1,5 +1,5 @@
 class ProfileSearch < Searchlight::Search
-  search_on proc { Profile.filled.joins(:user) }
+  search_on proc { Profile.filled.includes(:user, :circle).order(:id) }
 
   searches :circle_id, :skill, :interest
 
