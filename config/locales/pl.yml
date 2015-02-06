@@ -79,8 +79,8 @@ pl:
       clear: Wyczyść
       search: Szukaj
       circle: Krąg
-      skills: Oferowane
-      interests: Szukane
+      skill: Oferowana umiejętność
+      interest: Szukana umiejętność
 
   organizers:
     index:

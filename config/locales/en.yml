@@ -79,8 +79,8 @@ en:
       clear: Clear
       search: Search
       circle: Circle
-      skills: Skills
-      interests: Interests
+      skill: Skill
+      interest: Interest
 
   organizers:
     index:

@@ -2,12 +2,12 @@
   %table
     %tr
       %th= t('.circle')
-      %th= t('.skills')
-      %th= t('.interests')
+      %th= t('.skill')
+      %th= t('.interest')
     %tr
-      %td= f.select :circle_id, options_from_collection_for_select(circles, :id, :name), include_blank: true
-      %td= f.select :skills, options_from_collection_for_select(tags, :name, :name), include_blank: true
-      %td= f.select :interests, options_from_collection_for_select(tags, :name, :name), include_blank: true
+      %td= f.select :circle_id, options_from_collection_for_select(circles, :id, :name, search.circle_id), include_blank: true
+      %td= f.select :skill, options_from_collection_for_select(tags, :name, :name, search.skill), include_blank: true
+      %td= f.select :interest, options_from_collection_for_select(tags, :name, :name, search.interest), include_blank: true
 
   %button{type: :reset}= t('.clear')
   = f.submit t('.search'), class: 'button'
