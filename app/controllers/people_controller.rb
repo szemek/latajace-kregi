@@ -7,7 +7,7 @@ class PeopleController < ApplicationController
     circles = Circle.order(:position)
 
     render :index, locals: {
-      profiles: profiles, search: search, circles: circles, feature: feature,
+      profiles: profiles, search: search, circles: circles,
       skills: skills, interests: interests
     }
   end
@@ -20,9 +20,5 @@ class PeopleController < ApplicationController
 
   def search_params
     @search_params ||= params.delete(:profile_search) || {}
-  end
-
-  def feature
-    @feature ||= Rollout.new(Feature)
   end
 end
