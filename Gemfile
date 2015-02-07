@@ -25,6 +25,8 @@ group :development, :test do
   gem 'better_errors', '~> 2.0.0'
   gem 'binding_of_caller'
   gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'guard-bundler', '~> 2.1.0'
+  gem 'guard-rspec', '~> 4.5.0'
   gem 'quiet_assets', '~> 1.0.3'
   gem 'rspec-rails', '~> 3.1.0'
 end
