@@ -19,6 +19,6 @@ class PeopleController < ApplicationController
   private
 
   def search_params
-    @search_params ||= params.delete(:profile_search) || {}
+    params.delete(:search) || {}
   end
 end
