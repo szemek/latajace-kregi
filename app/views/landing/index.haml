@@ -6,7 +6,8 @@
 
   .md-modal.md-effect-3{'ng-class' => '{"md-show": modal}'}
     .md-content
-      %h3= t('.decide')
+      %h3{'ng-show' => 'showNext || showSignin'}= t('.header.signin')
+      %h3{'ng-show' => 'showSignup'}= t('.header.signup')
 
       = image_tag 'landing/spinner.svg', class: 'spinner', 'ng-show' => 'spinner'
 
@@ -24,8 +25,8 @@
           %span.field-wrapper{'ng-show' => 'showPassword'}
             = label_tag 'user[password]' do
               = fa_icon 'lock'
-            %span{'ng-show' => 'hiddenPassword', 'ng-click' => 'showPasswordText()'}= fa_icon 'eye', class: 'show-password'
-            %span{'ng-hide' => 'hiddenPassword', 'ng-click' => 'hidePasswordText()'}= fa_icon 'eye-slash', class: 'hide-password'
+            %span{'ng-show' => 'hiddenPassword', 'ng-click' => 'showPasswordText()'}= fa_icon 'eye-slash', class: 'show-password'
+            %span{'ng-hide' => 'hiddenPassword', 'ng-click' => 'hidePasswordText()'}= fa_icon 'eye', class: 'hide-password'
             = password_field_tag 'user[password]', nil, placeholder: t('.password'), 'ng-model' => 'password'
 
           %button{'ng-show' => 'showNext', 'ng-click' => 'check()', 'stop-event' => true}= t('.next')

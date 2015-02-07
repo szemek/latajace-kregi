@@ -12,7 +12,9 @@ en:
 
   landing:
     index:
-      decide: 'Sign in / Sign up'
+      header:
+        signin: 'Sign in'
+        signup: 'Sign up'
       email: Email
       go: 'Go'
       intro: 'We help creative feminine businesses spread their wings'
