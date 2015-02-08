@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125183526) do
+ActiveRecord::Schema.define(version: 20150208080748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150125183526) do
     t.integer  "position",                    null: false
     t.string   "color",      default: "#ccc"
     t.string   "cover"
+    t.boolean  "visible",    default: true
   end
 
   create_table "events", force: true do |t|

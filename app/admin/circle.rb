@@ -1,5 +1,5 @@
 ActiveAdmin.register Circle do
-  permit_params :name, :code, :position, :cover
+  permit_params :name, :code, :position, :cover, :visible
 
   actions :all, except: [:destroy]
 
@@ -10,6 +10,7 @@ ActiveAdmin.register Circle do
     column :code
     column :position
     column :cover
+    column :visible
     column :created_at
     actions
   end
@@ -24,6 +25,7 @@ ActiveAdmin.register Circle do
       f.input :code
       f.input :position
       f.input :cover
+      f.input :visible
     end
     f.actions
   end
