@@ -3,7 +3,7 @@ class Circle < ActiveRecord::Base
   has_many :profiles
   has_many :heroines
 
-  default_scope { where(visible: true) }
+  scope :visible, -> { where(visible: true) }
 
   validates :position, presence: true
 

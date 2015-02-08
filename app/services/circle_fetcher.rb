@@ -4,16 +4,12 @@ class CircleFetcher
   end
 
   def all
-    circles.decorate.slice_when(&pattern)
+    circles.decorate
   end
 
   private
 
   def circles
-    @circles ||= Circle.order(:position)
-  end
-
-  def pattern
-    lambda { |element, _| element.position % 7 == 0 || (element.position % 7) % 4 == 0 }
+    @circles ||= Circle.visible.order(:position)
   end
 end

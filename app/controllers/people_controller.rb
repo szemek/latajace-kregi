@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
     profiles = ProfileDecorator.decorate_collection(search.results)
     skills = SkillFetcher.all
     interests = InterestFetcher.all
-    circles = Circle.order(:position)
+    circles = CircleFetcher.all
 
     render :index, locals: {
       profiles: profiles, search: search, circles: circles,
