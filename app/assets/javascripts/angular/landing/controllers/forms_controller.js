@@ -8,6 +8,10 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     $('.intro').hide();
 
     $scope.modal = true;
+
+    _.delay(function() {
+      $('#check #user_email').focus();
+    }, 300);
   };
 
   $scope.showPasswordText = function() {
@@ -20,51 +24,27 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     $scope.hiddenPassword = true;
   };
 
-  $scope.go = {
-    signin: function() {
-      $scope.showNext = false;
-      $scope.showSignin = true;
-      $scope.showPassword = true;
-      $scope.showBack = true;
-    },
-    signup: function() {
-      $scope.showNext = false;
-      $scope.showSignup = true;
-      $scope.showPassword = true;
-      $scope.showBack = true;
-    },
-    back: function() {
-      $scope.showNext = true;
-      $scope.showSignin = false;
-      $scope.showSignup = false;
-      $scope.password = null;
-      $scope.showPassword = false;
-      $scope.showBack = false;
-      $scope.step = 'check';
-    }
-  };
-
   $scope.submit = function() {
     $scope[$scope.step]();
   };
 
   $scope.back = function() {
-    $scope.go.back();
+    $scope.step = 'check';
   };
 
   $scope.check = function() {
     $scope.spinner = true;
-    $.post('/api/users/check', $('form').serialize(), function(data) {
+    $.post('/api/users/check', $('form#check').serialize(), function(data) {
       $scope.step = data.action;
-      $scope.go[$scope.step]();
       $scope.spinner = false;
       $scope.$apply();
+      $('#step #user_password'.replace('step', data.action)).focus();
     });
   };
 
   $scope.signin = function() {
     $scope.spinner = true;
-    $.post('/api/users/sign_in', $('form').serialize(), function(data) {
+    $.post('/api/users/sign_in', $('form#signin').serialize(), function(data) {
       $scope.spinner = false;
       $scope.$apply();
       window.location.replace('/');
@@ -81,7 +61,7 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
 
   $scope.signup = function() {
     $scope.spinner = true;
-    $.post('/api/users', $('form').serialize(), function(data) {
+    $.post('/api/users', $('form#signup').serialize(), function(data) {
       $scope.spinner = false;
       $scope.$apply();
       window.location.replace('/');

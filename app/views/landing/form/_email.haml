@@ -1,0 +1,4 @@
+%span.field-wrapper
+  = label_tag 'user[email]' do
+    = fa_icon 'envelope'
+  = text_field_tag 'user[email]', nil, placeholder: email_placeholder, 'ng-model' => 'email'

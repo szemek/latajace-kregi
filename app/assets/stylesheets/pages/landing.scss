@@ -80,8 +80,9 @@ html, body {
         height: 22px;
         background-size: 100%;
         background-repeat: no-repeat;
-        position: absolute;
-        top: 9px;
+        position: relative;
+        display: inline-block;
+        top: -70px;
         left: -20px;
         cursor: pointer;
       }
@@ -161,18 +162,6 @@ html, body {
 
     input[type=submit] {
       border: none;
-    }
-
-    #signup {
-      input {
-        width: 100%;
-      }
-    }
-
-    #signin {
-      input {
-        width: 100%;
-      }
     }
   }
 }
