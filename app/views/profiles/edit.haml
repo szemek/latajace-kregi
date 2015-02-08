@@ -3,6 +3,9 @@
     %h2= t('.title')
 .row
   .small-12.columns
+    - if profile.fullname.blank?
+      .alert-box.alert-notice= t('.notice')
+
     = form_for(profile) do |f|
       .row
         .small-6.columns

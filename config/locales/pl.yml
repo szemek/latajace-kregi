@@ -101,6 +101,7 @@ pl:
       title: 'Ustawienia profilu'
       update: Aktualizuj
       webpage: 'Strona www'
+      notice: 'Podaj imię i nazwisko, aby Twój profil pojawił się na liście kręgowiczek'
 
   shared:
     extended_info:
