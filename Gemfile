@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 ruby '2.2.0'
 
@@ -60,6 +59,8 @@ gem 'route_translator', '~> 4.0.0'
 gem 'searchlight', '~> 3.1.1'
 gem 'underscore-rails', '~> 1.7.0'
 
-
-gem 'rails-assets-angular', '~> 1.3.9'
-gem 'rails-assets-angular-translate', '~> 2.5.2'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular', '~> 1.3.9'
+  gem 'rails-assets-angular-translate', '~> 2.5.2'
+  gem 'rails-assets-jquery-placeholder', '~> 2.1.0'
+end

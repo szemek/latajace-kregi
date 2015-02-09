@@ -1,8 +1,11 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery-placeholder
 //= require angular
 //= require angular-translate
 //= require underscore
+//= require ../exists
+//= require ../placeholders
 //= require ./landing/app
 //= require_tree ./landing/controllers
 //= require_tree ./landing/directives
