@@ -3,6 +3,8 @@
   display: inline-block;
   width: 205px;
   height: 205px;
+  margin-left: 20px;
+  margin-top: 20px;
 
   .circle-ellipse {
     position: relative;
@@ -43,12 +45,12 @@
     width: 200px;
     height: 200px;
     z-index: 9;
-    opacity: 1.0;
+    background: rgba(0,0,0,0.3);
     transition: all 0.5s;
   }
 
   &:hover .circle-color {
-    opacity: 0.4;
+    background: rgba(0,0,0,0.1);
     transition: all 0.5s;
   }
 
