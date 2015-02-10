@@ -15,7 +15,9 @@ pl:
       header:
         signin: 'Zaloguj się'
         signup: 'Zarejestruj się'
+        reset: 'Nie pamiętasz hasła?'
       email: 'E-mail'
+      forgot: 'Nie pamiętam hasła'
       go: 'Wejdź'
       intro: 'Pomagamy kreatywnym kobiecym biznesom rozwijać skrzydła'
       name: 'Imię i nazwisko'
@@ -25,6 +27,7 @@ pl:
         create: 'Wymyśl hasło (min. 8 znaków)'
       signin: Zaloguj
       signup: Zarejestruj
+      send_instructions: 'Wyślij instrukcje'
 
   feedbacks:
     new:

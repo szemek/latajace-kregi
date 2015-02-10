@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     devise_scope :user do
       post 'users/sign_in' => 'sessions#create'
       post 'users' => 'registrations#create'
+      post 'users/password' => 'passwords#create'
     end
 
     resources :tags, only: [:index]

@@ -68,11 +68,14 @@ html, body {
       }
     }
 
-    .form {
+    .forms {
       width: 300px;
       padding-left: 10px;
       padding-top: 60px;
-      position: relative;
+
+      form {
+        position: relative;
+      }
 
       .back {
         background: image-url('landing/back.png');
@@ -80,9 +83,8 @@ html, body {
         height: 22px;
         background-size: 100%;
         background-repeat: no-repeat;
-        position: relative;
-        display: inline-block;
-        top: -70px;
+        position: absolute;
+        top: 6px;
         left: -20px;
         cursor: pointer;
       }

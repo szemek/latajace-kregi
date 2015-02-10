@@ -8,13 +8,14 @@
     .md-content
       %h3{'ng-show' => "step === 'check' || step === 'signin'"}= t('.header.signin')
       %h3{'ng-show' => "step === 'signup'"}= t('.header.signup')
+      %h3{'ng-show' => "step === 'reset'"}= t('.header.reset')
 
       = image_tag 'landing/spinner.svg', class: 'spinner', 'ng-show' => 'spinner'
 
       .plane-wrapper
         .plane
 
-      .form
+      .forms
         %form#check{'ng-show' => "step === 'check'"}
           = token_tag
           = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
@@ -23,19 +24,27 @@
 
         %form#signin{'ng-show' => "step === 'signin'"}
           = token_tag
+          %span.back{'ng-click' => 'back()'}
           = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
           = render partial: 'landing/form/password', locals: { password_placeholder: t('.password.enter')}
-          %span.back{'ng-click' => 'back()'}
+          %a.reset{href: '#', 'ng-click' => 'reset()'}= t('.forgot')
 
           %button{'ng-click' => 'signin()', 'stop-event' => true}= t('.signin')
 
         %form#signup{'ng-show' => "step === 'signup'"}
           = token_tag
+          %span.back{'ng-click' => 'back()'}
           = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
           = render partial: 'landing/form/password', locals: { password_placeholder: t('.password.create') }
-          %span.back{'ng-click' => 'back()'}
 
           %button{'ng-click' => 'signup()', 'stop-event' => true}= t('.signup')
+
+        %form#reset{'ng-show' => "step === 'reset'"}
+          = token_tag
+          %span.back{'ng-click' => 'back()'}
+          = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
+
+          %button{'ng-click' => 'sendInstructions()', 'stop-event' => true}= t('.send_instructions')
 
   .md-overlay{'ng-click' => 'closeModal()'}
 

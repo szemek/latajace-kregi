@@ -77,7 +77,22 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
 
       $('.notification').fadeIn(500).delay(2000).fadeOut(500);
     });
-  }
+  };
+
+  $scope.reset = function() {
+    $scope.step = 'reset';
+  };
+
+  $scope.sendInstructions = function() {
+    $scope.spinner = true;
+    $.post('/api/users/password', $('form#reset').serialize(), function(data) {
+      $scope.spinner = false;
+      $scope.$apply();
+    }, 'json').fail(function(data) {
+      $scope.spinner = false;
+      $scope.$apply();
+    });
+  };
 
   $scope.closeModal = function() {
     $('.intro').show();
