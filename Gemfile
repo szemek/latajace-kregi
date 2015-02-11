@@ -5,8 +5,9 @@ ruby '2.2.0'
 gem 'rails', '4.1.9'
 
 group :development do
-  gem 'spring', '~> 1.3.0'
+  gem 'letter_opener', '~> 1.3.0'
   gem 'meta_request', '~> 0.3.4'
+  gem 'spring', '~> 1.3.0'
 end
 
 group :production do
