@@ -1,0 +1,18 @@
+.content{'ng-controller' => 'FormsController'}
+  .md-modal.md-effect-3.md-show
+    .md-content
+      %h3= t('.set_new_password')
+
+      = image_tag 'landing/spinner.svg', class: 'spinner', 'ng-show' => 'spinner'
+
+      .plane-wrapper
+        .plane
+
+      .forms
+        %form#set{'ng-submit' => 'changePassword()'}
+          = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+            = devise_error_messages!
+            = f.hidden_field :reset_password_token
+            = render partial: 'landing/form/password', locals: { password_placeholder: t('.new_password') }
+
+            = f.submit t('.change_my_password')

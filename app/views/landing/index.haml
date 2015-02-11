@@ -31,13 +31,13 @@
 
           %button{'ng-click' => 'signin()', 'stop-event' => true}= t('.signin')
 
-        %form#signup{'ng-show' => "step === 'signup'"}
+        %form#signup{'ng-show' => "step === 'signup'", 'ng-submit' => 'signup()'}
           = token_tag
           %span.back{'ng-click' => 'back()'}
           = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
           = render partial: 'landing/form/password', locals: { password_placeholder: t('.password.create') }
 
-          %button{'ng-click' => 'signup()', 'stop-event' => true}= t('.signup')
+          = submit_tag t('.signup')
 
         %form#reset{'ng-show' => "step === 'reset'"}
           = token_tag

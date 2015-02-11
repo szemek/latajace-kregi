@@ -97,6 +97,15 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     });
   };
 
+  $scope.changePassword = function() {
+    $scope.spinner = true;
+    $.post('/api/users/password', $('form#set').serialize(), function(argument) {
+      $scope.spinner = false;
+      $scope.$apply();
+      window.location.replace('/');
+    });
+  };
+
   $scope.closeModal = function() {
     $('.intro').show();
 

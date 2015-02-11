@@ -1,0 +1,6 @@
+pl:
+  devise:
+    passwords:
+      edit:
+        set_new_password: 'Ustaw nowe hasło'
+        new_password: 'Nowe hasło (min. 8 znaków)'

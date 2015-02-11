@@ -36,6 +36,7 @@ Rails.application.routes.draw do
       post 'users/sign_in' => 'sessions#create'
       post 'users' => 'registrations#create'
       post 'users/password' => 'passwords#create'
+      put 'users/password' => 'passwords#update'
     end
 
     resources :tags, only: [:index]
