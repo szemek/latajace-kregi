@@ -45,6 +45,7 @@
           = render partial: 'landing/form/email', locals: { email_placeholder: t('.email') }
 
           %button{'ng-click' => 'sendInstructions()', 'stop-event' => true}= t('.send_instructions')
+          .info.alert-box.radius= t('.sent_instructions')
 
   .md-overlay{'ng-click' => 'closeModal()'}
 

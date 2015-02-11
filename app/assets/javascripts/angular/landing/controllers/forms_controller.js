@@ -88,6 +88,9 @@ app.controller('FormsController', ['$scope', '$translate', function($scope, $tra
     $.post('/api/users/password', $('form#reset').serialize(), function(data) {
       $scope.spinner = false;
       $scope.$apply();
+      $('.info').addClass('show').delay(5000).queue(function(){
+        $(this).removeClass('show').dequeue();
+      });
     }, 'json').fail(function(data) {
       $scope.spinner = false;
       $scope.$apply();

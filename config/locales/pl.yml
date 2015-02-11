@@ -28,6 +28,7 @@ pl:
       signin: Zaloguj
       signup: Zarejestruj
       send_instructions: 'Wyślij instrukcje'
+      sent_instructions: 'Wysłaliśmy instrukcje na podany adres e-mail'
 
   feedbacks:
     new:
