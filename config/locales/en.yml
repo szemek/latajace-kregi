@@ -55,7 +55,6 @@ en:
     show:
       attendee_list: 'Attendee list'
       join: Join
-      sign_in_to_join: 'Sign in to join'
       waiting_list: 'Waiting list'
     waiting:
       change: 'Change'

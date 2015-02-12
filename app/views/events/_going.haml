@@ -1,0 +1,12 @@
+#rsvp-container
+  #rsvp-mine
+    %h3
+      = t('.you_will_participate')
+    %a.rsvp-change.label{"aria-label" => t('.change'), "data-reveal-id" => "rsvp-change", :href => "#"}
+      = t('.change')
+    #rsvp-change.reveal-modal{"data-reveal" => ""}
+      %h3= t('.still_interested?')
+      .action
+        %a.button.success.yes.close-modal= t('.stay')
+      .action= button_to(t('.leave'), event_rsvp_path(event, rsvp), method: :delete, class: 'button alert')
+      %a.close-reveal-modal ×

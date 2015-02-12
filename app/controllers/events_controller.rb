@@ -1,8 +1,22 @@
 class EventsController < ApplicationController
   def show
-    @event = Event.find(params[:id])
-    @rsvp = Rsvp.find_or_initialize_by(event: @event, user: current_user)
-    @going_users = User.where(id: @event.rsvps.going.pluck(:user_id)).includes(:profile)
-    @waiting_users = User.where(id: @event.rsvps.waiting.pluck(:user_id)).includes(:profile)
+    render :show, locals: { event: event, rsvp: rsvp, users: users }
+  end
+
+  private
+
+  def event
+    @event ||= Event.find(params[:id])
+  end
+
+  def rsvp
+    @rsvp ||= Rsvp.find_or_initialize_by(event: event, user: current_user)
+  end
+
+  def users
+    going = User.where(id: event.rsvps.going.pluck(:user_id)).includes(:profile)
+    waiting = User.where(id: event.rsvps.waiting.pluck(:user_id)).includes(:profile)
+
+    Hashie::Mash.new(going: going, waiting: waiting)
   end
 end
