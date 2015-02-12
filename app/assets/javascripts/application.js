@@ -21,3 +21,8 @@
 //= require tags
 //= require buttons
 //= require placeholders
+//= require vendor/modernizr
+//= require foundation/foundation
+//= require foundation/foundation.reveal
+
+$(document).foundation('reveal');
