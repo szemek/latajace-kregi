@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   private
 
   def event
-    @event ||= Event.find(params[:id])
+    @event ||= Event.find(params[:id]).decorate
   end
 
   def rsvp

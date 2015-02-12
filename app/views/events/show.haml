@@ -3,6 +3,7 @@
     %h2= event.name
     %p= I18n.l(event.starting_at, locale: I18n.locale, format: '%d %b %Y')
     %p= simple_format(auto_link(event.description))
+    = event.map
   .small-12.large-3.columns
     - if rsvp.going?
       = render partial: 'going', locals: { event: event, rsvp: rsvp }
