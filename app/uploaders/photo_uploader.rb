@@ -6,7 +6,30 @@ class PhotoUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  process :custom_crop
+
   version :thumbnail do
-    process resize_to_fill: [200, 200, 'north_west']
+    process :default_resize_to_fill
+  end
+
+  private
+
+  def custom_crop
+    {
+      x: model.photo_crop_x,
+      y: model.photo_crop_y,
+      width: model.photo_crop_w,
+      height: model.photo_crop_h,
+      crop: :crop
+    }
+  end
+
+  def default_resize_to_fill
+    {
+      width: 200,
+      height: 200,
+      gravity: 'north_west',
+      crop: :fill
+    }
   end
 end

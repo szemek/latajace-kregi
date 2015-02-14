@@ -23,6 +23,7 @@ class ProfilesController < ApplicationController
   end
 
   def profile_fields
-    [:fullname, :bio, :photo, :activity, :circle_id, :webpage, :contact, :skill_list, :interest_list]
+    [:fullname, :bio, :activity, :circle_id, :webpage, :contact, :skill_list, :interest_list,
+      :photo, :photo_crop => [:x, :y, :w, :h]]
   end
 end

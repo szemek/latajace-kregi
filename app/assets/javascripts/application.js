@@ -24,5 +24,6 @@
 //= require vendor/modernizr
 //= require foundation/foundation
 //= require foundation/foundation.reveal
+//= require profile
 
 $(document).foundation('reveal');
