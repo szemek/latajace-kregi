@@ -12,7 +12,6 @@ ActiveAdmin.register Event do
     selectable_column
     id_column
     column :name
-    column :description
     column :circle
     column :starting_at
     column :quantity
