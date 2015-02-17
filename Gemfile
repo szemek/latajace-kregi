@@ -31,6 +31,7 @@ group :development, :test do
 end
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 gem 'acts-as-taggable-on', '~> 3.4.3'
 gem 'awesome_print', '~> 1.6.1'
 gem 'carrierwave', '~> 0.10.0'
