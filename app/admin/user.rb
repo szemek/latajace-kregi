@@ -3,6 +3,8 @@ ActiveAdmin.register User do
 
   actions :all, except: [:destroy]
 
+  menu label: 'Users'
+
   controller do
     def scoped_collection
       super.includes(:profile)
