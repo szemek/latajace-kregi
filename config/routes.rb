@@ -53,5 +53,7 @@ Rails.application.routes.draw do
     get :thanks
   end
 
+  get 'status' => 'status#check'
+
   match '*path', to: redirect('/'), via: [:get, :post]
 end
