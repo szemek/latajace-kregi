@@ -41,6 +41,7 @@ nav {
   @include hover-lighten(".menu-item-circles", #c0392b);
   @include hover-lighten(".menu-item-profile", #2eb165);
   @include hover-lighten(".menu-item-sign-out", #2980b9);
+  @include hover-lighten(".menu-item-faq", #f44f94);
 
   .menu-item-ellipse {
     position: relative;

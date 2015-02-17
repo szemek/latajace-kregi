@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   post 'users/check'
 
+  get 'faq' => 'faq#show'
+
   localized do
     get 'people' => 'people#index', as: :start
 

@@ -19,6 +19,11 @@
         .menu-item-text= t('nav.profile')
         .menu-item-color.menu-item-profile
     %li
+      = link_to(faq_path, class: 'menu-item') do
+        .menu-item-ellipse
+        .menu-item-text= t('nav.faq')
+        .menu-item-color.menu-item-faq
+    %li
       = link_to(destroy_user_session_path, method: :delete, class: 'menu-item') do
         .menu-item-ellipse
         .menu-item-text= t('nav.users.sign_out')
