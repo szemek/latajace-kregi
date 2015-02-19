@@ -1,5 +1,5 @@
 class StatusController < ActionController::Base
-  newrelic_ignore
+  try(:newrelic_ignore)
 
   def check
     head(:ok)
