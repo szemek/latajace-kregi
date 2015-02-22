@@ -25,10 +25,23 @@ ActiveAdmin.register Event do
   filter :location
   filter :created_at
 
+  show do |event|
+    attributes_table do
+      row :name
+      row :description do
+         raw event.description
+      end
+      row :circle
+      row :starting_at
+      row :quantity
+      row :location
+    end
+  end
+
   form do |f|
     f.inputs "Event Details" do
       f.input :name
-      f.input :description
+      f.input :description, as: :html_editor
       f.input :circle
       f.input :starting_at
       f.input :quantity
