@@ -17,19 +17,19 @@
  *= require active_admin/editor/wysiwyg
  */
 
-@import 'config/variables';
-@import 'config/fonts';
-@import 'config/mixins';
+@import "config/variables";
+@import "config/fonts";
+@import "config/mixins";
 
-@import 'foundation/functions';
-@import 'foundation';
+@import "foundation/functions";
+@import "foundation";
 
-@import 'jcrop';
+@import "jcrop";
 
-@import 'pages/circles';
-@import 'pages/people';
-@import 'pages/events';
-@import 'pages/profile';
+@import "pages/circles";
+@import "pages/people";
+@import "pages/events";
+@import "pages/profile";
 
-@import 'components/feedback';
-@import 'components/navigation';
+@import "components/feedback";
+@import "components/navigation";
