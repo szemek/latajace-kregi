@@ -16,9 +16,9 @@
     %h3= t('.attendee_list')
     %ul
       - users.going.each do |user|
-        %li= user.fullname
+        = render partial: 'events/person', locals: { user: user }
 
     %h3= t('.waiting_list')
     %ul
       - users.waiting.each do |user|
-        %li= user.fullname
+        = render partial: 'events/person', locals: { user: user }
