@@ -30,6 +30,12 @@
           .menu-item-ellipse
           .menu-item-text= t('nav.users.sign_out')
           .menu-item-color.menu-item-sign-out
+    - else
+      %li
+        = link_to(new_user_session_path, class: 'menu-item') do
+          .menu-item-ellipse
+          .menu-item-text= t('nav.users.sign_in')
+          .menu-item-color.menu-item-sign-in
     - if admin?
       %li
         = link_to(admin_root_path, class: 'menu-item') do
