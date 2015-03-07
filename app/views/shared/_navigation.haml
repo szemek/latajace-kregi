@@ -8,6 +8,10 @@
         .menu-item-ellipse
         .menu-item-text= t('nav.members')
         .menu-item-color.menu-item-people
+      = link_to(organizers_path, class: 'menu-item') do
+        .menu-item-ellipse
+        .menu-item-text= t('nav.organizers')
+        .menu-item-color.menu-item-organizers
     %li
       = link_to(circles_path, class: 'menu-item') do
         .menu-item-ellipse

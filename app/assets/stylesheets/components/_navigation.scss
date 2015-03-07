@@ -38,6 +38,7 @@ nav {
   height: 95px;
 
   @include hover-lighten(".menu-item-people", #f39e17);
+  @include hover-lighten(".menu-item-organizers", #612798);
   @include hover-lighten(".menu-item-circles", #c0392b);
   @include hover-lighten(".menu-item-profile", #2eb165);
   @include hover-lighten(".menu-item-sign-out", #2980b9);

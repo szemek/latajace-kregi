@@ -1,6 +1,6 @@
 class OrganizersController < ApplicationController
   def index
-    @organizers = Organizer.all
+    @organizers = ProfileDecorator.decorate_collection(Organizer.all)
   end
 
   def show
