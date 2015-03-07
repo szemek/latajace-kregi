@@ -6,4 +6,5 @@ class Event < ActiveRecord::Base
   validates :name, presence: true
   validates :starting_at, presence: true
   validates :circle, presence: true
+  validates :quantity, presence: true
 end
