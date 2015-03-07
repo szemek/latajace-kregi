@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'landing#index'
+  root 'members#index'
 
   devise_for :users, :skip => [:sessions]
   as :user do
@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   get 'faq' => 'faq#show'
 
   localized do
-    get 'people' => 'people#index', as: :start
-
     resource :profile, only: [:edit, :update]
 
     resources :circles, only: [:index, :show]
@@ -26,7 +24,7 @@ Rails.application.routes.draw do
 
     resources :heroines, only: [:index, :show]
     resources :organizers, only: [:index, :show]
-    resources :people, only: [:index, :show] do
+    resources :members, only: [:index, :show] do
       post :index, on: :collection
     end
   end

@@ -5,7 +5,7 @@ en:
     events: events
     organizers: organizers
     heroines: heroines
-    people: people
+    members: members
     profile: profile
     rsvps: rsvps
     edit: edit
@@ -40,7 +40,7 @@ en:
     heroines: Heroines
     language: Language
     organizers: Organizers
-    people: People
+    members: Members
     profile: Profile
     settings: Settings
     users:
@@ -73,9 +73,9 @@ en:
     index:
       heroines: Heroines
 
-  people:
+  members:
     index:
-      people: People
+      members: People
     search:
       clear: Clear
       search: Search

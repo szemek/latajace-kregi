@@ -1,12 +1,12 @@
 %nav.row
-  = link_to(start_path) do
+  = link_to(root_path) do
     .logo
 
   %ul
     %li
-      = link_to(people_path, class: 'menu-item') do
+      = link_to(members_path, class: 'menu-item') do
         .menu-item-ellipse
-        .menu-item-text= t('nav.people')
+        .menu-item-text= t('nav.members')
         .menu-item-color.menu-item-people
     %li
       = link_to(circles_path, class: 'menu-item') do

@@ -1,0 +1,5 @@
+.row.people
+  .small-12.columns
+    %h1= t('.members')
+    = render partial: 'members/search', locals: { search: search, circles: circles, skills: skills, interests: interests }
+    = render partial: 'shared/profiles', locals: { profiles: profiles, profile_path: :member_path }

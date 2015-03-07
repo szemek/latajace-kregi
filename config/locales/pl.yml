@@ -5,7 +5,7 @@ pl:
     events: wydarzenia
     organizers: organizatorki
     heroines: bohaterki
-    people: kregowiczki
+    members: kregowiczki
     profile: profil
     rsvps: rsvp
     edit: edycja
@@ -46,7 +46,7 @@ pl:
     heroines: Bohaterki
     language: Język
     organizers: Organizatorki
-    people: Kręgowiczki
+    members: Kręgowiczki
     profile: Profil
     settings: Ustawienia
     users:
@@ -79,9 +79,9 @@ pl:
     index:
       heroines: Bohaterki
 
-  people:
+  members:
     index:
-      people: Kręgowiczki
+      members: Kręgowiczki
     search:
       clear: Wyczyść
       search: Szukaj
