@@ -112,8 +112,9 @@ pl:
   shared:
     extended_info:
       interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
-      login_to_see_more: 'Zaloguj się, aby zobaczyć więcej informacji'
       skill_list: 'To umiem/to mogę zaoferować innym'
+    profile:
+      login_to_see_more: 'Zaloguj się, aby zobaczyć więcej informacji'
 
   devise:
     registrations:

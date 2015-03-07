@@ -4,3 +4,8 @@ pl:
       edit:
         set_new_password: 'Ustaw nowe hasło'
         new_password: 'Nowe hasło (min. 8 znaków)'
+      new:
+        forgot_your_password: 'Nie pamiętasz hasła?'
+    shared:
+      links:
+        forgot_your_password: 'Nie pamiętasz hasła?'

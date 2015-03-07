@@ -13,7 +13,7 @@ class MembersController < ApplicationController
   end
 
   def show
-    @person = Profile.find(params[:id])
+    @person = ProfileDecorator.decorate(Profile.find(params[:id]))
   end
 
   private
