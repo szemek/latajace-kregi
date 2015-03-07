@@ -19,7 +19,11 @@ class AttendeeList
   def leave
     rsvp.not_going!
 
-    next_from_waiting_list.try(:going!)
+    event.reload
+
+    if can_join?
+      next_from_waiting_list.try(:going!)
+    end
   end
 
   private
