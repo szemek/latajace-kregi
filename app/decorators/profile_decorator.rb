@@ -8,4 +8,8 @@ class ProfileDecorator < Draper::Decorator
   def extended_info?
     skill_list.present? || interest_list.present? || webpage? || contact?
   end
+
+  def filled?
+    fullname.present?
+  end
 end

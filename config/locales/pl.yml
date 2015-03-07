@@ -63,6 +63,7 @@ pl:
       join: Dołącz
       signin: 'Zaloguj się'
       waiting_list: 'Lista rezerwowa'
+      fulfill_your_profile: 'Uzupełnij swój profil, aby dołączyć do wydarzenia'
     waiting:
       change: 'Zmień zdanie'
       leave: Zrezygnuj
@@ -107,7 +108,7 @@ pl:
       title: 'Ustawienia profilu'
       update: Aktualizuj
       webpage: 'Strona www'
-      notice: 'Podaj imię i nazwisko, aby Twój profil pojawił się na liście kręgowiczek'
+      notice: 'Podaj imię i nazwisko, aby rejestrować się na wydarzenia i pojawić się na liście kręgowiczek'
 
   shared:
     extended_info:

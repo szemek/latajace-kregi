@@ -10,17 +10,32 @@
     - elsif rsvp.waiting?
       = render partial: 'waiting', locals: { event: event, rsvp: rsvp }
     - elsif signed_in?
-      = form_for([event, Rsvp.new]) do |f|
-        = f.submit t('.join'), class: 'button success'
+      - if current_profile.filled?
+        = form_for([event, Rsvp.new]) do |f|
+          = f.submit t('.join'), class: 'button success'
+      - else
+        = link_to t('.fulfill_your_profile'), edit_profile_path, class: 'button success'
     - else
       = link_to t('.signin'), new_user_session_path, class: 'button warning'
 
-    %h3= t('.attendee_list')
-    %ul
-      - users.going.each do |user|
-        = render partial: 'events/person', locals: { user: user }
+    - if event.quantity?
+      %h3
+        = t('.attendee_list')
+        (#{users.going.size}/#{event.quantity})
+      %ul
+        - users.going.each do |user|
+          = render partial: 'events/person', locals: { user: user }
 
-    %h3= t('.waiting_list')
-    %ul
-      - users.waiting.each do |user|
-        = render partial: 'events/person', locals: { user: user }
+      %h3
+        = t('.waiting_list')
+        (#{users.waiting.size})
+      %ul
+        - users.waiting.each do |user|
+          = render partial: 'events/person', locals: { user: user }
+    - else
+      %h3
+        = t('.attendee_list')
+        (#{users.going.size})
+      %ul
+        - users.going.each do |user|
+          = render partial: 'events/person', locals: { user: user }

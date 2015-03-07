@@ -15,6 +15,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :admin?
 
+  def current_profile
+    current_user.profile.decorate
+  end
+
+  helper_method :current_profile
+
   def authorize_admin
     redirect_to(root_path) unless admin?
   end
