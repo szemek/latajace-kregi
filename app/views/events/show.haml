@@ -9,9 +9,11 @@
       = render partial: 'going', locals: { event: event, rsvp: rsvp }
     - elsif rsvp.waiting?
       = render partial: 'waiting', locals: { event: event, rsvp: rsvp }
-    - else
+    - elsif signed_in?
       = form_for([event, Rsvp.new]) do |f|
         = f.submit t('.join'), class: 'button success'
+    - else
+      = link_to t('.signin'), new_user_session_path, class: 'button warning'
 
     %h3= t('.attendee_list')
     %ul

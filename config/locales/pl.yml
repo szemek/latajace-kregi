@@ -61,6 +61,7 @@ pl:
     show:
       attendee_list: 'Lista uczestników'
       join: Dołącz
+      signin: 'Zaloguj się'
       waiting_list: 'Lista rezerwowa'
     waiting:
       change: 'Zmień zdanie'
