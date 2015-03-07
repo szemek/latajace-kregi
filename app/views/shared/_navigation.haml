@@ -13,21 +13,23 @@
         .menu-item-ellipse
         .menu-item-text= t('nav.circles')
         .menu-item-color.menu-item-circles
-    %li
-      = link_to(edit_profile_path, class: 'menu-item') do
-        .menu-item-ellipse
-        .menu-item-text= t('nav.profile')
-        .menu-item-color.menu-item-profile
+    - if signed_in?
+      %li
+        = link_to(edit_profile_path, class: 'menu-item') do
+          .menu-item-ellipse
+          .menu-item-text= t('nav.profile')
+          .menu-item-color.menu-item-profile
     %li
       = link_to(faq_path, class: 'menu-item') do
         .menu-item-ellipse
         .menu-item-text= t('nav.faq')
         .menu-item-color.menu-item-faq
-    %li
-      = link_to(destroy_user_session_path, method: :delete, class: 'menu-item') do
-        .menu-item-ellipse
-        .menu-item-text= t('nav.users.sign_out')
-        .menu-item-color.menu-item-sign-out
+    - if signed_in?
+      %li
+        = link_to(destroy_user_session_path, method: :delete, class: 'menu-item') do
+          .menu-item-ellipse
+          .menu-item-text= t('nav.users.sign_out')
+          .menu-item-color.menu-item-sign-out
     - if admin?
       %li
         = link_to(admin_root_path, class: 'menu-item') do
