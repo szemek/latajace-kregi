@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'members#index'
 
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'registrations'
+  }
   ActiveAdmin.routes(self)
 
   post 'users/check'
