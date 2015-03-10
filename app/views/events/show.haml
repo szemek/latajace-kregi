@@ -10,7 +10,7 @@
     - elsif rsvp.waiting?
       = render partial: 'waiting', locals: { event: event, rsvp: rsvp }
     - elsif signed_in?
-      - if current_profile.filled?
+      - if current_profile && current_profile.decorate.filled?
         = form_for([event, Rsvp.new]) do |f|
           = f.submit t('.join'), class: 'button success'
       - else
