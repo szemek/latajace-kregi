@@ -13,14 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery-placeholder
 //= require exists
 //= require underscore
 //= require modals
 //= require select2.min
 //= require tags
 //= require buttons
-//= require placeholders
 //= require vendor/modernizr
 //= require foundation/foundation
 //= require foundation/foundation.reveal
