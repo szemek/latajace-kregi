@@ -16,11 +16,20 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   def custom_crop
     {
-      x: model.photo_crop_x,
-      y: model.photo_crop_y,
-      width: model.photo_crop_w,
-      height: model.photo_crop_h,
-      crop: :crop
+      transformation: [
+        {
+          x: model.photo_crop_x,
+          y: model.photo_crop_y,
+          width: model.photo_crop_w,
+          height: model.photo_crop_h,
+          crop: :crop
+        },
+        {
+          width: 200,
+          height: 200,
+          crop: :scale
+        }
+      ]
     }
   end
 
