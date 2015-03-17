@@ -9,5 +9,7 @@
       %td= f.select :skill, options_from_collection_for_select(skills, :name, :name, search.skill), include_blank: true
       %td= f.select :interest, options_from_collection_for_select(interests, :name, :name, search.interest), include_blank: true
 
+  = f.hidden_field :seed
+
   %button{type: :reset}= t('.clear')
   = f.submit t('.search'), class: 'button'

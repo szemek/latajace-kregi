@@ -1,7 +1,7 @@
 class ProfileSearch < Searchlight::Search
-  search_on proc { Profile.filled.includes(:user, :circle).order(:id) }
+  search_on proc { Profile.filled.includes(:user, :circle) }
 
-  searches :circle_id, :skill, :interest
+  searches :circle_id, :skill, :interest, :seed
 
   def search_circle_id
     search.where(circle_id: circle_id)
@@ -13,5 +13,9 @@ class ProfileSearch < Searchlight::Search
 
   def search_interest
     search.tagged_with(interest, on: :interests, any: true)
+  end
+
+  def search_seed
+    search.order_by_rand(seed: seed)
   end
 end

@@ -270,6 +270,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    randumb (0.5.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      rake
     ransack (1.6.3)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -391,6 +395,7 @@ DEPENDENCIES
   rails-i18n (~> 4.0.3)
   rails_12factor (~> 0.0.3)
   rails_autolink (~> 1.1.6)
+  randumb (~> 0.5.0)
   rollout (~> 2.1.0)
   route_translator (~> 4.0.0)
   rspec-rails (~> 3.2.0)

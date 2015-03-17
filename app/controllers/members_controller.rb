@@ -19,6 +19,10 @@ class MembersController < ApplicationController
   private
 
   def search_params
-    params.delete(:search) || {}
+    params.delete(:search) || {seed: seed}
+  end
+
+  def seed
+    rand(1..100)
   end
 end
