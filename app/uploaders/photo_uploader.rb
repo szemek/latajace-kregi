@@ -6,30 +6,31 @@ class PhotoUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
-  process :custom_crop
-
-  version :thumbnail do
-    process :default_resize_to_fill
-  end
+  process :incoming_transformation
 
   private
 
+  def incoming_transformation
+    { transformation: transformations }
+  end
+
+  def transformations
+    @transformations = []
+
+    if model.photo_crop_w > 0 && model.photo_crop_h > 0
+      @transformations << custom_crop
+    end
+
+    @transformations <<  default_resize_to_fill
+  end
+
   def custom_crop
     {
-      transformation: [
-        {
-          x: model.photo_crop_x,
-          y: model.photo_crop_y,
-          width: model.photo_crop_w,
-          height: model.photo_crop_h,
-          crop: :crop
-        },
-        {
-          width: 200,
-          height: 200,
-          crop: :scale
-        }
-      ]
+      x: model.photo_crop_x,
+      y: model.photo_crop_y,
+      width: model.photo_crop_w,
+      height: model.photo_crop_h,
+      crop: :crop
     }
   end
 
