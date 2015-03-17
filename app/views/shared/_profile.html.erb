@@ -2,7 +2,7 @@
   <div class='small-12 large-3 columns'>
     <div class="th photo">
       <% if profile.photo? %>
-        <%= image_tag(profile.photo.thumbnail.url)  %>
+        <%= image_tag(profile.photo.url)  %>
       <% else %>
         <%= image_tag('woman.png') %>
       <% end %>

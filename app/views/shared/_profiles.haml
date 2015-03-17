@@ -3,7 +3,7 @@
     %article.profile.th
       = link_to(send(profile_path, profile)) do
         - if profile.photo?
-          = image_tag(profile.photo.thumbnail.url)
+          = image_tag(profile.photo.url)
         - else
           = image_tag('woman.png')
         %h5= profile.fullname

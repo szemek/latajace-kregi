@@ -37,7 +37,7 @@
           %label
             = t('.photo')
             = f.file_field :photo
-            = image_tag(profile.photo.thumbnail.url) if profile.photo?
+            = image_tag(profile.photo.url) if profile.photo?
           .preview
           - %w[x y w h].each do |attribute|
             = hidden_field_tag "profile[photo_crop][#{attribute}]"
