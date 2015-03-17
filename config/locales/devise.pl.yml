@@ -6,6 +6,9 @@ pl:
         new_password: 'Nowe hasło (min. 8 znaków)'
       new:
         forgot_your_password: 'Nie pamiętasz hasła?'
+    registrations:
+      new:
+        password: 'Hasło (min. 8 znaków)'
     shared:
       links:
         forgot_your_password: 'Nie pamiętasz hasła?'
