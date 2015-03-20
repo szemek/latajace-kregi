@@ -1,7 +1,8 @@
 class MembersController < ApplicationController
   def index
     search = ProfileSearch.new(search_params)
-    profiles = ProfileDecorator.decorate_collection(search.results)
+    results = search.results.page(params[:page])
+    profiles = ProfileDecorator.decorate_collection(results)
     skills = SkillFetcher.all
     interests = InterestFetcher.all
     circles = CircleFetcher.all

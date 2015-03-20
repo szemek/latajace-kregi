@@ -122,6 +122,14 @@ pl:
       edit:
         title: 'Ustawienia konta'
 
+  views:
+    pagination:
+      first: "&laquo; Pierwsza"
+      last: "Ostatnia &raquo;"
+      previous: "&lsaquo; Poprzednia"
+      next: "Następna &rsaquo;"
+      truncate: "&hellip;"
+
   activerecord:
     attributes:
       user:

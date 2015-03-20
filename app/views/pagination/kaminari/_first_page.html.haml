@@ -1,0 +1,8 @@
+%li
+  = form_for(search, as: :search, url: members_path) do |f|
+    = f.hidden_field :circle_id
+    = f.hidden_field :skill
+    = f.hidden_field :interest
+    = f.hidden_field :seed
+    = hidden_field_tag :page, 1
+    %button{type: :submit}= raw(t('views.pagination.first'))

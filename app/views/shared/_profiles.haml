@@ -13,3 +13,5 @@
       - if profile.code
         .profile-circle.label{class: profile.circle.slug, 'data-tooltip' => true, style: profile.color_background, title: profile.circle.name}
           = profile.code
+
+  = yield(:pagination)
