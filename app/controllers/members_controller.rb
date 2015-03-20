@@ -23,6 +23,6 @@ class MembersController < ApplicationController
   end
 
   def seed
-    rand(1..100)
+    rand(1..1_000_000)
   end
 end
