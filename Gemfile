@@ -11,7 +11,7 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'newrelic_rpm', '~> 3.9.9.275'
+  gem 'newrelic_rpm', '~> 3.11.0.283'
 end
 
 gem 'pg'
@@ -42,7 +42,7 @@ gem 'devise-i18n', '~> 0.11.3'
 gem 'devise-i18n-views', '~> 0.3.4'
 gem 'dotenv-rails', '~> 1.0.2'
 gem 'draper', '~> 1.4.0'
-gem 'eventmachine', '~> 1.0.6'
+gem 'eventmachine', '~> 1.0.7'
 gem 'faker', '~> 1.4.3'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'foundation-rails', '~> 5.5.1.0'
@@ -52,7 +52,7 @@ gem 'haml-rails', '~> 0.8.2'
 gem 'hashie', '~> 3.4.0'
 gem 'jquery-ui-rails', '~> 5.0.3'
 gem 'kaminari', '~> 0.16.3'
-gem 'passenger', '~> 4.0.58'
+gem 'passenger', '~> 5.0.4'
 gem 'progress', '~> 3.1.0'
 gem 'pry-rails', '~> 0.3.3'
 gem 'rails-i18n', '~> 4.0.3'
