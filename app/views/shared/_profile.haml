@@ -1,0 +1,16 @@
+.row
+  .small-12.large-3.columns
+    .th.photo
+      - if profile.photo?
+        = image_tag(profile.photo.url)
+      - else
+        = image_tag('woman.png')
+  .small-12.large-9.columns
+    %h1= profile.fullname
+    %p.activity
+      %strong= profile.activity
+    = simple_format(profile.bio, class: 'bio')
+    - if signed_in?
+      = render partial: 'shared/extended_info', locals: {profile: profile}
+    - elsif profile.extended_info?
+      = link_to t('.login_to_see_more'), new_user_session_path, class: 'button success'
