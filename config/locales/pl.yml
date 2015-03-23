@@ -96,6 +96,10 @@ pl:
       organizers: Organizatorki
 
   profiles:
+    cancel:
+      are_you_sure: 'Czy na pewno chcesz usunąć konto?'
+      cancel_my_account: 'Usuń konto'
+      canceling_account: 'Usuwanie konta'
     edit:
       activity: 'Projekt/firma'
       bio: 'O sobie'

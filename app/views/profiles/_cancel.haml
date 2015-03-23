@@ -1,0 +1,5 @@
+%hr
+.row
+  .small-12.columns
+    %h2= t('.canceling_account')
+    = link_to t('.cancel_my_account'), registration_path(current_user), data: { confirm: t('.are_you_sure') }, method: :delete, class: 'button alert'

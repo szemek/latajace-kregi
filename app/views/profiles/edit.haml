@@ -43,6 +43,8 @@
             = hidden_field_tag "profile[photo_crop][#{attribute}]"
       .row
         .small-6.columns
-          = f.submit t('.update'), class: 'button small'
+          = f.submit t('.update'), class: 'button'
+
+= render 'cancel'
 
 = include_gon
