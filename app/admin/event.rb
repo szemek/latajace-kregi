@@ -36,6 +36,18 @@ ActiveAdmin.register Event do
       row :quantity
       row :location
     end
+
+    panel t('admin.event.going') do
+      table_for event.rsvps.going.includes(:user).map(&:user) do
+        column :email
+      end
+    end
+
+    panel t('admin.event.waiting') do
+      table_for event.rsvps.waiting.includes(:user).map(&:user) do
+        column :email
+      end
+    end
   end
 
   form do |f|
