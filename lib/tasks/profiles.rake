@@ -16,4 +16,22 @@ namespace :profiles do
       user.save
     end
   end
+
+  namespace :taggings do
+    desc 'migrate profiles taggings to users'
+    task migrate: :environment do
+      profile_ids = Tagging.where(taggable_type: 'Profile').pluck(:taggable_id)
+      profile_ids.each.with_progress do |profile_id|
+        profile = Profile.find(profile_id)
+        user_id = profile.user.id
+
+        Tagging.where(taggable_type: 'Profile')
+               .where(taggable_id: profile_id)
+               .update_all({
+                taggable_type: 'User',
+                taggable_id: user_id
+              })
+      end
+    end
+  end
 end
