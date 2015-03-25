@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   belongs_to :circle
 
+  validates :fullname, presence: true
+
   mount_uploader :photo, PhotoUploader
 
   def photo_crop

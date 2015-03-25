@@ -8,6 +8,7 @@ pl:
         forgot_your_password: 'Nie pamiętasz hasła?'
     registrations:
       new:
+        fullname: 'Imię i nazwisko'
         password: 'Hasło (min. 8 znaków)'
     shared:
       links:

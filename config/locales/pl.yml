@@ -135,9 +135,12 @@ pl:
       truncate: "&hellip;"
 
   activerecord:
+    models:
+      user: 'Profil użytkownika'
     attributes:
       user:
         email: 'E-mail'
+        fullname: 'Imię i nazwisko'
         password: 'Hasło'
         password_confirmation: 'Potwierdzenie hasła'
         current_password: 'Aktualne hasło'
