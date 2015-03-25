@@ -14,8 +14,8 @@ class EventsController < ApplicationController
   end
 
   def users
-    going = User.where(id: event.rsvps.going.pluck(:user_id)).includes(:profile)
-    waiting = User.where(id: event.rsvps.waiting.pluck(:user_id)).includes(:profile)
+    going = User.where(id: event.rsvps.going.pluck(:user_id))
+    waiting = User.where(id: event.rsvps.waiting.pluck(:user_id))
 
     Hashie::Mash.new(going: going, waiting: waiting)
   end

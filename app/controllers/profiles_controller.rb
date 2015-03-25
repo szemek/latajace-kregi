@@ -3,17 +3,15 @@ class ProfilesController < ApplicationController
 
   def edit
     circles = Circle.all
-    profile = Profile.find_or_create_by(user: current_user)
 
     gon.tags = Tag.order(:name).pluck(:name)
 
-    render :edit, locals: {circles: circles, profile: profile}
+    render :edit, locals: {circles: circles, profile: current_user}
   end
 
   def update
-    profile = current_user.profile
-    profile.assign_attributes(profile_params)
-    profile.save
+    current_user.assign_attributes(profile_params)
+    current_user.save
 
     redirect_to(edit_profile_path)
   end
