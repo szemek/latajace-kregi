@@ -17,9 +17,4 @@ production:
   password: <%= ENV['FLYING_CIRCLES_DATABASE_PASSWORD'] %>
 
 heroku:
-  adapter: postgresql
-  database: <%= ENV['HEROKU_DATABASE'] %>
-  host: <%= ENV['HEROKU_HOST'] %>
-  port: <%= ENV['HEROKU_PORT'] %>
-  username: <%= ENV['HEROKU_USERNAME'] %>
-  password: <%= ENV['HEROKU_PASSWORD'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_TEAL_URL'] %>
