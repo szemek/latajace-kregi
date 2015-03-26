@@ -5,20 +5,15 @@ ActiveAdmin.register User do
 
   menu label: 'Users'
 
-  controller do
-    def scoped_collection
-      super.includes(:profile)
-    end
-  end
-
   index do
     selectable_column
     id_column
+    column :fullname
     column :email
-    column :current_sign_in_at
-    column :sign_in_count
+    column :circle
+    column :organizer
+    column :admin
     column :created_at
-    column :profile
     actions
   end
 
@@ -67,10 +62,9 @@ ActiveAdmin.register User do
     end
   end
 
+  filter :fullname
   filter :email
-  filter :current_sign_in_at
-  filter :sign_in_count
-  filter :created_at
+  filter :circle
 
   form do |f|
     f.inputs "User Details" do
