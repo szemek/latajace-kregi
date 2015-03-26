@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :email, :admin
+  permit_params :email, :admin, :organizer
 
   actions :all, except: [:destroy]
 
@@ -27,8 +27,26 @@ ActiveAdmin.register User do
       row :id
       row :email
       row :admin
-      row :profile do
-        user.profile
+      row :organizer
+    end
+
+    panel 'Profile Details' do
+      attributes_table_for user do
+        row :fullname
+        row :photo do
+          image_tag(user.photo_url)
+        end
+        row :bio
+        row :activity
+        row :circle
+        row 'Skills' do
+           user.skills.pluck(:name).join(', ')
+        end
+        row 'Interests' do
+           user.interests.pluck(:name).join(', ')
+        end
+        row :webpage
+        row :contact
       end
     end
 
@@ -58,6 +76,7 @@ ActiveAdmin.register User do
     f.inputs "User Details" do
       f.input :email
       f.input :admin
+      f.input :organizer
     end
     f.actions
   end
