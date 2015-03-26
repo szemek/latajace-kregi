@@ -1,4 +1,1 @@
-- if user.profile
-  %li= link_to "#{user.fullname}", member_path(user.profile)
-- else
-  %li= user.fullname
+%li= link_to user.fullname, member_path(user)
