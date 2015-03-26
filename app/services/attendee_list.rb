@@ -21,8 +21,11 @@ class AttendeeList
 
     event.reload
 
-    if can_join?
-      next_from_waiting_list.try(:going!)
+    first_from_waiting_list = waiting_list.first
+
+    if can_join? && first_from_waiting_list
+      first_from_waiting_list.going!
+      Notifications.going(first_from_waiting_list).deliver
     end
   end
 
@@ -32,7 +35,7 @@ class AttendeeList
     event.quantity > event.rsvps.going.count
   end
 
-  def next_from_waiting_list
-    event.rsvps.waiting.order(:updated_at).first
+  def waiting_list
+    event.rsvps.waiting.order(:updated_at)
   end
 end
