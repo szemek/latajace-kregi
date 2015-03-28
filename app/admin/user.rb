@@ -65,6 +65,8 @@ ActiveAdmin.register User do
   filter :fullname
   filter :email
   filter :circle
+  filter :admin
+  filter :organizer
 
   form do |f|
     f.inputs "User Details" do
