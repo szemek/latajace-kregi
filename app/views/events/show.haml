@@ -1,7 +1,12 @@
 .row
   .small-12.large-9.columns
     %h2= event.name
-    %p= I18n.l(event.starting_at, locale: I18n.locale, format: '%d %B %Y')
+    %p
+      %i.fa.fa-calendar
+      = I18n.l(event.starting_at, locale: I18n.locale, format: '%d %B %Y, %H:%M')
+    %p
+      %i.fa.fa-map-marker
+      = event.location
     %p= simple_format(auto_link(event.description))
     = event.map
   .small-12.large-3.columns

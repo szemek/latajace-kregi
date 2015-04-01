@@ -1,9 +1,0 @@
-<h1><%= @circle.name %></h1>
-
-<h2><%= t('.events') %></h2>
-
-<% @events.each do |event| %>
-  <p><%= I18n.l(event.starting_at, locale: I18n.locale, format: '%d %B %Y') %></p>
-  <h3><%= link_to event.name, event %></h3>
-  <p><%= simple_format(auto_link(event.description)) %></p>
-<% end %>
