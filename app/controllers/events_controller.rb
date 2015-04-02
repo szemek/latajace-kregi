@@ -1,9 +1,17 @@
 class EventsController < ApplicationController
+  def index
+    render :index, locals: { events: events }
+  end
+
   def show
     render :show, locals: { event: event, rsvp: rsvp, users: users }
   end
 
   private
+
+  def events
+    @events ||= EventDecorator.decorate_collection(Event.order(starting_at: :desc).includes(:circle))
+  end
 
   def event
     @event ||= Event.find(params[:id]).decorate

@@ -1,0 +1,14 @@
+%h2= t('.events')
+- events.each do |event|
+  .event
+    = render event.circle
+    %h3= link_to event.name, event
+    = link_to t('.go'), event_path(event), class: 'button success'
+    %p
+      %i.fa.fa-calendar
+      = I18n.l(event.starting_at, locale: I18n.locale, format: '%d %B %Y, %H:%M')
+    %p
+      %i.fa.fa-map-marker
+      = event.location
+    %p= simple_format(auto_link(event.description))
+

@@ -76,6 +76,9 @@ pl:
       stay: Tak
       still_interested?: 'Czy nadal chcesz wziąć udział w wydarzeniu?'
       you_will_participate: 'Weźmiesz udział'
+    index:
+      events: Wydarzenia
+      go: 'Przejdź do strony wydarzenia'
 
   heroines:
     index:

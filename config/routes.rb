@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
     resources :circles, only: [:index, :show]
 
-    resources :events, only: [:show] do
+    resources :events, only: [:index, :show] do
       resources :rsvps, only: [:create, :destroy]
     end
 

@@ -13,10 +13,10 @@
         .menu-item-text= t('nav.organizers')
         .menu-item-color.menu-item-organizers
     %li
-      = link_to(circles_path, class: 'menu-item') do
+      = link_to(events_path, class: 'menu-item') do
         .menu-item-ellipse
-        .menu-item-text= t('nav.circles')
-        .menu-item-color.menu-item-circles
+        .menu-item-text= t('nav.events')
+        .menu-item-color.menu-item-events
     - if signed_in?
       %li
         = link_to(edit_profile_path, class: 'menu-item') do

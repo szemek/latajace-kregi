@@ -3,6 +3,8 @@ class EventDecorator < Draper::Decorator
 
   delegate_all
 
+  decorates_association :circle
+
   def map
     content_tag(:iframe, nil, iframe_options.merge(src: map_url)) if location?
   end
