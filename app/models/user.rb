@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
     true
   end
 
-  has_one :profile, dependent: :destroy
   has_many :rsvps, dependent: :delete_all
   has_many :events, through: :rsvps
   has_many :feedbacks, dependent: :delete_all
