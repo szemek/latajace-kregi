@@ -60,6 +60,30 @@ ActiveAdmin.register User do
         row :updated_at
       end
     end
+
+    panel 'Events' do
+      attributes_table_for user do
+        row 'Going' do
+          ul do
+            user.rsvps.going.map(&:event).each do |event|
+              li do
+                a event.name, href: admin_event_path(event)
+              end
+            end
+          end
+        end
+
+        row 'Waiting' do
+          ul do
+            user.rsvps.waiting.map(&:event).each do |event|
+              li do
+                a event.name, href: admin_event_path(event)
+              end
+            end
+          end
+        end
+      end
+    end
   end
 
   filter :fullname

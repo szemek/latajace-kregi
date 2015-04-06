@@ -37,15 +37,27 @@ ActiveAdmin.register Event do
       row :location
     end
 
-    panel t('admin.event.going') do
-      table_for event.rsvps.going.includes(:user).map(&:user) do
-        column :email
-      end
-    end
+    panel t('admin.event.users') do
+      attributes_table_for event do
+        row 'Going' do
+          ul do
+            event.rsvps.going.includes(:user).map(&:user).each do |user|
+              li do
+                a user.email, href: admin_user_path(user)
+              end
+            end
+          end
+        end
 
-    panel t('admin.event.waiting') do
-      table_for event.rsvps.waiting.includes(:user).map(&:user) do
-        column :email
+        row 'Waiting' do
+          ul do
+            event.rsvps.waiting.includes(:user).map(&:user).each do |user|
+              li do
+                a user.email, href: admin_user_path(user)
+              end
+            end
+          end
+        end
       end
     end
   end
