@@ -31,11 +31,11 @@
             = f.label :interest_list, t('.interest_list')
             = f.hidden_field :interest_list
         .small-6.columns
-          %label
-            = t('.circle')
+          .field
+            = f.label :circle_id, t('.circle')
             = f.select :circle_id, options_from_collection_for_select(circles, :id, :name, selected: profile.circle_id)
-          %label
-            = t('.photo')
+          .field
+            = f.label :photo, t('.photo')
             = f.file_field :photo
             = image_tag(profile.photo.url) if profile.photo?
           .preview

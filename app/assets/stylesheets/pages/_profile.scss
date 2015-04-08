@@ -3,3 +3,10 @@
   border-color: lighten(#c0392b, 10%);
   color: white;
 }
+
+form#edit_profile {
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
