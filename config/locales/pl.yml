@@ -110,7 +110,7 @@ pl:
       contact: Kontakt
       fullname: 'Imię i nazwisko'
       interest_list: 'Tego potrzebuję/tego się chcę nauczyć'
-      photo: Zdjęcie
+      photo: 'Zdjęcie (najlepiej w rozmiarze 200 x 200 pikseli)'
       skill_list: 'To umiem/to mogę zaoferować innym'
       title: 'Ustawienia profilu'
       update: Aktualizuj
