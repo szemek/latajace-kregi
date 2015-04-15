@@ -1,6 +1,4 @@
 class FeedbacksController < ApplicationController
-  before_action :authenticate_user!
-
   def new
     feedback = Feedback.new
 
@@ -8,7 +6,9 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    current_user.feedbacks.create(feedback_params)
+    feedback = Feedback.new(feedback_params)
+    feedback.user = current_user
+    feedback.save
 
     redirect_to(thanks_feedback_path)
   end
