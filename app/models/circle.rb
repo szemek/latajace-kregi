@@ -1,6 +1,6 @@
 class Circle < ActiveRecord::Base
   has_many :events, dependent: :delete_all
-  has_many :profiles
+  has_many :users
   has_many :heroines
 
   scope :visible, -> { where(visible: true) }

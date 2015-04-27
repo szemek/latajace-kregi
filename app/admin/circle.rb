@@ -15,6 +15,33 @@ ActiveAdmin.register Circle do
     actions
   end
 
+  show do |circle|
+    attributes_table do
+      row :id
+      row :name
+      row :created_at
+      row :updated_at
+      row :slug
+      row :code
+      row :position
+      row :color
+      row :cover
+      row :visible
+    end
+
+    panel t('admin.circle.users') do
+      attributes_table_for(circle) do
+        ul do
+          circle.users.each do |user|
+            li do
+              a user.email, href: admin_user_path(user)
+            end
+          end
+        end
+      end
+    end
+  end
+
   filter :name
   filter :code
   filter :created_at
