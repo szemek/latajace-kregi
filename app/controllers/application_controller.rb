@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :capture_request_data
+  before_action :capture_request_data, unless: :admin_panel?
   before_action :authorize_admin, if: :admin_panel?
 
   def capture_request_data

@@ -37,7 +37,7 @@ ActiveAdmin.register Event do
       row :location
     end
 
-    panel t('admin.event.users') do
+    panel t('admin.event.emails') do
       attributes_table_for event do
         row 'Going' do
           ul do
@@ -60,7 +60,40 @@ ActiveAdmin.register Event do
         end
       end
     end
+
+    panel t('admin.event.users') do
+      attributes_table_for event do
+        row 'Going' do
+          table do
+            event.rsvps.going.includes(:user).each do |rsvp|
+              tr do
+                td rsvp.user.fullname
+                td rsvp.user.email
+                td do
+                  link_to 'Remove', admin_rsvp_path(rsvp), confirm: 'Are you sure?', method: :delete
+                end
+              end
+            end
+          end
+        end
+
+        row 'Waiting' do
+          table do
+            event.rsvps.waiting.includes(:user).each do |rsvp|
+              tr do
+                td rsvp.user.fullname
+                td rsvp.user.email
+                td do
+                  link_to 'Remove', admin_rsvp_path(rsvp), confirm: 'Are you sure?', method: :delete
+                end
+              end
+            end
+          end
+        end
+      end
+    end
   end
+
 
   form do |f|
     f.inputs "Event Details" do
