@@ -2,10 +2,12 @@
   %table
     %tr
       %th= t('.circle')
+      %th= t('.query')
       %th= t('.skill')
       %th= t('.interest')
     %tr
       %td= f.select :circle_id, options_from_collection_for_select(circles, :id, :name, search.circle_id), include_blank: true
+      %td= f.text_field :query
       %td= f.select :skill, options_from_collection_for_select(skills, :name, :name, search.skill), include_blank: true
       %td= f.select :interest, options_from_collection_for_select(interests, :name, :name, search.interest), include_blank: true
 

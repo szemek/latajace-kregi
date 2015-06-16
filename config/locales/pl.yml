@@ -93,6 +93,7 @@ pl:
       circle: Krąg
       skill: Oferowana umiejętność
       interest: Szukana umiejętność
+      query: 'Imię, nazwisko lub nazwa firmy'
 
   organizers:
     index:
