@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   private
 
   def events
-    @events ||= EventDecorator.decorate_collection(Event.order(starting_at: :desc).includes(:circle))
+    @events ||= EventDecorator.decorate_collection(Event.visible.order(starting_at: :desc).includes(:circle))
   end
 
   def event

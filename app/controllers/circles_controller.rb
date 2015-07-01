@@ -7,6 +7,6 @@ class CirclesController < ApplicationController
 
   def show
     @circle = Circle.find(params[:id])
-    @events = @circle.events.order(created_at: :desc)
+    @events = @circle.events.visible.order(created_at: :desc)
   end
 end

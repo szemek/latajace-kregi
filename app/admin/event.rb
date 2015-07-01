@@ -4,7 +4,8 @@ ActiveAdmin.register Event do
     :circle_id,
     :starting_at,
     :quantity,
-    :location
+    :location,
+    :visible
 
   actions :all, except: [:destroy]
 
@@ -16,6 +17,7 @@ ActiveAdmin.register Event do
     column :starting_at
     column :quantity
     column :location
+    column :visible
     column :created_at
     actions
   end
@@ -23,6 +25,7 @@ ActiveAdmin.register Event do
   filter :name
   filter :circle
   filter :location
+  filter :visible
   filter :created_at
 
   show do |event|
@@ -35,6 +38,7 @@ ActiveAdmin.register Event do
       row :starting_at
       row :quantity
       row :location
+      row :visible
     end
 
     panel t('admin.event.emails') do
@@ -103,6 +107,7 @@ ActiveAdmin.register Event do
       f.input :starting_at
       f.input :quantity
       f.input :location
+      f.input :visible
     end
     f.actions
   end

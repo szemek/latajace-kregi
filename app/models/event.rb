@@ -7,4 +7,6 @@ class Event < ActiveRecord::Base
   validates :starting_at, presence: true
   validates :circle, presence: true
   validates :quantity, presence: true
+
+  scope :visible, -> { where(visible: true) }
 end
