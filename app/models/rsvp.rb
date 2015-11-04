@@ -6,6 +6,6 @@ class Rsvp < ActiveRecord::Base
 
   # dynamic definitions of scopes
   statuses.each do |status, value|
-    scope status, -> { where(status: value)}
+    scope status, -> { where(status: value).order(:updated_at) }
   end
 end

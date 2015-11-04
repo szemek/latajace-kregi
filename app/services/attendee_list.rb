@@ -36,6 +36,6 @@ class AttendeeList
   end
 
   def waiting_list
-    event.rsvps.waiting.order(:updated_at)
+    event.rsvps.waiting
   end
 end
