@@ -7,14 +7,14 @@ describe CircleDecorator do
   it 'returns proper color_background' do
     circle = described_class.new(double(color: 'blue'))
 
-    expect(circle.color_background).to eq('background: blue')
+    expect(circle.color_background).to eq('background-color: blue')
   end
 
   context 'cover is present' do
     it 'returns proper cover_background' do
       circle = described_class.new(double(cover: 'photo.jpg', cover?: true))
 
-      expect(circle.cover_background).to eq('background: url(photo.jpg)')
+      expect(circle.cover_background).to eq('background-image: url(photo.jpg)')
     end
   end
 

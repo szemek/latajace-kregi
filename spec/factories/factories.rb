@@ -5,12 +5,8 @@ FactoryGirl.define do
     position 1
   end
 
-  factory :profile do
-    fullname 'Anna Nowak'
-    association :user
-  end
-
   factory :user do
+    fullname Faker::Name.name
     sequence(:email) { |n| "user#{n}@example.com" }
     password 'password'
   end
