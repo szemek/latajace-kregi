@@ -14,7 +14,11 @@ class MembersController < ApplicationController
   end
 
   def show
-    @person = ProfileDecorator.decorate(User.find(params[:id]))
+    begin
+      @person = ProfileDecorator.decorate(User.find(params[:id]))
+    rescue ActiveRecord::RecordNotFound
+      redirect_to(members_path)
+    end
   end
 
   private
