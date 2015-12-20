@@ -6,7 +6,7 @@ class CirclesController < ApplicationController
   end
 
   def show
-    @circle = Circle.find(params[:id])
+    @circle = Circle.find_by(slug: params[:id])
     @events = @circle.events.visible.order(created_at: :desc)
   end
 end
