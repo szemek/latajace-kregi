@@ -1,7 +1,7 @@
 class ProfileDecorator < Draper::Decorator
   delegate_all
 
-  decorates_association :circle
+  decorates_association :circle, with: CircleDecorator
 
   delegate :color_background, to: :circle, allow_nil: true
 
