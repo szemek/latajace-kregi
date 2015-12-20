@@ -11,6 +11,13 @@ FactoryGirl.define do
     password 'password'
   end
 
+  factory :organizer do
+    fullname Faker::Name.name
+    sequence(:email) { |n| "organizer#{n}@example.com" }
+    password 'password'
+    organizer true
+  end
+
   factory :circle do
     sequence(:name) { |n| "Krąg #{n}" }
     sequence(:code) { |n| "KOD #{n}" }
