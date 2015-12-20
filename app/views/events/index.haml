@@ -1,7 +1,7 @@
 %h2= t('.events')
 - events.each do |event|
   .event
-    = render event.circle
+    = render partial: 'circles/circle', locals: { circle: event.circle }
     %h3= link_to event.name, event
     = link_to t('.go'), event_path(event), class: 'button success'
     %p
