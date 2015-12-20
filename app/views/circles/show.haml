@@ -2,5 +2,5 @@
 %h2= t('.events')
 - @events.each do |event|
   %p= I18n.l(event.starting_at, locale: I18n.locale, format: '%d %B %Y, %H:%M')
-  %h3= link_to event.name, event
+  %h3= link_to event.name, event_path(event)
   %p= simple_format(auto_link(event.description))
