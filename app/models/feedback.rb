@@ -1,5 +1,2 @@
-class Feedback < ActiveRecord::Base
-  belongs_to :user
-
-  validates :content, presence: true
+class Feedback < PostgreSQL::Feedback
 end

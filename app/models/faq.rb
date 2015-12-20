@@ -1,3 +1,2 @@
-class FAQ < ActiveRecord::Base
-  self.table_name = :faq
+class FAQ < PostgreSQL::FAQ
 end

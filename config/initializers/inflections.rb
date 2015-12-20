@@ -18,4 +18,6 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.plural /^(faq)$/i, '\1'.upcase
   inflect.acronym 'FAQ'
+  inflect.acronym 'PostgreSQL'
+  inflect.acronym 'MongoDB'
 end

@@ -1,4 +1,4 @@
-class Feature < ActiveRecord::Base
+class PostgreSQL::Feature < ActiveRecord::Base
   def self.get(key)
     self.find_by_key(key).try(:value) || default_value
   end

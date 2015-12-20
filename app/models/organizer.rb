@@ -1,3 +1,2 @@
-class Organizer < User
-  default_scope { where(organizer: true) }
+class Organizer < PostgreSQL::Organizer
 end

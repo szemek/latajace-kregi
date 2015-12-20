@@ -1,4 +1,4 @@
-class Email
+class MongoDB::Email
   include Mongoid::Document
   include Mongoid::Timestamps
 
