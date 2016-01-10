@@ -6,7 +6,7 @@
     - if profile.fullname.blank?
       .alert-box.alert-notice= t('.notice')
 
-    = form_for(profile, as: :profile, url: profile_path(profile)) do |f|
+    = form_for(profile, as: :profile, url: profile_path) do |f|
       .row
         .small-6.columns
           .field
