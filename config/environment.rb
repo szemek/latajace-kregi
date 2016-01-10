@@ -5,11 +5,11 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :address        => 'smtp.mandrillapp.com',
-  :port           => '587',
-  :authentication => :plain,
-  :user_name      => ENV['MANDRILL_USERNAME'],
-  :password       => ENV['MANDRILL_APIKEY'],
-  :domain         => 'heroku.com',
-  :enable_starttls_auto => true
+  address:              ENV['MAILER_SERVER'],
+  port:                 587,
+  domain:               'latajacekregi.pl',
+  user_name:            ENV['MAILER_USERNAME'],
+  password:             ENV['MAILER_PASSWORD'],
+  authentication:       :plain,
+  enable_starttls_auto: true
 }
