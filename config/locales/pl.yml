@@ -129,6 +129,11 @@ pl:
     registrations:
       edit:
         title: 'Ustawienia konta'
+    mailer:
+      reset_password_instructions:
+        instruction: 'Zmień swoje hasło klikając na poniższy link:'
+        instruction_2: Jeśli to nie Ty prosiłaś o zmianę hasła, proszę zignoruj tę wiadomość.
+        instruction_3: Twoje hasło nie ulegnie zmianie dopóki nie wejdziesz na poniższy link i nie ustawisz nowego.
 
   views:
     pagination:
