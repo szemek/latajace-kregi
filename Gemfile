@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.3.0'
 
 gem 'rails', '4.1.9'
 
@@ -29,7 +29,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.2.0'
 end
 
-gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 gem 'activeadmin', github: 'activeadmin'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'arel-helpers', '~> 2.1.0'
