@@ -102,7 +102,7 @@ ActiveAdmin.register Event do
   form do |f|
     f.inputs "Event Details" do
       f.input :name
-      f.input :description, as: :html_editor
+      f.input :description
       f.input :circle
       f.input :starting_at
       f.input :quantity
