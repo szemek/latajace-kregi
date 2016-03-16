@@ -3,6 +3,10 @@ ActiveAdmin.register Circle do
 
   actions :all, except: [:destroy]
 
+  controller do
+    resources_configuration[:self][:finder] = :find_by_slug
+  end
+
   index do
     selectable_column
     id_column
