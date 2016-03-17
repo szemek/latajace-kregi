@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def edit
-    circles = Circle.all
+    circles = Circle.visible
 
     gon.tags = Tag.order(:name).pluck(:name)
 
