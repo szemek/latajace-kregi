@@ -3,6 +3,10 @@ class EventDecorator < Draper::Decorator
 
   delegate_all
 
+  def self.collection_decorator_class
+    PaginatingDecorator
+  end
+
   decorates_association :circle, with: CircleDecorator
 
   def map
