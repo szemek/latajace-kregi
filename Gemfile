@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.1.9'
+gem 'rails', '4.1.16'
 
 group :development do
   gem 'letter_opener', '~> 1.3.0'
@@ -15,7 +15,7 @@ group :production do
 end
 
 gem 'pg', '~> 0.18.4'
-gem 'sass-rails', '~> 5.0.1'
+gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '~> 2.7.2'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 3.1.2'
