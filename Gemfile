@@ -11,7 +11,6 @@ end
 
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
-  gem 'newrelic_rpm', '~> 3.14.1.311'
 end
 
 gem 'pg', '~> 0.18.4'
