@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.1.16'
+gem 'rails', '4.2.0'
 
 group :development do
   gem 'letter_opener', '~> 1.3.0'
@@ -28,7 +28,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.2.0'
 end
 
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '1.0.0'
 gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'arel-helpers', '~> 2.1.0'
 gem 'awesome_print', '~> 1.6.1'
