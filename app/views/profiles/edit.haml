@@ -26,10 +26,10 @@
             = f.text_field :contact
           .field
             = f.label :skill_list, t('.skill_list')
-            = f.hidden_field :skill_list
+            = hidden_field_tag 'profile[skill_list]', "#{profile.skill_list}", id: :profile_skill_list
           .field
             = f.label :interest_list, t('.interest_list')
-            = f.hidden_field :interest_list
+            = hidden_field_tag 'profile[interest_list]', "#{profile.interest_list}",  id: :profile_interest_list
         .small-6.columns
           .field
             = f.label :circle_id, t('.circle')
