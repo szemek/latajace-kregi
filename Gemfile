@@ -17,7 +17,7 @@ gem 'pg', '~> 0.18.4'
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '~> 2.7.2'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails', '~> 3.1.2'
+gem 'jquery-rails', '~> 3.1.3'
 
 group :development, :test do
   gem 'better_errors', '~> 2.1.1'
