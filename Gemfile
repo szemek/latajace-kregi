@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11'
 
 group :development do
   gem 'letter_opener', '~> 1.3.0'
