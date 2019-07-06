@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.3.5'
 
 gem 'rails', '4.2.11'
 
@@ -24,8 +24,8 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'guard-bundler', '~> 2.1.0'
-  gem 'guard-rspec', '~> 4.5.0'
-  gem 'rspec-rails', '~> 3.2.0'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
 end
 
 gem 'activeadmin', '1.0.0'
@@ -36,8 +36,8 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 gem 'cloudinary', '~> 1.1.2'
 gem 'colored', '~> 1.2'
-gem 'devise', '~> 3.5.10'
-gem 'devise-i18n', '~> 1.5.1'
+gem 'devise', '~> 4.6.2'
+gem 'devise-i18n', '~> 1.8.0'
 gem 'devise-i18n-views', '~> 0.3.4'
 gem 'dotenv-rails', '~> 1.0.2'
 gem 'draper', '~> 1.4.0'

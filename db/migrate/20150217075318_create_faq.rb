@@ -1,4 +1,4 @@
-class CreateFaq < ActiveRecord::Migration
+class CreateFAQ < ActiveRecord::Migration
   def change
     create_table :faq do |t|
       t.text :content
